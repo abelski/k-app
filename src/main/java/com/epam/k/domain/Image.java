@@ -1,33 +1,23 @@
 package com.epam.k.domain;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.net.URL;
+import java.net.URI;
 
 @Document
 public class Image {
-    @Id
     private String id;
-    private URL url;
     private String altText;
-    private String ext;
+    private String extension;
+    private URI uri;
+    private String description;
 
     public String getId() {
         return id;
     }
 
-    public Image setId(String id) {
+    public Image setId(final String id) {
         this.id = id;
-        return this;
-    }
-
-    public URL getUrl() {
-        return url;
-    }
-
-    public Image setUrl(URL url) {
-        this.url = url;
         return this;
     }
 
@@ -35,17 +25,35 @@ public class Image {
         return altText;
     }
 
-    public Image setAltText(String altText) {
+    public Image setAltText(final String altText) {
         this.altText = altText;
         return this;
     }
 
-    public String getExt() {
-        return ext;
+    public String getExtension() {
+        return extension;
     }
 
-    public Image setExt(String ext) {
-        this.ext = ext;
+    public Image setExtension(final String extension) {
+        this.extension = extension;
+        return this;
+    }
+
+    public URI getUri() {
+        return uri;
+    }
+
+    public Image setUri(final URI uri) {
+        this.uri = uri;
+        return this;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Image setDescription(final String description) {
+        this.description = description;
         return this;
     }
 }

@@ -1,14 +1,29 @@
 package com.epam.k.domain;
 
-public class Tag {
-    private String title;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-    public String getTitle() {
-        return title;
+@Document
+public class Tag {
+    @Id
+    private String id;
+    private String name;
+
+    public String getId() {
+        return id;
     }
 
-    public Tag setTitle(String title) {
-        this.title = title;
+    public Tag setId(final String id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Tag setName(final String name) {
+        this.name = name;
         return this;
     }
 }

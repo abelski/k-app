@@ -1,18 +1,15 @@
 package com.epam.k.service;
 
+import com.epam.k.dao.UserDAO;
+import com.epam.k.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.querydsl.QueryDslPredicateExecutor;
-
-import com.epam.k.dao.UserDAO;
-import com.epam.k.domain.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
-
-/**
- * Created by Ruslan_Mostov on 10/15/2016.
- */
+@Service
 public class UserService extends BaseService<User, String> {
     private final static Logger LOG = LoggerFactory.getLogger(UserService.class);
 
@@ -38,10 +35,6 @@ public class UserService extends BaseService<User, String> {
             return null;
         }
         return getRepository().findByUsername(username);
-    }
-
-    public User findByToken(String token) {
-        return getRepository().findByToken(token);
     }
 
     public void setEncodedPassword(final User user, final String password) {

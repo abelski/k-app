@@ -1,14 +1,29 @@
 package com.epam.k.domain;
 
-public class Transport {
-    public String title;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-    public String getTitle() {
-        return title;
+@Document
+public class Transport {
+    @Id
+    private String id;
+    private String type;
+
+    public String getId() {
+        return id;
     }
 
-    public Transport setTitle(String title) {
-        this.title = title;
+    public Transport setId(final String id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public Transport setType(final String type) {
+        this.type = type;
         return this;
     }
 }

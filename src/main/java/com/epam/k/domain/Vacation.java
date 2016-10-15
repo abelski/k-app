@@ -1,43 +1,70 @@
 package com.epam.k.domain;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.epam.k.domain.enums.VacationStatus;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.time.LocalDate;
-import java.util.List;
 
 @Document
 public class Vacation {
     @Id
     private String id;
-    private String title;
     private User owner;
-    private VacationStatus status;
+    private List<User> members;
+    private String title;
     private String description;
-    private Image image;
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
-    private LocalDate startDate;
-    @JsonDeserialize(using = LocalDateDeserializer.class)
+    private LocalDate beginDate;
     @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate endDate;
-    private List<User> participants;
-    private List<Comment> comments;
-    private List<Activity> activities;
+    private String countryToGo;
+    private String cityToGo;
     private List<Tag> tags;
+    private BigDecimal estimatedCost;
+    private int minMembers;
+    private VacationStatus status;
+    private List<Activity> plannedActivities;
+    private List<Comment> comments;
+    private List<Image> gallery;
+    private Image titleImg;
     private Transport transport;
+    private int days;
+    private String departureCountry;
 
     public String getId() {
         return id;
     }
 
-    public Vacation setId(String id) {
+    public Vacation setId(final String id) {
         this.id = id;
+        return this;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public Vacation setOwner(final User owner) {
+        this.owner = owner;
+        return this;
+    }
+
+    public List<User> getMembers() {
+        return members;
+    }
+
+    public Vacation setMembers(final List<User> members) {
+        this.members = members;
         return this;
     }
 
@@ -45,7 +72,7 @@ public class Vacation {
         return title;
     }
 
-    public Vacation setTitle(String title) {
+    public Vacation setTitle(final String title) {
         this.title = title;
         return this;
     }
@@ -54,26 +81,17 @@ public class Vacation {
         return description;
     }
 
-    public Vacation setDescription(String description) {
+    public Vacation setDescription(final String description) {
         this.description = description;
         return this;
     }
 
-    public Image getImage() {
-        return image;
+    public LocalDate getBeginDate() {
+        return beginDate;
     }
 
-    public Vacation setImage(Image image) {
-        this.image = image;
-        return this;
-    }
-
-    public LocalDate getStartDate() {
-        return startDate;
-    }
-
-    public Vacation setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
+    public Vacation setBeginDate(final LocalDate beginDate) {
+        this.beginDate = beginDate;
         return this;
     }
 
@@ -81,35 +99,26 @@ public class Vacation {
         return endDate;
     }
 
-    public Vacation setEndDate(LocalDate endDate) {
+    public Vacation setEndDate(final LocalDate endDate) {
         this.endDate = endDate;
         return this;
     }
 
-    public List<User> getParticipants() {
-        return participants;
+    public String getCountryToGo() {
+        return countryToGo;
     }
 
-    public Vacation setParticipants(List<User> participants) {
-        this.participants = participants;
+    public Vacation setCountryToGo(final String countryToGo) {
+        this.countryToGo = countryToGo;
         return this;
     }
 
-    public List<Comment> getComments() {
-        return comments;
+    public String getCityToGo() {
+        return cityToGo;
     }
 
-    public Vacation setComments(List<Comment> comments) {
-        this.comments = comments;
-        return this;
-    }
-
-    public List<Activity> getActivities() {
-        return activities;
-    }
-
-    public Vacation setActivities(List<Activity> activities) {
-        this.activities = activities;
+    public Vacation setCityToGo(final String cityToGo) {
+        this.cityToGo = cityToGo;
         return this;
     }
 
@@ -117,26 +126,26 @@ public class Vacation {
         return tags;
     }
 
-    public Vacation setTags(List<Tag> tags) {
+    public Vacation setTags(final List<Tag> tags) {
         this.tags = tags;
         return this;
     }
 
-    public Transport getTransport() {
-        return transport;
+    public BigDecimal getEstimatedCost() {
+        return estimatedCost;
     }
 
-    public Vacation setTransport(Transport transport) {
-        this.transport = transport;
+    public Vacation setEstimatedCost(final BigDecimal estimatedCost) {
+        this.estimatedCost = estimatedCost;
         return this;
     }
 
-    public User getOwner() {
-        return owner;
+    public int getMinMembers() {
+        return minMembers;
     }
 
-    public Vacation setOwner(User owner) {
-        this.owner = owner;
+    public Vacation setMinMembers(final int minMembers) {
+        this.minMembers = minMembers;
         return this;
     }
 
@@ -144,8 +153,68 @@ public class Vacation {
         return status;
     }
 
-    public Vacation setStatus(VacationStatus status) {
+    public Vacation setStatus(final VacationStatus status) {
         this.status = status;
         return this;
+    }
+
+    public List<Activity> getPlannedActivities() {
+        return plannedActivities;
+    }
+
+    public Vacation setPlannedActivities(final List<Activity> plannedActivities) {
+        this.plannedActivities = plannedActivities;
+        return this;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public Vacation setComments(final List<Comment> comments) {
+        this.comments = comments;
+        return this;
+    }
+
+    public List<Image> getGallery() {
+        return gallery;
+    }
+
+    public Vacation setGallery(final List<Image> gallery) {
+        this.gallery = gallery;
+        return this;
+    }
+
+    public Image getTitleImg() {
+        return titleImg;
+    }
+
+    public int getDays() {
+        return days;
+    }
+
+    public String getDepartureCountry() {
+        return departureCountry;
+    }
+
+    public void setDays(int days) {
+        this.days = days;
+    }
+
+    public Vacation setTitleImg(final Image titleImg) {
+        this.titleImg = titleImg;
+        return this;
+    }
+
+    public void setDepartureCountry(String departureCountry) {
+        this.departureCountry = departureCountry;
+    }
+
+    public Transport getTransport() {
+        return transport;
+    }
+
+    public void setTransport(Transport transport) {
+        this.transport = transport;
     }
 }
