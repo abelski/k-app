@@ -2,19 +2,20 @@ package com.epam.k.web;
 
 import com.epam.k.domain.Image;
 import com.epam.k.service.ImageService;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.net.URI;
 import java.nio.file.Paths;
 
@@ -44,6 +45,16 @@ public class ImageController {
         return new HttpEntity<>(image);
     }
 
+
+    @RequestMapping(path = "/img/{path}")
+    public void image(@PathVariable("path") String path, HttpServletResponse response) throws IOException {
+        File img = new File(path);
+        if (img.exists() && !img.isDirectory()) {
+            FileInputStream imgStream = new FileInputStream(img);
+            response.getWriter().write(IOUtils.toString(imgStream));
+        }
+    }
+
     private void upload(MultipartFile file, Image image) {
         String filePath = Paths.get(uploadDir, image.getId() + "." + image.getExtension()).toString();
         try (BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(filePath)))) {
@@ -53,4 +64,5 @@ public class ImageController {
             LOG.error("Upload error", e);
         }
     }
+
 }
