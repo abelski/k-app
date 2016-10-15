@@ -1,7 +1,7 @@
 'use strict';
-// import { User } from './domain/user';
+import { User } from './domain/user';
 
-// export var userInfo: User;
+export var userInfo: User;
 
 export var PATH_VACS = "vacations";
 export var PATH_VAC_ADD = PATH_VACS + "/add";
