@@ -30,6 +30,18 @@ task wrapper(type: Wrapper) {
     gradleVersion = '3.1'
 }
 
+sourceSets {
+    generated {
+        java {
+            srcDir 'src/main/generated'
+        }
+    }
+}
+
+configurations {
+    querydslapt
+}
+
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
@@ -38,4 +50,21 @@ dependencies {
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.5.3'
 
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+task generateSources(type: JavaCompile, group: 'build', description: 'Generates the QueryDSL query types') {
+    source = sourceSets.main.java
+    classpath = configurations.compile + configurations.querydslapt
+    options.compilerArgs = ['-proc:only',
+                            '-processor',
+                            'org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor']
+    options.warnings = false
+    destinationDir = file('src/main/generated')
+    outputs.dir destinationDir
+}
+
+compileJava.source generateSources.outputs.files
+
+clean {
+    delete sourceSets.generated.java.srcDirs
 }
