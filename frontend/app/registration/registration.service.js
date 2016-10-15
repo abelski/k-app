@@ -225,7 +225,7 @@ var RegistrationService = (function () {
         return Globals.userInfo;
     };
     RegistrationService.prototype.getUserName = function () {
-        return Globals.userInfo ? Globals.userInfo.firstName + " " + Globals.userInfo.lastName : null;
+        return Globals.userInfo ? Globals.userInfo : null;
     };
     RegistrationService.prototype.startExpiresTimer = function (seconds) {
         var _this = this;
