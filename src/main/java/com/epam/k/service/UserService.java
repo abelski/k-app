@@ -63,9 +63,10 @@ public class UserService extends BaseService<User, String> {
         String firstName = user.getFirstName();
         String lastName = user.getLastName();
         if (findOneByFirstNameAndLastName(firstName, lastName) != null) {
-            new HttpEntity<>(user);
+            return user;
+        } else {
+            addAuthority(user, Role.ROLE_USER);
+            return save(user);
         }
-        addAuthority(user, Role.ROLE_USER);
-        return save(user);
     }
 }
