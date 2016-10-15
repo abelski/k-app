@@ -51,7 +51,9 @@ public class ImageController {
         File img = new File(path);
         if (img.exists() && !img.isDirectory()) {
             FileInputStream imgStream = new FileInputStream(img);
-            response.getWriter().write(IOUtils.toString(imgStream));
+            response.getOutputStream().write(IOUtils.toByteArray(imgStream));
+        } else {
+            response.getWriter().print("ХЕР ТАМ!");
         }
     }
 
