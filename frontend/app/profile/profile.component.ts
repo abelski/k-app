@@ -3,23 +3,32 @@ import { RegistrationService } from '../registration/registration.service';
 import { Router }   from '@angular/router';
 import Globals = require('../globals');
 import { User } from '../domain/user';
+import { Vacation } from '../domain/vacation';
+import { ProfileService } from './profile.service';
 
 declare var $: any;
 
 @Component({
     //selector: 'header-login',
     templateUrl: 'app/profile/profile.template.html',
-    providers: [RegistrationService]
+    providers: [RegistrationService, ProfileService]
 })
 
 export class ProfileComponent {
     private user: User;
     private authenticated: boolean = false;
     private isMyProfile = false;
+    private activeVacation: Vacation[];
+    private pastVacation: Vacation[];
+    private ownedVacation: Vacation[];
+    private monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    constructor(private registrationService: RegistrationService, private router: Router) {
+    constructor(private registrationService: RegistrationService, private router: Router, private profileService: ProfileService) {
         router.events.subscribe((val) => this.initProfileView());
         this.user = Globals.userInfo;
+        this.profileService.getActiveVacations(this.user.id).subscribe(vacs => this.activeVacation = vacs);
+        this.profileService.getPastVacations(this.user.id).subscribe(vacs => this.pastVacation = vacs);
+        this.profileService.getOwnedVacations(this.user.id).subscribe(vacs => this.ownedVacation = vacs);
     }
 
     ngAfterViewInit() {
@@ -48,6 +57,7 @@ export class ProfileComponent {
         });
 
         $("#vacationsList h2 a[href='#vacs-active']").trigger("click");
+        
     }
 
     private initProfileView() {
@@ -87,5 +97,9 @@ export class ProfileComponent {
         // TODO update user on server
 
          $('i.' + value.id).hide();
+    }
+
+    getMonthName(monthNum) {
+        return this.monthNames[monthNum];
     }
 }
