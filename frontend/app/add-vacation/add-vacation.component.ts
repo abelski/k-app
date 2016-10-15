@@ -344,38 +344,45 @@ export class AddVacationComponent {
 
     saveTrip() {
         var that = this;
-        // $(document).ready(function (e) {
-        //     var formData = new FormData(this);
-            // $.ajax({
-            //     type: 'POST',
-            //     url: UrlUtil.UPLOAD_IMAGE,
-            //     data: formData,
-            //     cache: false,
-            //     contentType: false,
-            //     processData: false,
-            //     success: function (data) {
-            //         that.titleImg = new Image(data.id, data.altText, data.extension, data.uri, data.description)
-                    
-            //         console.log("CURRENT USER " + that.currentUser);
-            //         that.currentUser.id = "123456";
-            //         that.vacation = new Vacation(that.currentUser, that.members, that.title, that.description,
-            //             that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
-            //             that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry,
-            //             that.targetCountry, that.targetCity);
+        $(document).ready(function (e) {
+            var formData = new FormData(this);
+            console.log("FORM DATA" + formData);
+            delete $.ajaxSettings.headers["Content-Type"];
 
-            //         that.vacationService.createVacation(that.vacation);
-            //     },
-            //     error: function (data) {
-            //         console.log("error");
-            //         console.log(data);
-            //     }
-            // });
-            
-        // });
+            alert("COOL" + $.ajaxSettings.headers);
+
+            $.ajax({
+                type: 'POST',
+                url: UrlUtil.UPLOAD_IMAGE,
+                file: formData,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    console.log(data);
+                    that.titleImg = new Image(data.id, data.altText, data.extension, data.uri, data.description)
+                    $.ajaxSettings.headers["Content-Type"] = "application/json";
+
+                    console.log("CURRENT USER " + that.currentUser);
+                    alert("COOL" + that.currentUser);
+                    that.currentUser.id = "123456";
+                    that.vacation = new Vacation(that.currentUser, that.members, that.title, that.description,
+                        that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
+                        that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry,
+                        that.targetCountry, that.targetCity);
+
+                    that.vacationService.createVacation(that.vacation);
+                },
+                error: function (data) {
+                    console.log("error");
+                    alert("MISTAKE!!1");
+                    console.log(data);
+                }
+            });
+        });
         that.vacation = new Vacation(that.currentUser, that.members, that.title, that.description,
-                         that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
-                         that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry,
-                         that.targetCountry, that.targetCity);
+            that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
+            that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry,
+            that.targetCountry, that.targetCity);
         that.vacationService.createVacation(that.vacation);
         // return false;
     }
