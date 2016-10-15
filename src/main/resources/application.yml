@@ -3,7 +3,8 @@ mongodb:
   
 vacations.list: db.json
 
-uploadDir: /img
+uploadDir: C:/hackaton/img
+resourceImgDir: img
 
 server:
     port: 9090

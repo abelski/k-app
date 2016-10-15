@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -33,10 +32,9 @@ public class ImageController {
     private String uploadDir;
 
     @RequestMapping(value = "/upload", method = POST)
-    public HttpEntity<Image> uploadImage(@RequestParam("file") MultipartFile file) {
+    public HttpEntity<Image> uploadImage(MultipartFile file) {
         final String filename = file.getOriginalFilename();
         LOG.debug("Uploading image with filename {}", filename);
-
         Image image = new Image();
         image.setAltText(filename);
         image.setExtension(filename.split("\\.")[1]);
@@ -48,8 +46,8 @@ public class ImageController {
 
     @RequestMapping(path = "/img/{path}")
     public void image(@PathVariable("path") String path, HttpServletResponse response) throws IOException {
-        String imgPath = "img/" + path + ".jpg";
-        try (InputStream imgResource = getClass().getClassLoader().getResourceAsStream(imgPath);){
+        String imgPath = "/" + path + ".jpg";
+        try (InputStream imgResource = getClass().getClassLoader().getResourceAsStream(uploadDir+imgPath)) {
             response.setContentType("image/jpg");
             response.getOutputStream().write(IOUtils.toByteArray(imgResource));
         } catch (IOException ex) {
@@ -58,10 +56,11 @@ public class ImageController {
     }
 
     private void upload(MultipartFile file, Image image) {
-        String filePath = Paths.get(uploadDir, image.getId() + "." + image.getExtension()).toString();
+        String imageNamePlusExt = image.getId() + "." + image.getExtension();
+        String filePath = Paths.get(uploadDir, imageNamePlusExt).toString();
         try (BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(filePath)))) {
             stream.write(file.getBytes());
-            image.setUri(new URI(filePath));
+            image.setUri(new URI("img/"+imageNamePlusExt));
         } catch (Exception e) {
             LOG.error("Upload error", e);
         }
