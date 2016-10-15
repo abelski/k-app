@@ -12,7 +12,7 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div *ngFor="let gImg of vacation.gallery; let fst = first;" [class]="fst ? 'item active' : 'item'"
-                                [ngStyle]="{'background-image': 'url(../../img/' + gImg + ')'}">
+                                [ngStyle]="{'background-image': 'url(' + 'http://10.9.202.128:9090' + vacation.titleImg.uri + vacation.titleImg.extension + ')'}">
                             <!--<img src="../../img/{{gImg}}">-->
                         </div>
                     </div>

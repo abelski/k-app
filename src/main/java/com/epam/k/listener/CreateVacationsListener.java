@@ -4,8 +4,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+import com.mongodb.client.MongoDatabase;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
+import org.bson.BsonDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationListener;
@@ -24,11 +26,15 @@ public class CreateVacationsListener implements ApplicationListener<ContextRefre
     @Autowired
     private VacationDAO vacationDAO;
 
+    @Autowired
+    private MongoDatabase mongoDatabase;
+
     @Value("${vacations.list}")
     private String vacationsPath;
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        mongoDatabase.drop();
         try (InputStream vacationsStream = getClass().getClassLoader().getResourceAsStream(vacationsPath)) {
             String vacationsJson = IOUtils.toString(vacationsStream);
             ObjectMapper objectMapper = new ObjectMapper();

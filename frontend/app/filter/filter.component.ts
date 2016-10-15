@@ -35,7 +35,9 @@ export class FilterComponent implements OnInit {
         $('#filterDatepicker input').uui_datepicker()
             .on('change', function (dateText, inst) {
                 that.beginDate = $(this).uui_datepicker('getDate'); //the getDate method
-                that.filterService.getFilteredVacations();
+                FilterService.filterDate = that.beginDate;
+                VacationService.vacations = that.filterService.getFilteredVacations();
+                FilterService.isChanged = true;
             });
     }
 

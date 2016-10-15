@@ -19,16 +19,19 @@ var FilterService = (function () {
         this.vacationService = vacationService;
     }
     FilterService.prototype.getFilteredVacations = function () {
-        var body = null;
+        var body = '{';
         if (FilterService.filterTags.length != 0) {
-            body = JSON.stringify(FilterService.filterTags);
+            body += '"tags":' + JSON.stringify(FilterService.filterTags);
         }
         if (FilterService.filterDate != null) {
+            body += '"startDate":' + JSON.stringify(FilterService.filterDate);
         }
+        body += '}';
+        console.log("FILTERS: " + body);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
         // console.log(body);
-        return this.http.post(url_util_1.UrlUtil.FILTER, '{ "tags":' + body + '}', options)
+        return this.http.post(url_util_1.UrlUtil.FILTER, body, options)
             .map(this.extractData)
             .catch(this.handleError);
     };
