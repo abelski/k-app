@@ -1,6 +1,5 @@
  [
 	{
-            "id": 1,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -98,7 +97,6 @@
 				}
     }, 
 	{
-            "id": 1234234,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -195,7 +193,6 @@
 				}
     },
 	{
-            "id": 12344,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -293,7 +290,6 @@
 				}
     },
 	{
-            "id": 153456,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -390,7 +386,6 @@
 				}
     },
 	{
-            "id": 18676,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -487,7 +482,6 @@
 				}
     },
 	{
-            "id": 13123,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -584,7 +578,6 @@
 				}
     },
 	{
-            "id": 1543534,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -681,7 +674,6 @@
 				}
     },
 	{
-            "id": 1532,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -778,7 +770,6 @@
 				}
     },
 	{
-            "id": 16,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -875,7 +866,6 @@
 				}
 				
     },{
-            "id": 15,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -972,7 +962,6 @@
 				}
 				
     },{
-            "id": 14,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1069,7 +1058,6 @@
 				}
 				
     },{
-            "id": 13,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1166,7 +1154,6 @@
 				}
 				
     },{
-            "id": 12,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1263,7 +1250,6 @@
 				}
 				
     },{
-            "id": 11,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1360,7 +1346,6 @@
 				}
 				
     },{
-            "id": 10,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1457,7 +1442,6 @@
 				}
 				
     },{
-            "id": 9,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1554,7 +1538,6 @@
 				}
 				
     },{
-            "id": 8,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1651,7 +1634,6 @@
 				}
 				
     },{
-            "id": 7,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1748,7 +1730,6 @@
 				}
 				
     },{
-            "id": 6,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1845,7 +1826,6 @@
 				}
 				
     },{
-            "id": 5,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1942,7 +1922,6 @@
 				}
 				
     },{
-            "id": 4,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -2039,7 +2018,6 @@
 				}
 				
     },{
-            "id": 3,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -2136,7 +2114,6 @@
 				}
 				
     },{
-            "id": 2,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -2233,7 +2210,6 @@
 				}
 				
     },{
-            "id": 112311,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
