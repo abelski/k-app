@@ -478,6 +478,8 @@ vdp .mdl-card {
 vdp .card-navigation-section {
     width: 100%;
     height: 40px;
+    font-size: 14pt;
+    color: #E4445F;
 }
 .card-body .details {
     padding: 24px 18px;
@@ -517,7 +519,7 @@ vdp .card-navigation-section {
     white-space: normal;
 }
 .member-item {
-    color: #E4445F;
+    color: #A3C644;
     font-size: 14pt;
     padding: 6px 12px;
     display: inline-block;
@@ -701,6 +703,9 @@ vdp .card-body {
 .vac-form-table #tags-block {
     min-height: 44px;
     padding-top: 4px; 
+}
+.card-body .places {
+    padding-left: 16px;
 }
 .card-body .details .days, 
 .card-body .details .dep-country, 

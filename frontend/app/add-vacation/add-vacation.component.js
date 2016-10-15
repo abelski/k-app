@@ -16,10 +16,8 @@ var Globals = require('../globals');
 var vacation_service_1 = require('../feed/vacation/vacation.service');
 var vacation_1 = require('../domain/vacation');
 var tag_1 = require('../domain/tag');
-var image_1 = require('../domain/image');
 var user_service_1 = require('../user-picker/user.service');
 var vacation_status_1 = require('../domain/enums/vacation-status');
-var url_util_1 = require('../utils/url.util');
 var AddVacationComponent = (function () {
     function AddVacationComponent(registrationService, router, userPickerComponent, vacationService, userService) {
         this.registrationService = registrationService;
@@ -291,28 +289,37 @@ var AddVacationComponent = (function () {
     };
     AddVacationComponent.prototype.saveTrip = function () {
         var that = this;
-        $(document).ready(function (e) {
-            var formData = new FormData(this);
-            $.ajax({
-                type: 'POST',
-                url: url_util_1.UrlUtil.UPLOAD_IMAGE,
-                data: formData,
-                cache: false,
-                contentType: false,
-                processData: false,
-                success: function (data) {
-                    that.titleImg = new image_1.Image(data.id, data.altText, data.extension, data.uri, data.description);
-                    console.log("CURRENT USER " + that.currentUser);
-                    that.currentUser.id = "123456";
-                    that.vacation = new vacation_1.Vacation(that.currentUser, that.members, that.title, that.description, that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, vacation_status_1.VacationStatus.OPEN, that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry, that.targetCountry, that.targetCity);
-                    that.vacationService.createVacation(that.vacation);
-                },
-                error: function (data) {
-                    console.log("error");
-                    console.log(data);
-                }
-            });
-        });
+        // $(document).ready(function (e) {
+        //     var formData = new FormData(this);
+        // $.ajax({
+        //     type: 'POST',
+        //     url: UrlUtil.UPLOAD_IMAGE,
+        //     data: formData,
+        //     cache: false,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function (data) {
+        //         that.titleImg = new Image(data.id, data.altText, data.extension, data.uri, data.description)
+        //         console.log("CURRENT USER " + that.currentUser);
+        //         that.currentUser.id = "123456";
+        //         that.vacation = new Vacation(that.currentUser, that.members, that.title, that.description,
+        //             that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
+        //             that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry,
+        //             that.targetCountry, that.targetCity);
+        //         that.vacationService.createVacation(that.vacation);
+        //     },
+        //     error: function (data) {
+        //         console.log("error");
+        //         console.log(data);
+        //     }
+        // });
+        // });
+        that.vacation = new vacation_1.Vacation(that.currentUser, that.members, that.title, that.description, that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, vacation_status_1.VacationStatus.OPEN, that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry, that.targetCountry, that.targetCity);
+        that.vacationService.createVacation(that.vacation);
+        // return false;
+    };
+    AddVacationComponent.prototype.createHashTag = function () {
+        $("#inst-tag").val("Vac-" + this.beginDate);
     };
     AddVacationComponent.prototype.cancelVacCreation = function () {
         var answer = confirm("Are you sure you want to leave this page?");

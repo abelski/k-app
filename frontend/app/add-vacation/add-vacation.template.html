@@ -112,16 +112,16 @@
             <tr>
                 <td><span class="uui-label blue">Instagram</span></td>
                 <td colspan="3">
-                    <input (change)="minMembers = $event.target.value" class="uui-form-element" style="width: 68px" placeholder="Hash-tag Unique for Your Travel"/>
-                    <i class="fa fa-magic" id="insta-magic-btn"></i>
+                    <input id="inst-tag" (change)="minMembers = $event.target.value" class="uui-form-element" style="width: 68px" placeholder="Hash-tag Unique for Your Travel"/>
+                    <i class="fa fa-magic" id="insta-magic-btn" (click)="createHashTag()"></i>
                 </td>
             </tr>
             <tr>
                 <td></td>
                 <td colspan="3">
-                    <a routerLink="/vacations" class="uui-button text-button form-action large" (click)="saveTrip()" id="save-vac-btn" *ngIf="!editMode">Create</a>
+                    <button (click)="saveTrip()" class="uui-button text-button form-action large" id="save-vac-btn" *ngIf="!editMode">Create</button>
                     <a routerLink="/vacations" class="uui-button text-button form-action large" (click)="saveTrip()" id="save-vac-btn" *ngIf="editMode">Apply</a>
-                    <a routerLink="/vacations" class="uui-button text-button large grayed" (click)="cancelVacCreation()" id="cancel-vac-btn">Cancel</a>
+                    <a routerLink="vacations" class="uui-button text-button large grayed" (click)="cancelVacCreation()" id="cancel-vac-btn">Cancel</a>
                 </td>
             </tr>
         </table>
