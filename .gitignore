@@ -1,0 +1,55 @@
+﻿
+.idea/
+build/
+classes/
+.DS_STORE
+
+# Donnt commit the following directories created by pub.
+packages
+pubspec.lock
+.pub
+.packages
+
+/dist/
+.buildlog
+node_modules
+bower_components
+typings/
+
+# Or broccoli working directory
+tmp
+
+# Or the files created by dart2js.
+*.dart.js
+*.dart.precompiled.js
+*.js_
+*.js.deps
+*.js.map
+
+# Include when developing application packages.
+.c9
+.settings/
+*.swo
+modules/.settings
+modules/.vscode
+
+# Don't check in secret files
+*secret.js
+
+# Ignore npm debug log
+npm-debug.log
+
+/docs/bower_components/
+
+# build-analytics
+.build-analytics
+
+# built dart payload tests
+/modules_dart/payload/**/build
+
+# rollup-test output
+/modules/rollup-test/dist/
+
+.gradle/
+src/main/generated/
+src/main/webapp/
