@@ -289,8 +289,8 @@ var AddVacationComponent = (function () {
         this.ownerAdded = true;
     };
     AddVacationComponent.prototype.saveTrip = function () {
-        that.departureCountry = $('#depart-country-input').val();
         var that = this;
+        that.departureCountry = $('#depart-country-input').val();
         that.titleImg = new image_1.Image("", "", ".jpg", "/img/vac_1", "");
         that.vacation = new vacation_1.Vacation(that.currentUser, that.members, that.title, that.description, that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, vacation_status_1.VacationStatus.OPEN, that.plannedActivities, [], [that.titleImg], that.titleImg, that.days, that.transoprt, that.departureCountry, that.targetCountry, that.targetCity);
         that.vacationService.createVacation(that.vacation);

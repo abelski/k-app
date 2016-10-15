@@ -343,8 +343,8 @@ export class AddVacationComponent {
     }
 
     saveTrip() {
-        that.departureCountry = $('#depart-country-input').val();
         var that = this;
+        that.departureCountry = $('#depart-country-input').val();
         that.titleImg = new Image("", "", ".jpg", "/img/vac_1", "");
         that.vacation = new Vacation(that.currentUser, that.members, that.title, that.description,
             that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
