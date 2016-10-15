@@ -27,6 +27,11 @@ export class HeaderComponent {
         this.registrationService.startGoogleAuth();
     }
 
+    startYammerAuth() {
+        this.authInProgress = true;
+        this.registrationService.startYammerAuth();
+    }
+
     logoutGoogle() {
         this.registrationService.doLogout();
         this.authenticated = false;
@@ -41,7 +46,7 @@ export class HeaderComponent {
         }
         this.user = user;
         this.authenticated = true;
-        this.onUserRegister();    
+        this.onUserRegister();
         this.ref.detectChanges();
     }
 

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RegistrationService } from '../registration/registration.service';
-import { Router }   from '@angular/router';
+import { Router } from '@angular/router';
 import Globals = require('../globals');
 import { User } from '../domain/user';
 import { Vacation } from '../domain/vacation';
 import { ProfileService } from './profile.service';
+import { VacationStatus } from '../domain/enums/vacation-status';
 
 declare var $: any;
 
@@ -26,8 +27,16 @@ export class ProfileComponent {
     constructor(private registrationService: RegistrationService, private router: Router, private profileService: ProfileService) {
         router.events.subscribe((val) => this.initProfileView());
         this.user = Globals.userInfo;
-        this.profileService.getActiveVacations(this.user.id).subscribe(vacs => this.activeVacation = vacs);
-        this.profileService.getPastVacations(this.user.id).subscribe(vacs => this.pastVacation = vacs);
+        this.profileService.getActiveVacations(this.user.id)
+            .subscribe(vacs => {
+                this.activeVacation = vacs.filter(vac => vac.status === VacationStatus.OPEN)
+            });
+
+        this.profileService.getPastVacations(this.user.id)
+            .subscribe(vacs => {
+                this.pastVacation = vacs.filter(vac => vac.status === VacationStatus.CLOSED)
+            });
+
         this.profileService.getOwnedVacations(this.user.id).subscribe(vacs => this.ownedVacation = vacs);
     }
 
@@ -57,7 +66,7 @@ export class ProfileComponent {
         });
 
         $("#vacationsList h2 a[href='#vacs-active']").trigger("click");
-        
+
     }
 
     private initProfileView() {
@@ -87,8 +96,8 @@ export class ProfileComponent {
         let id = value.id;
         let inputValue = value.value;
         if (id === "gender") {
-            this.user.gender = inputValue; 
-        } else if (id === "birth"){
+            this.user.gender = inputValue;
+        } else if (id === "birth") {
             this.user.birth = inputValue;
         } else if (id === "region") {
             this.user.region = inputValue;
@@ -96,7 +105,7 @@ export class ProfileComponent {
 
         // TODO update user on server
 
-         $('i.' + value.id).hide();
+        $('i.' + value.id).hide();
     }
 
     getMonthName(monthNum) {

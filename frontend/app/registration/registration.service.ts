@@ -12,6 +12,7 @@ import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
 import Globals = require('../globals');
 
+declare var yam: any;
 declare var Cookies: any;
 
 @Injectable()
@@ -133,6 +134,31 @@ export class RegistrationService {
         }, this.intervalLength);
     }
 
+    public startYammerAuth() {
+        yam.platform.getLoginStatus((response) => {
+            if (response.authResponse) {
+                console.log(response);
+                yam.platform.request({
+                    url: "users.json",     //this is one of many REST endpoints that are available
+                    method: "GET",
+                    data: {    //use the data object literal to specify parameters, as documented in the REST API section of this developer site
+                        "letter": "a",
+                        "page": "2",
+                    },
+                    success: function (user) { //print message response information to the console
+                        alert("The request was successful.");
+                        console.dir(user);
+                    },
+                    error: function (user) {
+                        alert("There was an error with the request.");
+                    }
+                });
+            } else {
+                alert("not logged in")
+            }
+        });
+    }
+
     tryLogin() {
         let tokenSaved = this.getTokenFromCookies();
         if (tokenSaved) {
@@ -146,7 +172,7 @@ export class RegistrationService {
     }
 
     private saveTokenToCookies() {
-        Cookies.set(this.ckTokenName, this.token, { expires: 14/*, secure: true */});
+        Cookies.set(this.ckTokenName, this.token, { expires: 14/*, secure: true */ });
     }
 
     private getTokenFromCookies() {
@@ -154,7 +180,7 @@ export class RegistrationService {
     }
 
     private saveUserToCookies() {
-        Cookies.set(this.ckUserInfoName, JSON.stringify(Globals.userInfo), {expires: 14});
+        Cookies.set(this.ckUserInfoName, JSON.stringify(Globals.userInfo), { expires: 14 });
     }
 
     private restoreUserFromCookies() {
@@ -182,7 +208,7 @@ export class RegistrationService {
 
             this.http.post(UrlUtil.REGISTER_ACCOUNT, body, options);
         }
-    } 
+    }
 
     public doLogout() {
         this.authenticated = false;

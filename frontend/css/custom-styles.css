@@ -1102,3 +1102,16 @@ vdp .card-body {
     left: 2px;
     font-size: 16pt;
 }
+
+button.uui-button.transparent.fa.fa-yammer {
+    height: 20px;
+    width: 20px;
+    background: url(../img/yammer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) brightness(200%);
+}
+
+button.uui-button.transparent.fa.fa-yammer:hover {
+      filter: grayscale(0%) brightness(100%);
+}

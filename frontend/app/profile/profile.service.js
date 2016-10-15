@@ -17,17 +17,17 @@ var ProfileService = (function () {
         this.http = http;
     }
     ProfileService.prototype.getActiveVacations = function (userId) {
-        return this.http.get(url_util_1.UrlUtil.GET_ACTIVE_VACATION)
+        return this.http.get(url_util_1.UrlUtil.GET_ACTIVE_VACATION + userId)
             .map(this.extractData)
             .catch(this.handleError);
     };
     ProfileService.prototype.getPastVacations = function (userId) {
-        return this.http.get(url_util_1.UrlUtil.GET_PAST_VACATION)
+        return this.http.get(url_util_1.UrlUtil.GET_ACTIVE_VACATION + userId)
             .map(this.extractData)
             .catch(this.handleError);
     };
     ProfileService.prototype.getOwnedVacations = function (userId) {
-        return this.http.get(url_util_1.UrlUtil.GET_OWNED_VACATION)
+        return this.http.get(url_util_1.UrlUtil.GET_OWNED_VACATION + userId + "/vacations")
             .map(this.extractData)
             .catch(this.handleError);
     };
