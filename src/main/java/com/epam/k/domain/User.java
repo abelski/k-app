@@ -1,24 +1,13 @@
 package com.epam.k.domain;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class User {
-    @Id
-    private String id;
+public class User extends Principal {
+
     private String email;
     private String firstName;
     private String secondName;
-
-    public String getId() {
-        return id;
-    }
-
-    public User setId(String id) {
-        this.id = id;
-        return this;
-    }
 
     public String getEmail() {
         return email;
