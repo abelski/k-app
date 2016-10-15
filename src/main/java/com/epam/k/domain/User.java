@@ -12,7 +12,6 @@ public class User extends Principal {
     private String skype;
     private String phone;
     private Image avatar;
-    private String token;
 
     public String getId() {
         return id;
@@ -65,13 +64,5 @@ public class User extends Principal {
     public User setAvatar(final Image avatar) {
         this.avatar = avatar;
         return this;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
     }
 }
