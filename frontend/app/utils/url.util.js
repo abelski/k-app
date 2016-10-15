@@ -30,6 +30,10 @@ var UrlUtil = (function () {
      */
     UrlUtil.GET_ALL_USERS = UrlUtil.HOST_NAME + '/users';
     UrlUtil.GET_USER_BY_ID = UrlUtil.HOST_NAME + '/users/';
+    /**
+     * File upload
+     */
+    UrlUtil.UPLOAD_IMAGE = "/upload";
     return UrlUtil;
 }());
 exports.UrlUtil = UrlUtil;

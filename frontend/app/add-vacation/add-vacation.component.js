@@ -19,6 +19,7 @@ var tag_1 = require('../domain/tag');
 var image_1 = require('../domain/image');
 var user_service_1 = require('../user-picker/user.service');
 var vacation_status_1 = require('../domain/enums/vacation-status');
+var url_util_1 = require('../utils/url.util');
 var AddVacationComponent = (function () {
     function AddVacationComponent(registrationService, router, userPickerComponent, vacationService, userService) {
         this.registrationService = registrationService;
@@ -288,8 +289,27 @@ var AddVacationComponent = (function () {
         this.ownerAdded = true;
     };
     AddVacationComponent.prototype.saveTrip = function () {
-        this.vacation = new vacation_1.Vacation(this.owner, this.members, this.title, this.description, this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, vacation_status_1.VacationStatus.OPEN, this.plannedActivities, null, null, new image_1.Image("", "", ".jpg", "vac_1", "ds"), this.days, this.transoprt, this.departureCountry, this.targetCountry, this.targetCity);
-        this.vacationService.createVacation(this.vacation);
+        var that = this;
+        $(document).ready(function (e) {
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: url_util_1.UrlUtil.UPLOAD_IMAGE,
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    that.titleImg = new image_1.Image(data.id, data.altText, data.extension, data.uri, data.description);
+                    this.vacation = new vacation_1.Vacation(this.owner, this.members, this.title, this.description, this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, vacation_status_1.VacationStatus.OPEN, this.plannedActivities, null, null, this.titleImg, this.days, this.transoprt, this.departureCountry, this.targetCountry, this.targetCity);
+                    this.vacationService.createVacation(this.vacation);
+                },
+                error: function (data) {
+                    console.log("error");
+                    console.log(data);
+                }
+            });
+        });
     };
     AddVacationComponent.prototype.cancelVacCreation = function () {
         var answer = confirm("Are you sure you want to leave this page?");
@@ -301,7 +321,7 @@ var AddVacationComponent = (function () {
     AddVacationComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/add-vacation/add-vacation.template.html',
-            providers: [registration_service_1.RegistrationService, user_picker_component_1.UserPickerComponent, user_service_1.UserService]
+            providers: [registration_service_1.RegistrationService, user_picker_component_1.UserPickerComponent, user_service_1.UserService],
         }), 
         __metadata('design:paramtypes', [registration_service_1.RegistrationService, router_1.Router, user_picker_component_1.UserPickerComponent, vacation_service_1.VacationService, user_service_1.UserService])
     ], AddVacationComponent);

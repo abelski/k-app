@@ -33,4 +33,9 @@ export class UrlUtil {
      */
     public static GET_ALL_USERS = UrlUtil.HOST_NAME + '/users';
     public static GET_USER_BY_ID = UrlUtil.HOST_NAME + '/users/';
+
+    /**
+     * File upload
+     */
+    public static UPLOAD_IMAGE: string = "/upload";
 }

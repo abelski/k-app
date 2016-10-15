@@ -45,12 +45,16 @@
                 <td><span class="uui-label blue">Images</span></td>
                 <td colspan="3">
                     <div class="uui-file-uploader fileinput fileinput-new" data-provides="fileinput">
-                        <span class="btn btn-file uui-button">
-                            <span class="fileinput-new">Choose...</span>
-                        <span class="fileinput-exists">Change...</span>
-                        <input type="file" name="..." />
-                        </span>
-                        <span class="fileinput-filename"></span>
+                        <form id="imageUploadForm" method="post">
+                            <span class="btn btn-file uui-button">
+                                <span class="fileinput-new">Choose...</span>
+                            <span class="fileinput-exists">Change...</span>
+                            
+                            <input type="file" id="file" name="..." />
+                            </span>
+                            <span class="fileinput-filename"></span>
+                        </form>
+                        
                         <a href="#" class="close fileinput-exists" data-dismiss="fileinput">×</a>
                     </div>
                 </td>
