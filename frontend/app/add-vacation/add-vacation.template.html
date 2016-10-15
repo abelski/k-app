@@ -108,8 +108,8 @@
             <tr>
                 <td></td>
                 <td colspan="3">
-                    <a href="" class="uui-button text-button form-action large" (click)="saveTrip()" id="save-vac-btn" *ngIf="!editMode">Create</a>
-                    <a href="" class="uui-button text-button form-action large" (click)="saveTrip()" id="save-vac-btn" *ngIf="editMode">Apply</a>
+                    <a routerLink="/vacations" class="uui-button text-button form-action large" (click)="saveTrip()" id="save-vac-btn" *ngIf="!editMode">Create</a>
+                    <a routerLink="/vacations" class="uui-button text-button form-action large" (click)="saveTrip()" id="save-vac-btn" *ngIf="editMode">Apply</a>
                     <a routerLink="/vacations" class="uui-button text-button large grayed" (click)="cancelVacCreation()" id="cancel-vac-btn">Cancel</a>
                 </td>
             </tr>

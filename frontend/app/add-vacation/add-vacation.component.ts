@@ -330,14 +330,12 @@ export class AddVacationComponent {
     }
 
     saveTrip() {
-        this.vacation = new Vacation(-1, this.owner, this.members, this.title, this.description,
+        this.vacation = new Vacation(this.owner, this.members, this.title, this.description,
         this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, VacationStatus.OPEN, 
         this.plannedActivities, null, null, this.titleImg, this.days, this.transoprt, this.departureCountry,
         this.targetCountry, this.targetCity);
 
         this.vacationService.createVacation(this.vacation);
-
-        return false;
     }
 
     cancelVacCreation() {

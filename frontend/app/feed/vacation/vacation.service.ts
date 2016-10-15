@@ -40,10 +40,14 @@ export class VacationService {
         let body = JSON.stringify(vacation);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-
+        console.log("VAC CREATED" + body);
         return this.http.post(UrlUtil.ADD_VACATION, body, options)
             .map(this.extractData)
-            .catch(this.handleError);
+            .catch(this.handleError)
+            .subscribe(vac => {
+                console.log(vac); 
+                return vac; 
+            });
     }
 
     private extractData(res: Response) {

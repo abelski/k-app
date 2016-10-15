@@ -277,9 +277,8 @@ var AddVacationComponent = (function () {
         this.ownerAdded = true;
     };
     AddVacationComponent.prototype.saveTrip = function () {
-        this.vacation = new vacation_1.Vacation(-1, this.owner, this.members, this.title, this.description, this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, vacation_status_1.VacationStatus.OPEN, this.plannedActivities, null, null, this.titleImg, this.days, this.transoprt, this.departureCountry, this.targetCountry, this.targetCity);
+        this.vacation = new vacation_1.Vacation(this.owner, this.members, this.title, this.description, this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, vacation_status_1.VacationStatus.OPEN, this.plannedActivities, null, null, this.titleImg, this.days, this.transoprt, this.departureCountry, this.targetCountry, this.targetCity);
         this.vacationService.createVacation(this.vacation);
-        return false;
     };
     AddVacationComponent.prototype.cancelVacCreation = function () {
         var answer = confirm("Are you sure you want to leave this page?");
