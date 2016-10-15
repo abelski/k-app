@@ -1,5 +1,9 @@
 package com.epam.k.domain;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,9 +15,14 @@ public class Vacation {
     @Id
     private String id;
     private String title;
+    private User owner;
     private String description;
     private Image image;
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate startDate;
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate endDate;
     private List<User> participants;
     private List<Comment> comments;
@@ -117,6 +126,15 @@ public class Vacation {
 
     public Vacation setTransport(Transport transport) {
         this.transport = transport;
+        return this;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public Vacation setOwner(User owner) {
+        this.owner = owner;
         return this;
     }
 }
