@@ -18,6 +18,7 @@ var VacationDetailPageComponent = (function () {
         this.route = route;
         this.router = router;
         this.isInVac = false;
+        this.monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         this.currentUser = Globals.userInfo;
     }
     VacationDetailPageComponent.prototype.ngOnInit = function () {
@@ -27,12 +28,12 @@ var VacationDetailPageComponent = (function () {
             _this.vacationService.getVacation(id)
                 .subscribe(function (vac) {
                 _this.vacation = vac;
-                // setTimeout(function(){
-                //     $("#vac-carousel .carousel-indicators li").each(function(index) {
-                //         $(this).attr("data-slide-to", index);
-                //         console.log(index);
-                //     });
-                // }, 50);
+                setTimeout(function () {
+                    $("#vac-carousel .carousel-indicators li").each(function (index) {
+                        $(this).attr("data-slide-to", index);
+                        console.log(index);
+                    });
+                }, 50);
             });
         });
     };
@@ -41,10 +42,11 @@ var VacationDetailPageComponent = (function () {
         if (!this.isInVac) {
             this.vacationService.addMember(this.vacation.id, this.currentUser);
             this.vacation.members.push(this.currentUser);
+            this.isInVac = true;
         }
     };
-    VacationDetailPageComponent.prototype.goBack = function () {
-        this.router.navigate(['/vacations']);
+    VacationDetailPageComponent.prototype.getMonthName = function (monthNum) {
+        return this.monthNames[monthNum];
     };
     VacationDetailPageComponent = __decorate([
         core_1.Component({

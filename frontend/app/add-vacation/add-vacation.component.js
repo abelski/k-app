@@ -16,6 +16,7 @@ var Globals = require('../globals');
 var vacation_service_1 = require('../feed/vacation/vacation.service');
 var vacation_1 = require('../domain/vacation');
 var tag_1 = require('../domain/tag');
+var image_1 = require('../domain/image');
 var user_service_1 = require('../user-picker/user.service');
 var vacation_status_1 = require('../domain/enums/vacation-status');
 var AddVacationComponent = (function () {
@@ -61,11 +62,21 @@ var AddVacationComponent = (function () {
         });
         $('#pickerDateRange .beginDate')
             .on('change', function (dateText, inst) {
-            that.beginDate = $(this).uui_datepicker('getDate'); //the getDate method
+            var d = new Date();
+            d = $(this).uui_datepicker('getDate');
+            var curr_date = d.getDate();
+            var curr_month = d.getMonth() + 1;
+            var curr_year = d.getFullYear();
+            that.beginDate = curr_year + "-" + ((curr_month < 10) ? "0" : "") + curr_month + "-" + ((curr_date < 10) ? "0" : "") + curr_date;
         });
         $('#pickerDateRange .endDate')
             .on('change', function (dateText, inst) {
-            that.endDate = $(this).uui_datepicker('getDate'); //the getDate method
+            var d = new Date();
+            d = $(this).uui_datepicker('getDate');
+            var curr_date = d.getDate();
+            var curr_month = d.getMonth() + 1;
+            var curr_year = d.getFullYear();
+            that.endDate = curr_year + "-" + ((curr_month < 10) ? "0" : "") + curr_month + "-" + ((curr_date < 10) ? "0" : "") + curr_date;
         });
         $('.selectpicker').selectpicker();
         this.loadCountriesList();
@@ -277,7 +288,7 @@ var AddVacationComponent = (function () {
         this.ownerAdded = true;
     };
     AddVacationComponent.prototype.saveTrip = function () {
-        this.vacation = new vacation_1.Vacation(this.owner, this.members, this.title, this.description, this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, vacation_status_1.VacationStatus.OPEN, this.plannedActivities, null, null, this.titleImg, this.days, this.transoprt, this.departureCountry, this.targetCountry, this.targetCity);
+        this.vacation = new vacation_1.Vacation(this.owner, this.members, this.title, this.description, this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, vacation_status_1.VacationStatus.OPEN, this.plannedActivities, null, null, new image_1.Image("", "", ".jpg", "vac_1", "ds"), this.days, this.transoprt, this.departureCountry, this.targetCountry, this.targetCity);
         this.vacationService.createVacation(this.vacation);
     };
     AddVacationComponent.prototype.cancelVacCreation = function () {

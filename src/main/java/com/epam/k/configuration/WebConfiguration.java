@@ -1,10 +1,15 @@
 package com.epam.k.configuration;
 
+import javax.servlet.Filter;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import com.epam.k.web.filter.SpyFilter;
+
 
 @Configuration
 public class WebConfiguration extends WebMvcConfigurerAdapter {
@@ -23,7 +28,11 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         sender.setPort(587);
         sender.getJavaMailProperties().setProperty("mail.mime.charset", "UTF-8");
         sender.getJavaMailProperties().setProperty("mail.smtp.starttls.enable", "true");
-
         return sender;
+    }
+
+    @Bean("spyFilter")
+    public Filter spyFilter() {
+        return new SpyFilter();
     }
 }

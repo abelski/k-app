@@ -32,11 +32,26 @@
 		"title": "Moto Trip To Europe",
 		"description": "This tour is for adventurers. No, it will not be necessarily challenging of one’s skills. Any experienced touring enthusiast can manage this one fine. But it is a longer tour that will promote independence, exploration and call on you to use navigational skills and use of GPS, which is required. Those who enjoy this tour the most are spirited individuals who break away to make their own discoveries, and there are so many to be made riding the legendary shores of the Black Sea",
 
+		"places": [
+			{
+				"country" : {"name": "Poland"},
+				"city": {"name": "Warsaw"}
+			},
+			{
+				"country" : {"name": "Austria"},
+				"city": {"name": "Venn"}
+			},
+			{
+				"country" : {"name": "Czech Republic"},
+				"city": {"name": "Prague"}
+			}
+		],
+
 		"tags": [
 			{ "name":"motorcycle travel"},
 			{ "name":"Europe"},
 			{ "name":"Black Sea"},
-			{ "name":"Trip"}
+			{ "name":"trip"}
 		],
 
 		"estimatedCost": "350",
@@ -89,7 +104,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"/img/vac_1.",
+			"uri":"/img/gal_123.",
 			"description":"Very good description"
 		}
 	},
@@ -126,11 +141,19 @@
 		"title": "Yoga Tour To India",
 		"description": "Yoga was first practiced in India in around 5000 BC. Up to this day, India is still the best destination for yoga holidays. There are many yoga ashrams as well as yoga resorts in India, aimed at cultivating one’s spirituality. They can offer you a great spiritual and meditative experience on your India yoga vacation.",
 
+		"places": [
+			{
+				"country" : {"name": "India"},
+				"city": {"name": "Barcelona"}
+			}
+		],
+
 		"tags": [
-			{ "name":"Yoga"},
-			{ "name":"IndiaTour"},
+			{ "name":"yoga"},
+			{ "name":"indiaTour"},
 			{ "name":"hathayoga "},
 			{ "name":"healthy body"},
+			{ "name":"trip"},
 			{ "name":"openChakras"}
 		],
 
@@ -169,13 +192,19 @@
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"/img/gal_123.",
+				"uri":"/img/gal_211.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"/img/gal_124.",
+				"uri":"/img/gal_212.",
+				"description":"Very good description"
+			},
+			{
+				"altText":"Smth else",
+				"extension":"jpg",
+				"uri":"/img/gal_213.",
 				"description":"Very good description"
 			}
 		],
@@ -184,7 +213,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"/img/vac_2.",
+			"uri":"/img/gal_211.",
 			"description":"Very good description"
 		}
 	},
@@ -221,6 +250,13 @@
 		"title": "Tour To Spain on football",
 		"description": "No football tour would be complete without a visit to Barcelona’s majestic Nou Camp stadium. Wherever you sit in the stadium, your first view inside Camp Nou stadium is likely to take your breath away. With fully seated capacity for 98,772 people, it is the largest all-seater stadium in Europe and 11th largest in the world",
 
+		"places": [
+			{
+				"country" : {"name": "Spain"},
+				"city": {"name": "Barcelona"}
+			}
+		],
+
 		"tags": [
 			{ "name":"football"},
 			{ "name":"Barcelona"},
@@ -232,9 +268,9 @@
 		"minMembers": "3",
 		"status": "CLOSED",
 		"plannedActivities": [
-			{"title":"Football"},
-			{"title":"Surfing"},
-			{"title":"PyromydWatching"}
+			{"title":"football"},
+			{"title":"match day"},
+			{"title":"Barcelona"}
 		],
 		"comments": [
 			{
@@ -263,13 +299,13 @@
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"/img/gal_123.",
+				"uri":"/img/gal_311.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"/img/gal_124.",
+				"uri":"/img/gal_312.",
 				"description":"Very good description"
 			}
 		],
@@ -278,7 +314,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"/img/vac_3.",
+			"uri":"/img/gal_311.",
 			"description":"Very good description"
 		}
 	},
@@ -312,26 +348,32 @@
 		}
 
 		],
-		"title": "Trip To Hackathon",
+		"title": "Trip To Bukovel",
 		"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+
+		"places": [
+			{
+				"country" : {"name": "Ukraine"},
+				"city": {"name": "Polanica"}
+			}
+		],
 
 		"tags": [
 			{ "name":"winter"},
-			{ "name":"Egypt"},
-			{ "name":"Mordor"},
-			{ "name":"Shire"},
-			{ "name":"Ausralia"},
-			{ "name":"Some Islands"},
-			{ "name":"The End of The World"}
+			{ "name":"NewYear"},
+			{ "name":"ChristmasHolidays"},
+			{ "name":"trip"},
+			{ "name":"Bukovel"}
 		],
 
-		"estimatedCost": "111.11",
-		"minMembers": "5",
+		"estimatedCost": "890",
+		"minMembers": "4",
 		"status": "OPEN",
 		"plannedActivities": [
-			{"title":"Ski"},
-			{"title":"Surfing"},
-			{"title":"PyromydWatching"}
+			{"title":"ski"},
+			{"title":"snowboarding"},
+			{"title":"tripBukovel"},
+			{"title":"New Year"}
 		],
 		"comments": [
 			{
@@ -353,20 +395,20 @@
 				"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
 			}
 		],
-		"beginDate": [2016,3,2],
-		"endDate": [2016,6,2],
+		"beginDate": [2016,12,29],
+		"endDate": [2017,1,6],
 		"gallery": [
 			{
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"/img/gal_123.",
+				"uri":"/img/gal_411.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"/img/gal_124.",
+				"uri":"/img/gal_412.",
 				"description":"Very good description"
 			}
 		],
@@ -375,7 +417,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"/img/vac_4.",
+			"uri":"/img/gal_411.",
 			"description":"Very good description"
 		}
 	},
@@ -409,27 +451,31 @@
 		}
 
 		],
-		"title": "Trip To Egypt",
-		"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"title": "Trip To Hackathon",
+		"description": "Hackathon - is a programming marathon which usually lasts for 12 hours. It's a developer's forum, during which, specialists from various domains of software development are working altogether in order to resolve some issue (problem)",
+
+		"places": [
+			{
+				"country" : {"name": "Belarus"},
+				"city": {"name": "Minsk"}
+			}
+		],
 
 		"tags": [
-			{ "name":"winter"},
-			{ "name":"Egypt"},
-			{ "name":"Mordor"},
-			{ "name":"Shire"},
-			{ "name":"Ausralia"},
-			{ "name":"Some Islands"},
-			{ "name":"The End of The World"}
+			{ "name":"EpamHackathon"},
+			{ "name":"MinskCity"},
+			{ "name":"K_app"}
 		],
 
-		"estimatedCost": "111.11",
-		"minMembers": "5",
+		"estimatedCost": "10",
+		"minMembers": "8",
 		"status": "OPEN",
 		"plannedActivities": [
-			{ "title":"Ski"},
-			{ "title":"Surfing"},
-			{ "title":"PyromydWatching"}
+			{ "title":"coding"},
+			{ "title":"presentation"}
+
 		],
+
 		"comments": [
 			{
 
@@ -450,20 +496,20 @@
 				"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
 			}
 		],
-		"beginDate": [2016,3,2],
-		"endDate": [2016,6,2],
+		"beginDate": [2016,10,14],
+		"endDate": [2016,10,15],
 		"gallery": [
 			{
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"/img/gal_123.",
+				"uri":"/img/gal_511.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"/img/gal_124.",
+				"uri":"/img/gal_512.",
 				"description":"Very good description"
 			}
 		],
@@ -472,7 +518,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"/img/vac_1.",
+			"uri":"/img/gal_511.",
 			"description":"Very good description"
 		}
 	}
