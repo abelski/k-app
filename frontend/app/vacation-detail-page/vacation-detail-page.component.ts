@@ -29,7 +29,7 @@ export class VacationDetailPageComponent implements OnInit {
 
     ngOnInit() {
         this.route.params.forEach((params: Params) => {
-            let id = +params['id'];
+            let id = params['id'];
             this.vacationService.getVacation(id)
                 .subscribe(vac => { 
                     this.vacation = vac;

@@ -47,7 +47,7 @@ export class VacationCartComponent {
     public getVacations() {
         if (FilterService.filterTags.length > 0) {
             console.log("have a filter");
-            VacationService.vacations = this.filterService.getVacationsByTag();
+            VacationService.vacations = this.filterService.getFilteredVacations();
             this.vacations = VacationService.vacations;
         } else {
             console.log("haven't a filter");

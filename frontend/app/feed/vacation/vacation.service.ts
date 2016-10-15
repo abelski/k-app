@@ -20,13 +20,13 @@ export class VacationService {
             .catch(this.handleError);
     }
 
-    public getVacation(id: number): Observable<Vacation> {
+    public getVacation(id: any): Observable<Vacation> {
         return this.http.get(UrlUtil.GET_VACATION + id)
             .map(this.extractData)
             .catch(this.handleError);
     }
 
-    public addMember(id: number, member: User) {
+    public addMember(id: any, member: User) {
         let body = JSON.stringify(member);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });

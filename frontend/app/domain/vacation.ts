@@ -26,7 +26,7 @@ export class Vacation {
     public departureCountry: string,
     public targetCountry: string,
     public targetCity: string,
-    public id?: number
+    public id?: any
     ) {
         
     }

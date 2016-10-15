@@ -36,7 +36,7 @@ var VacationCartComponent = (function () {
     VacationCartComponent.prototype.getVacations = function () {
         if (filter_service_1.FilterService.filterTags.length > 0) {
             console.log("have a filter");
-            vacation_service_1.VacationService.vacations = this.filterService.getVacationsByTag();
+            vacation_service_1.VacationService.vacations = this.filterService.getFilteredVacations();
             this.vacations = vacation_service_1.VacationService.vacations;
         }
         else {
