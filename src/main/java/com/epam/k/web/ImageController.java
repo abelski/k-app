@@ -48,12 +48,12 @@ public class ImageController {
 
     @RequestMapping(path = "/img/{path}")
     public void image(@PathVariable("path") String path, HttpServletResponse response) throws IOException {
-        File img = new File(path);
+        File img = new File("C://hackaton/img"+path);
         if (img.exists() && !img.isDirectory()) {
             FileInputStream imgStream = new FileInputStream(img);
             response.getOutputStream().write(IOUtils.toByteArray(imgStream));
         } else {
-            response.getWriter().print("ХЕР ТАМ!");
+            response.getWriter().print(img.getAbsolutePath());
         }
     }
 
