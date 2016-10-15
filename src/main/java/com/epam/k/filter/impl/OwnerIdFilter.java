@@ -5,7 +5,7 @@ import com.epam.k.filter.Filter;
 import com.epam.k.web.dto.FilterDTO;
 import com.querydsl.core.types.dsl.BooleanExpression;
 
-public class OwnerFilter implements Filter {
+public class OwnerIdFilter implements Filter {
     @Override
     public BooleanExpression addConstraint(BooleanExpression filterExpression, FilterDTO filter) {
         String ownerId = filter.getOwnerId();
