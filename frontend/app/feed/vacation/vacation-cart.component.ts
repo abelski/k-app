@@ -15,8 +15,8 @@ declare var $: any;
 
 @Component({
     selector: 'vacation-cart',
-    templateUrl: 'app/feed/vacation/vacation-cart.template.html',
-    providers: [VacationService, FilterService, FilterComponent]
+    templateUrl: 'app/feed/vacation/vacation-cart.template.html'
+    // providers: [VacationService, FilterService, FilterComponent]
 })
 export class VacationCartComponent {
     vacations: Observable<Vacation[]> = null;

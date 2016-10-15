@@ -8,8 +8,6 @@ declare var $: any;
 })
 
 export class WhatsupComponent {
-    private imgMinHeight = 50;
-    private imgMaxHeight = 350;
 
     private instImages = [];
 
