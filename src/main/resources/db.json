@@ -230,7 +230,7 @@
 
 		"estimatedCost": "600",
 		"minMembers": "3",
-		"status": "",
+		"status": "CLOSED",
 		"plannedActivities": [
 			{"title":"Football"},
 			{"title":"Surfing"},
