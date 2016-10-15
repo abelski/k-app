@@ -9,6 +9,8 @@ public class User extends Principal {
     private String id;
     private String firstName;
     private String lastName;
+    private String birth;
+    private String region;
     private String skype;
     private String phone;
     private Image avatar;
@@ -63,6 +65,24 @@ public class User extends Principal {
 
     public User setAvatar(final Image avatar) {
         this.avatar = avatar;
+        return this;
+    }
+
+    public String getBirth() {
+        return birth;
+    }
+
+    public User setBirth(String birth) {
+        this.birth = birth;
+        return this;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public User setRegion(String region) {
+        this.region = region;
         return this;
     }
 }
