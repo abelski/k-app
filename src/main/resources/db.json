@@ -31,6 +31,7 @@
 		],
 		"title": "Moto Trip To Europe",
 		"description": "This tour is for adventurers. No, it will not be necessarily challenging of one’s skills. Any experienced touring enthusiast can manage this one fine. But it is a longer tour that will promote independence, exploration and call on you to use navigational skills and use of GPS, which is required. Those who enjoy this tour the most are spirited individuals who break away to make their own discoveries, and there are so many to be made riding the legendary shores of the Black Sea",
+		"departureCountry": "Austria",
 
 		"places": [
 			{
@@ -84,6 +85,7 @@
 		],
 		"beginDate": [2016,6,2],
 		"endDate": [2016,6,14],
+		"days":12,
 		"gallery": [
 			{
 
@@ -140,21 +142,14 @@
 		],
 		"title": "Yoga Tour To India",
 		"description": "Yoga was first practiced in India in around 5000 BC. Up to this day, India is still the best destination for yoga holidays. There are many yoga ashrams as well as yoga resorts in India, aimed at cultivating one’s spirituality. They can offer you a great spiritual and meditative experience on your India yoga vacation.",
-
-		"places": [
-			{
-				"country" : {"name": "India"},
-				"city": {"name": "Barcelona"}
-			}
-		],
+		"departureCountry": "Poland",
 
 		"tags": [
 			{ "name":"yoga"},
-			{ "name":"indiaTour"},
 			{ "name":"hathayoga "},
 			{ "name":"healthy body"},
-			{ "name":"trip"},
-			{ "name":"openChakras"}
+			{ "name":"trip"}
+
 		],
 
 		"estimatedCost": "658",
@@ -187,6 +182,7 @@
 		],
 		"beginDate": [2016,8,3],
 		"endDate": [2016,8,18],
+		"days":15,
 		"gallery": [
 			{
 
@@ -249,6 +245,7 @@
 		],
 		"title": "Tour To Spain on football",
 		"description": "No football tour would be complete without a visit to Barcelona’s majestic Nou Camp stadium. Wherever you sit in the stadium, your first view inside Camp Nou stadium is likely to take your breath away. With fully seated capacity for 98,772 people, it is the largest all-seater stadium in Europe and 11th largest in the world",
+		"departureCountry": "Latvia",
 
 		"places": [
 			{
@@ -261,7 +258,8 @@
 			{ "name":"football"},
 			{ "name":"Barcelona"},
 			{ "name":"Camp Nou"},
-			{ "name":"OceanSea"}
+			{ "name":"travel"}
+
 		],
 
 		"estimatedCost": "600",
@@ -294,6 +292,7 @@
 		],
 		"beginDate": [2016,5,5],
 		"endDate": [2016,5,8],
+		"days":3,
 		"gallery": [
 			{
 
@@ -350,7 +349,7 @@
 		],
 		"title": "Trip To Bukovel",
 		"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
+		"departureCountry": "Ukraine",
 		"places": [
 			{
 				"country" : {"name": "Ukraine"},
@@ -361,7 +360,7 @@
 		"tags": [
 			{ "name":"winter"},
 			{ "name":"NewYear"},
-			{ "name":"ChristmasHolidays"},
+			{ "name":"travel"},
 			{ "name":"trip"},
 			{ "name":"Bukovel"}
 		],
@@ -397,6 +396,7 @@
 		],
 		"beginDate": [2016,12,29],
 		"endDate": [2017,1,6],
+		"days":23,
 		"gallery": [
 			{
 
@@ -453,7 +453,7 @@
 		],
 		"title": "Trip To Hackathon",
 		"description": "Hackathon - is a programming marathon which usually lasts for 12 hours. It's a developer's forum, during which, specialists from various domains of software development are working altogether in order to resolve some issue (problem)",
-
+		"departureCountry": "Belarus",
 		"places": [
 			{
 				"country" : {"name": "Belarus"},
@@ -464,7 +464,8 @@
 		"tags": [
 			{ "name":"EpamHackathon"},
 			{ "name":"MinskCity"},
-			{ "name":"K_app"}
+			{ "name":"K_app"},
+			{ "name":"trip"}
 		],
 
 		"estimatedCost": "10",
@@ -497,7 +498,8 @@
 			}
 		],
 		"beginDate": [2016,10,14],
-		"endDate": [2016,10,15],
+		"endDate": [2016,10,16],
+		"days":3,
 		"gallery": [
 			{
 

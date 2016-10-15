@@ -22,7 +22,7 @@ var UserService = (function () {
             .catch(this.handleError);
     };
     UserService.prototype.getUserById = function (id) {
-        return this.http.get(url_util_1.UrlUtil.GET_USER_BY_ID)
+        return this.http.get(url_util_1.UrlUtil.GET_USER_BY_ID + id)
             .map(this.extractData)
             .catch(this.handleError);
     };

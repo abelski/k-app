@@ -16,7 +16,7 @@ export class UserService {
     }
 
     public getUserById(id: any) {
-        return this.http.get(UrlUtil.GET_USER_BY_ID)
+        return this.http.get(UrlUtil.GET_USER_BY_ID + id)
             .map(this.extractData)
             .catch(this.handleError);
     }

@@ -29,7 +29,7 @@ var UrlUtil = (function () {
      * Users url's
      */
     UrlUtil.GET_ALL_USERS = UrlUtil.HOST_NAME + '/users';
-    UrlUtil.GET_USER_BY_ID = UrlUtil.HOST_NAME + '/users/';
+    UrlUtil.GET_USER_BY_ID = UrlUtil.HOST_NAME + '/user/';
     /**
      * File upload
      */

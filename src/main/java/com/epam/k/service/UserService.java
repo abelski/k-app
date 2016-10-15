@@ -53,4 +53,8 @@ public class UserService extends BaseService<User, String> {
         user.setPassword(passwordEncoder.encode(password));
         save(user);
     }
+
+    public User findOneByFirstNameAndLastName(String firstName, String lastName) {
+        return getRepository().findOneByFirstNameAndLastName(firstName, lastName);
+    }
 }

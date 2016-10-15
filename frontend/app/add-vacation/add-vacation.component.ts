@@ -12,6 +12,7 @@ import { Image } from '../domain/image';
 import { UserService } from '../user-picker/user.service';
 import { VacationStatus } from '../domain/enums/vacation-status';
 import { UrlUtil } from '../utils/url.util';
+import { Observable } from 'rxjs/Observable';
 
 declare var $: any;
 
@@ -325,13 +326,15 @@ export class AddVacationComponent {
         //that.participants = [];
         $("#user-picker-modal-body .selected").each(function (index, el) {
             var name = $(el).text();
-            var id = +$(el).attr('id');
-            var member: User;
-            that.userService.getUserById(id).subscribe(m => member = m);
-            if (that.members.indexOf(member) == -1) {
-                that.members.push(name);
-            }
-            $(el).removeClass("selected");
+            var id = $(el).attr('id');
+            var member = that.userService.getUserById(id);
+            member.subscribe(m => {
+                debugger;
+                if (that.participants.indexOf(m) == -1) {
+                    that.participants.push(m);
+                }
+                $(el).removeClass("selected");
+            });
         });
     }
 

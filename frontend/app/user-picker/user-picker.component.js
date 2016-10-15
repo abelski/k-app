@@ -12,14 +12,7 @@ var core_1 = require('@angular/core');
 var user_service_1 = require('./user.service');
 var UserPickerComponent = (function () {
     function UserPickerComponent(userService) {
-        var _this = this;
         this.userService = userService;
-        // private userList = ["Aaron A. Aaronson", "Nima Laszlo", "Khalil Seachnall", "Platon I'timad", "Sakhr Ranulf", "Valentin Haroun",
-        //     "Gallagher Baldur", "Jafar Aodhan", "Eyvindur Kajetan", "Einion Leary", "Augusto Kristof", "Nasir Miloslav", "Bearach Murchadh",
-        //     "Fechin Darragh", "Dionisio Maximiliano", "Aracely Woerner", "Silvia Giehl", "Eugenia Houston", "Ofelia Ali", "Þordis Petocs", "Bergljot Hanigan",
-        //     "Herodotus Adamsen", "Susann Danielsen", "Luciana Hummel", "Rasmus Hermansen", "Abraham Falk", "Theodoulos Steensen", "Grete Landvik", "Pomponia Carlson"];
-        this.userList = [];
-        this.userService.getAllUsers().subscribe(function (user) { return _this.userList.push(user); });
         // makes Case Insensitive 'contains'
         $.extend($.expr[":"], {
             "containsIN": function (elem, i, match, array) {
@@ -28,13 +21,18 @@ var UserPickerComponent = (function () {
         });
     }
     UserPickerComponent.prototype.ngAfterViewInit = function () {
-        $("#user-filter-input").bind("input", function () {
-            var filterText = $(this).val();
-            $(".user-pick-item").removeClass("hidden");
-            $(".user-pick-item:not(:containsIN('" + filterText + "'))").addClass("hidden");
-        });
-        $(".user-pick-item").click(function () {
-            $(this).toggleClass("selected");
+        this.userList = this.userService.getAllUsers();
+        this.userList.subscribe(function () {
+            setTimeout(function () {
+                $("#user-filter-input").bind("input", function () {
+                    var filterText = $(this).val();
+                    $(".user-pick-item").removeClass("hidden");
+                    $(".user-pick-item:not(:containsIN('" + filterText + "'))").addClass("hidden");
+                });
+                $(".user-pick-item").click(function () {
+                    $(this).toggleClass("selected");
+                });
+            }, 100);
         });
     };
     UserPickerComponent.prototype.init = function () {

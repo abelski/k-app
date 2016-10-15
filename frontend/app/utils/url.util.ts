@@ -32,7 +32,7 @@ export class UrlUtil {
      * Users url's
      */
     public static GET_ALL_USERS = UrlUtil.HOST_NAME + '/users';
-    public static GET_USER_BY_ID = UrlUtil.HOST_NAME + '/users/';
+    public static GET_USER_BY_ID = UrlUtil.HOST_NAME + '/user/';
 
     /**
      * File upload

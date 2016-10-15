@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Vacation } from '../domain/vacation';
 import { UserService } from './user.service';
+import { Observable } from 'rxjs/Observable';
 import { User } from '../domain/user';
 declare var $: any;
 
@@ -16,10 +17,9 @@ export class UserPickerComponent {
     //     "Fechin Darragh", "Dionisio Maximiliano", "Aracely Woerner", "Silvia Giehl", "Eugenia Houston", "Ofelia Ali", "Þordis Petocs", "Bergljot Hanigan",
     //     "Herodotus Adamsen", "Susann Danielsen", "Luciana Hummel", "Rasmus Hermansen", "Abraham Falk", "Theodoulos Steensen", "Grete Landvik", "Pomponia Carlson"];
 
-    private userList: User[] = [];
+    private userList: Observable<User>;
 
     constructor(private userService: UserService) {
-        this.userService.getAllUsers().subscribe(user => this.userList.push(user));
         // makes Case Insensitive 'contains'
         $.extend($.expr[":"], {
             "containsIN": function (elem, i, match, array) {
@@ -29,15 +29,22 @@ export class UserPickerComponent {
     }
 
     ngAfterViewInit() {
-        $("#user-filter-input").bind("input", function () {
-            var filterText = $(this).val();
-            $(".user-pick-item").removeClass("hidden");
-            $(".user-pick-item:not(:containsIN('" + filterText + "'))").addClass("hidden");
+
+        this.userList = this.userService.getAllUsers();
+        this.userList.subscribe(() => {
+            setTimeout(function () {
+                $("#user-filter-input").bind("input", function () {
+                    var filterText = $(this).val();
+                    $(".user-pick-item").removeClass("hidden");
+                    $(".user-pick-item:not(:containsIN('" + filterText + "'))").addClass("hidden");
+                });
+
+                $(".user-pick-item").click(function () {
+                    $(this).toggleClass("selected");
+                });
+            }, 100);
         });
-        
-        $(".user-pick-item").click(function() {
-            $(this).toggleClass("selected");
-        });
+
     }
 
     public init() {

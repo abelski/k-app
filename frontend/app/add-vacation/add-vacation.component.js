@@ -275,13 +275,15 @@ var AddVacationComponent = (function () {
         //that.participants = [];
         $("#user-picker-modal-body .selected").each(function (index, el) {
             var name = $(el).text();
-            var id = +$(el).attr('id');
-            var member;
-            that.userService.getUserById(id).subscribe(function (m) { return member = m; });
-            if (that.members.indexOf(member) == -1) {
-                that.members.push(name);
-            }
-            $(el).removeClass("selected");
+            var id = $(el).attr('id');
+            var member = that.userService.getUserById(id);
+            member.subscribe(function (m) {
+                debugger;
+                if (that.participants.indexOf(m) == -1) {
+                    that.participants.push(m);
+                }
+                $(el).removeClass("selected");
+            });
         });
     };
     AddVacationComponent.prototype.addOwner = function () {
