@@ -13,6 +13,7 @@ import java.util.List;
 
 @Service
 public class VacationService extends BaseService<Vacation, String> {
+
     @Autowired
     private VacationDAO vacationDAO;
 
@@ -26,17 +27,11 @@ public class VacationService extends BaseService<Vacation, String> {
         return vacationDAO;
     }
 
-   public Iterable<Vacation> findAllByOwner(final User user)
-   {
-      final List<Vacation> vacationsOwnedByUser = getRepository().findAllByOwnerAndStatusIn(user, Arrays.asList
-            (VacationStatus.OPEN, VacationStatus.CLOSED));
-      return vacationsOwnedByUser;
-   }
+    public Iterable<Vacation> findAllByOwner(final User user) {
+        return getRepository().findAllByOwnerAndStatusIn(user, Arrays.asList(VacationStatus.OPEN, VacationStatus.CLOSED));
+    }
 
-   public Iterable<Vacation> findAllByMember(final User user)
-   {
-      final List<Vacation> vacationsOwnedByMember = getRepository().findAllByMemberAndStatusIn(user, Arrays.asList
-              (VacationStatus.OPEN, VacationStatus.CLOSED));
-      return vacationsOwnedByMember;
-   }
+    public Iterable<Vacation> findAllByMember(final User user) {
+        return getRepository().findAllByMemberAndStatusIn(user, Arrays.asList(VacationStatus.OPEN, VacationStatus.CLOSED));
+    }
 }
