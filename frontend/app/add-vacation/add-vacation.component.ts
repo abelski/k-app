@@ -329,7 +329,6 @@ export class AddVacationComponent {
             var id = $(el).attr('id');
             var member = that.userService.getUserById(id);
             member.subscribe(m => {
-                debugger;
                 if (that.participants.indexOf(m) == -1) {
                     that.participants.push(m);
                 }

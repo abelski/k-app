@@ -251,7 +251,7 @@ export class RegistrationService {
     }
 
     public getUserName() {
-        return Globals.userInfo ? Globals.userInfo.firstName + " " + Globals.userInfo.lastName : null;
+        return Globals.userInfo ? Globals.userInfo : null;
     }
 
     private startExpiresTimer(seconds: number) {
