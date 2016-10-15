@@ -13,6 +13,10 @@ var router_1 = require('@angular/router');
 var vacation_service_1 = require('../feed/vacation/vacation.service');
 var Globals = require('../globals');
 var VacationDetailPageComponent = (function () {
+    //    private place = {
+    //        country: {name: "Germany"},
+    //        city: {name: "Dortmund"},
+    //    }
     function VacationDetailPageComponent(vacationService, route, router) {
         this.vacationService = vacationService;
         this.route = route;
