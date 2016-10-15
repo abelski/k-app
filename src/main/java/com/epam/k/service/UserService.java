@@ -2,16 +2,16 @@ package com.epam.k.service;
 
 import com.epam.k.dao.UserDAO;
 import com.epam.k.domain.User;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.epam.k.domain.enums.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.EnumSet;
+
 @Service
 public class UserService extends BaseService<User, String> {
-    private final static Logger LOG = LoggerFactory.getLogger(UserService.class);
 
     @Autowired
     private UserDAO userDAO;
@@ -30,11 +30,19 @@ public class UserService extends BaseService<User, String> {
     }
 
     public User findByUsername(final String username) {
-        LOG.debug("Requesting user '{}' from DB", username);
         if (username == null) {
             return null;
         }
         return getRepository().findByUsername(username);
+    }
+
+    public void addAuthority(User user, Role role) {
+        EnumSet<Role> authorities = user.getAuthorities();
+        if (authorities == null) {
+            authorities = EnumSet.noneOf(Role.class);
+        }
+        authorities.add(role);
+        user.setAuthorities(authorities);
     }
 
     public void setEncodedPassword(final User user, final String password) {
