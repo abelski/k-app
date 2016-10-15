@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "firstName": "Valera",
+    "lastName": "Valerov",
+    "skype": "qwert",
+    "phone": "+123 44 234 3434",
+    "avatar": {
+      "altText": "alt_text",
+      "extension": "jpg",
+      "uri": "/img/avatar1.",
+      "description": "Very good description"
+    }
+  },
+  {
+    "id": "2",
+    "firstName": "Leha",
+    "lastName": "Evlanov",
+    "skype": "leha.here",
+    "phone": "+375 33 345 0182",
+    "avatar": {
+
+      "altText":"alt_text",
+      "extension":"jpg",
+      "uri":"/img/avatar1.",
+      "description":"Very good description"
+    }
+  }
+]
