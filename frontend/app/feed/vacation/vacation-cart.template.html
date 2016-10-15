@@ -2,11 +2,12 @@
     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="addVacFAB" routerLink="/vacations/add">
         <i class="material-icons">add</i>
     </button>
+    <i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw" *ngIf="isUpdating"></i>
     <div class="row vac-row" *ngFor="let vacation of vacations | async">
         <div>
             <div class="card card-big">
                 <div routerLink="/vacations/{{vacation.id}}" class="mini-card-body">
-                    <div [ngStyle]="{'background-image': 'url(' + vacation.titleImg.uri + vacation.titleImg.extension + ')'}" class="card-image">
+                    <div [ngStyle]="{'background-image': 'url(' + 'http://10.9.202.128:9090' + vacation.titleImg.uri + vacation.titleImg.extension + ')'}" class="card-image">
                         <h2 class="card-title">{{vacation.title}}</h2>
                     </div>
                     <div class="mini-card-details">

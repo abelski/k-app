@@ -27,8 +27,7 @@ public class Vacation {
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate endDate;
-    private String countryToGo;
-    private String cityToGo;
+    private List<Place> places;
     private List<Tag> tags;
     private BigDecimal estimatedCost;
     private int minMembers;
@@ -101,24 +100,6 @@ public class Vacation {
 
     public Vacation setEndDate(final LocalDate endDate) {
         this.endDate = endDate;
-        return this;
-    }
-
-    public String getCountryToGo() {
-        return countryToGo;
-    }
-
-    public Vacation setCountryToGo(final String countryToGo) {
-        this.countryToGo = countryToGo;
-        return this;
-    }
-
-    public String getCityToGo() {
-        return cityToGo;
-    }
-
-    public Vacation setCityToGo(final String cityToGo) {
-        this.cityToGo = cityToGo;
         return this;
     }
 
@@ -216,5 +197,14 @@ public class Vacation {
 
     public void setTransport(Transport transport) {
         this.transport = transport;
+    }
+
+    public List<Place> getPlaces() {
+        return places;
+    }
+
+    public Vacation setPlaces(List<Place> places) {
+        this.places = places;
+        return this;
     }
 }

@@ -122,6 +122,17 @@ var RegistrationService = (function () {
             }
         }, this.intervalLength);
     };
+    RegistrationService.prototype.startYammerAuth = function () {
+        yam.platform.getLoginStatus(function (response) {
+            console.log(response);
+            if (response.authResponse) {
+                console.log(response);
+            }
+            else {
+                alert("not logged in");
+            }
+        });
+    };
     RegistrationService.prototype.tryLogin = function () {
         var tokenSaved = this.getTokenFromCookies();
         if (tokenSaved) {

@@ -1,19 +1,25 @@
 package com.epam.k.domain;
 
+import com.epam.k.domain.enums.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
+import java.util.EnumSet;
 
 public class Principal implements UserDetails {
 
     private String username;
     private String passwordHash;
+    private EnumSet<Role> authorities;
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+    @JsonIgnore
+    public EnumSet<Role> getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(EnumSet<Role> authorities) {
+        this.authorities = authorities;
     }
 
     @Override
@@ -37,21 +43,21 @@ public class Principal implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }

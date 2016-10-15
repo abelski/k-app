@@ -1,6 +1,6 @@
 export class UrlUtil {
 
-    private static HOST_NAME: string = 'http://localhost:9000'; // need to user real address of server
+    private static HOST_NAME: string = 'http://10.9.202.128:9090'; // need to user real address of server
 
     /**
      * Registration url's
@@ -14,8 +14,8 @@ export class UrlUtil {
     public static GET_VACATION: string = UrlUtil.HOST_NAME + '/vacations/';
     public static ADD_MEMBER: string = UrlUtil.HOST_NAME + '/vacations/'
     public static ADD_VACATION: string =  UrlUtil.HOST_NAME + '/vacation';
-    public static GET_ACTIVE_VACATION: string = UrlUtil.HOST_NAME + "/user/";
-    public static GET_PAST_VACATION: string = UrlUtil.HOST_NAME + "/user/";
+    public static GET_ACTIVE_VACATION: string = UrlUtil.HOST_NAME + '/vacations/members/';
+    // public static GET_PAST_VACATION: string = UrlUtil.HOST_NAME + "/user/";
     public static GET_OWNED_VACATION: string = UrlUtil.HOST_NAME + "/user/";
 
     /**

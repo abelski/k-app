@@ -21,7 +21,7 @@ export class FilterComponent implements OnInit {
     ngOnInit() { }
 
     ngAfterViewInit() {
-
+        var that = this;
         $('#filterDatepicker').uui_datepicker({ todayHighlight: true });
 
         $('#filterDatepicker').uui_datepicker({
@@ -34,8 +34,8 @@ export class FilterComponent implements OnInit {
 
         $('#filterDatepicker input').uui_datepicker()
             .on('change', function (dateText, inst) {
-                this.beginDate = $(this).uui_datepicker('getDate'); //the getDate method
-                console.log(this.beginDate.getDate());
+                that.beginDate = $(this).uui_datepicker('getDate'); //the getDate method
+                that.filterService.getFilteredVacations();
             });
     }
 
@@ -62,7 +62,7 @@ export class FilterComponent implements OnInit {
             FilterService.filterTags.splice(index, 1);
         }
         this.filterTags = FilterService.filterTags;
-        VacationService.vacations = this.filterService.getVacationsByTag();
+        VacationService.vacations = this.filterService.getFilteredVacations();
         FilterService.isChanged = true;
 
         if (this.filterTags.length === 0) {

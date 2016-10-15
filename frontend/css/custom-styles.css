@@ -12,10 +12,18 @@ app > div {
     top: 50%;
     left: 50%;
 }
-
+/* Sidebar */
+#side-filter {
+    margin-top: 18px;
+}
 .container.vacs-list {
     padding: 26px 7% 20px 7%;
     width: auto;
+}
+.vacs-list .fa-spin {
+    color: #1A9CB0;
+    display: block;
+    margin: 0 auto;
 }
 
 .container .row.vac-row {
@@ -110,6 +118,7 @@ app > div {
 .details-tags .tag:hover {
     opacity: 0.8;
     cursor: pointer;
+    box-shadow: 0 2px 3px rgba(157,157,157,.5)
 }
 .details-tags .tag::before {
     content: "#";
@@ -435,6 +444,13 @@ header .uui-header .user-profile.vac-message .location {
 }
 #dep-cntr-spinner {
     right: 32px; 
+}
+
+#insta-magic-btn {
+    margin-left: 16px;
+    font-size: 14pt;
+    cursor: pointer;
+    color: #1A9CB0;
 }
 
 vdp .card-image {
@@ -1020,6 +1036,18 @@ vdp .card-body {
     font-family: 'Oswald Regular', Arial, sans-serif;
     font-size: 12pt;
 }
+#whatsup-charts {
+    margin-top: 24px;
+}
+#charts-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.c3-chart-arcs-title {
+    font-size: 11pt;
+}
 
 #inst {
     margin-top: 24px;
@@ -1103,6 +1131,19 @@ vdp .card-body {
     left: 2px;
     font-size: 16pt;
 }
+button.uui-button.transparent.fa.fa-yammer {
+    height: 20px;
+    width: 20px;
+    background: url(../img/yammer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) brightness(200%);
+}
+
+button.uui-button.transparent.fa.fa-yammer:hover {
+      filter: grayscale(0%) brightness(100%);
+}
+
 #magic-header,
 #places-header {
     margin-top: 28px;

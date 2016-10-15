@@ -2,7 +2,7 @@
 var UrlUtil = (function () {
     function UrlUtil() {
     }
-    UrlUtil.HOST_NAME = 'http://localhost:9000'; // need to user real address of server
+    UrlUtil.HOST_NAME = 'http://10.9.202.128:9090'; // need to user real address of server
     /**
      * Registration url's
      */
@@ -14,8 +14,8 @@ var UrlUtil = (function () {
     UrlUtil.GET_VACATION = UrlUtil.HOST_NAME + '/vacations/';
     UrlUtil.ADD_MEMBER = UrlUtil.HOST_NAME + '/vacations/';
     UrlUtil.ADD_VACATION = UrlUtil.HOST_NAME + '/vacation';
-    UrlUtil.GET_ACTIVE_VACATION = UrlUtil.HOST_NAME + "/user/";
-    UrlUtil.GET_PAST_VACATION = UrlUtil.HOST_NAME + "/user/";
+    UrlUtil.GET_ACTIVE_VACATION = UrlUtil.HOST_NAME + '/vacations/members/';
+    // public static GET_PAST_VACATION: string = UrlUtil.HOST_NAME + "/user/";
     UrlUtil.GET_OWNED_VACATION = UrlUtil.HOST_NAME + "/user/";
     /**
      * Comments url's

@@ -1,4 +1,9 @@
 mongodb:
   name: local
+  
+vacations.list: db.json
 
-uploadDir: /images
+uploadDir: /img
+
+server:
+    port: 9090

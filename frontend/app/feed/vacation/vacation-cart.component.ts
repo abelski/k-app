@@ -21,6 +21,7 @@ declare var $: any;
 export class VacationCartComponent {
     vacations: Observable<Vacation[]> = null;
     errorMsg: string = null;
+    isUpdating = false;
     monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     constructor(
@@ -45,15 +46,19 @@ export class VacationCartComponent {
     }
 
     public getVacations() {
+        this.isUpdating = true;
         if (FilterService.filterTags.length > 0) {
             console.log("have a filter");
-            VacationService.vacations = this.filterService.getVacationsByTag();
+            VacationService.vacations = this.filterService.getFilteredVacations();
             this.vacations = VacationService.vacations;
         } else {
             console.log("haven't a filter");
             VacationService.vacations = this.vacationService.getVacations();
             this.vacations = VacationService.vacations;
         }
+        this.vacations.subscribe(() => {
+            this.isUpdating = false;
+        });
     }
 
     gotoDetail(vacation: Vacation) {

@@ -27,7 +27,7 @@ public class PersistenceConfiguration {
     public VacationFilterPredicateBuilder vacationFilterPredicateBuilder() {
         VacationFilterPredicateBuilderImpl builder = new VacationFilterPredicateBuilderImpl();
         builder.setFilters(Arrays.asList(new DatesFilter(), new OwnerIdFilter(), new TagsFilter(), new TransportFilter(),
-                new DepartureCountryFilter()));
+                new DepartureCountryFilter(), new EstimatedBudgetFilter()));
         return builder;
     }
 }

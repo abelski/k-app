@@ -18,8 +18,13 @@ var FilterService = (function () {
         this.http = http;
         this.vacationService = vacationService;
     }
-    FilterService.prototype.getVacationsByTag = function () {
-        var body = JSON.stringify(FilterService.filterTags);
+    FilterService.prototype.getFilteredVacations = function () {
+        var body = null;
+        if (FilterService.filterTags.length != 0) {
+            body = JSON.stringify(FilterService.filterTags);
+        }
+        if (FilterService.filterDate != null) {
+        }
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
         // console.log(body);
@@ -51,6 +56,7 @@ var FilterService = (function () {
         console.error(errMsg); // log to console instead
         return Observable_1.Observable.throw(errMsg);
     };
+    FilterService.filterDate = null;
     FilterService.filterTags = [];
     FilterService.isChanged = false;
     FilterService = __decorate([

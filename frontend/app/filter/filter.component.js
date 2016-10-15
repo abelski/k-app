@@ -19,6 +19,7 @@ var FilterComponent = (function () {
     }
     FilterComponent.prototype.ngOnInit = function () { };
     FilterComponent.prototype.ngAfterViewInit = function () {
+        var that = this;
         $('#filterDatepicker').uui_datepicker({ todayHighlight: true });
         $('#filterDatepicker').uui_datepicker({
             format: "dd/mm/yyyy"
@@ -28,8 +29,8 @@ var FilterComponent = (function () {
         $('.selectpicker').selectpicker();
         $('#filterDatepicker input').uui_datepicker()
             .on('change', function (dateText, inst) {
-            this.beginDate = $(this).uui_datepicker('getDate'); //the getDate method
-            console.log(this.beginDate.getDate());
+            that.beginDate = $(this).uui_datepicker('getDate'); //the getDate method
+            that.filterService.getFilteredVacations();
         });
     };
     FilterComponent.prototype.ngDoCheck = function () {
@@ -51,7 +52,7 @@ var FilterComponent = (function () {
             filter_service_1.FilterService.filterTags.splice(index, 1);
         }
         this.filterTags = filter_service_1.FilterService.filterTags;
-        vacation_service_1.VacationService.vacations = this.filterService.getVacationsByTag();
+        vacation_service_1.VacationService.vacations = this.filterService.getFilteredVacations();
         filter_service_1.FilterService.isChanged = true;
         if (this.filterTags.length === 0) {
             $('.sub-menu').click();

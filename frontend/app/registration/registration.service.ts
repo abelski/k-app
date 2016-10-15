@@ -12,6 +12,7 @@ import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
 import Globals = require('../globals');
 
+declare var yam: any;
 declare var Cookies: any;
 
 @Injectable()
@@ -133,6 +134,17 @@ export class RegistrationService {
         }, this.intervalLength);
     }
 
+    public startYammerAuth() {
+        yam.platform.getLoginStatus((response) => {
+            console.log(response);
+            if (response.authResponse) {
+                console.log(response);
+            } else {
+                alert("not logged in")
+            }
+        });
+    }
+
     tryLogin() {
         let tokenSaved = this.getTokenFromCookies();
         if (tokenSaved) {
@@ -146,7 +158,7 @@ export class RegistrationService {
     }
 
     private saveTokenToCookies() {
-        Cookies.set(this.ckTokenName, this.token, { expires: 14/*, secure: true */});
+        Cookies.set(this.ckTokenName, this.token, { expires: 14/*, secure: true */ });
     }
 
     private getTokenFromCookies() {
@@ -154,7 +166,7 @@ export class RegistrationService {
     }
 
     private saveUserToCookies() {
-        Cookies.set(this.ckUserInfoName, JSON.stringify(Globals.userInfo), {expires: 14});
+        Cookies.set(this.ckUserInfoName, JSON.stringify(Globals.userInfo), { expires: 14 });
     }
 
     private restoreUserFromCookies() {
@@ -182,7 +194,7 @@ export class RegistrationService {
 
             this.http.post(UrlUtil.REGISTER_ACCOUNT, body, options);
         }
-    } 
+    }
 
     public doLogout() {
         this.authenticated = false;
