@@ -30,11 +30,10 @@ task wrapper(type: Wrapper) {
     gradleVersion = '3.1'
 }
 
-sourceSets {
-    generated {
-        java {
-            srcDir 'src/main/generated'
-        }
+idea {
+    module {
+        sourceDirs += file('src/main/generated')
+        generatedSourceDirs += file('src/main/generated')
     }
 }
 
@@ -46,6 +45,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
     compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'com.querydsl:querydsl-core:4.1.4'
     compile 'com.querydsl:querydsl-apt:4.1.4'
     compile 'com.querydsl:querydsl-mongodb:4.1.4'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.5.3'
@@ -53,19 +53,14 @@ dependencies {
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
 
-task generateSources(type: JavaCompile, group: 'build', description: 'Generates the QueryDSL query types') {
-    source = sourceSets.main.java
-    classpath = configurations.compile + configurations.querydslapt
-    options.compilerArgs = ['-proc:only',
-                            '-processor',
-                            'org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor']
-    options.warnings = false
-    destinationDir = file('src/main/generated')
-    outputs.dir destinationDir
+def generatedSrcDir = 'src/main/generated'
+task createGeneratedSrcDir << {
+    file(generatedSrcDir).mkdirs()
 }
-
-compileJava.source generateSources.outputs.files
-
+compileJava.dependsOn createGeneratedSrcDir
+compileJava {
+    options.compilerArgs << '-processor' << 'org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor' << '-s' << file(generatedSrcDir).absolutePath
+}
 clean {
-    delete sourceSets.generated.java.srcDirs
+    delete generatedSrcDir
 }

@@ -1,5 +1,6 @@
 package com.epam.k.domain;
 
+import com.epam.k.domain.enums.VacationStatus;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
@@ -16,6 +17,7 @@ public class Vacation {
     private String id;
     private String title;
     private User owner;
+    private VacationStatus status;
     private String description;
     private Image image;
     @JsonDeserialize(using = LocalDateDeserializer.class)
@@ -135,6 +137,15 @@ public class Vacation {
 
     public Vacation setOwner(User owner) {
         this.owner = owner;
+        return this;
+    }
+
+    public VacationStatus getStatus() {
+        return status;
+    }
+
+    public Vacation setStatus(VacationStatus status) {
+        this.status = status;
         return this;
     }
 }
