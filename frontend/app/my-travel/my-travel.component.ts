@@ -15,7 +15,7 @@ export class MyTravelComponent {
     }
 
     ngAfterViewInit() {
-        this.loadInstPictures("cheerleader");
+        this.loadInstPictures("khackathon");
     }
 
     private loadInstPictures(hashtag) {
