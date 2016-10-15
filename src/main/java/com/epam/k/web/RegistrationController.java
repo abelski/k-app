@@ -27,7 +27,9 @@ public class RegistrationController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public HttpEntity<User> register(@RequestBody User user) {
-        if (userService.findByUsername(user.getUsername()) != null) {
+        String firstName = user.getFirstName();
+        String lastName = user.getLastName();
+        if (userService.findOneByFirstNameAndLastName(firstName, lastName) != null) {
             new HttpEntity<>(user);
         }
         userService.addAuthority(user, Role.ROLE_USER);

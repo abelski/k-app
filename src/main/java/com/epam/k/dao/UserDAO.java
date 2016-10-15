@@ -11,4 +11,6 @@ import com.epam.k.domain.User;
  */
 public interface UserDAO extends PagingAndSortingRepository<User, String>, QueryDslPredicateExecutor<User> {
     User findByUsername(String username);
+
+    User findOneByFirstNameAndLastName(String firstName, String lastName);
 }
