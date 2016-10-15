@@ -5,6 +5,7 @@ import com.epam.k.domain.User;
 import com.epam.k.domain.enums.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.querydsl.QueryDslPredicateExecutor;
+import org.springframework.http.HttpEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -56,5 +57,15 @@ public class UserService extends BaseService<User, String> {
 
     public User findOneByFirstNameAndLastName(String firstName, String lastName) {
         return getRepository().findOneByFirstNameAndLastName(firstName, lastName);
+    }
+
+    public User registerAndGet(User user) {
+        String firstName = user.getFirstName();
+        String lastName = user.getLastName();
+        if (findOneByFirstNameAndLastName(firstName, lastName) != null) {
+            new HttpEntity<>(user);
+        }
+        addAuthority(user, Role.ROLE_USER);
+        return save(user);
     }
 }
