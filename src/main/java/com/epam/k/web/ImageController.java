@@ -48,7 +48,7 @@ public class ImageController {
 
     @RequestMapping(path = "/img/{path}")
     public void image(@PathVariable("path") String path, HttpServletResponse response) throws IOException {
-        File img = new File("C://hackaton/img"+path);
+        File img = new File("C://hackaton/img/"+path+".jpg");
         if (img.exists() && !img.isDirectory()) {
             FileInputStream imgStream = new FileInputStream(img);
             response.getOutputStream().write(IOUtils.toByteArray(imgStream));
