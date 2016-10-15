@@ -14,6 +14,9 @@ var UrlUtil = (function () {
     UrlUtil.GET_VACATION = UrlUtil.HOST_NAME + '/vacations/';
     UrlUtil.ADD_MEMBER = UrlUtil.HOST_NAME + '/vacations/';
     UrlUtil.ADD_VACATION = UrlUtil.HOST_NAME + '/vacation';
+    UrlUtil.GET_ACTIVE_VACATION = UrlUtil.HOST_NAME + "/user/";
+    UrlUtil.GET_PAST_VACATION = UrlUtil.HOST_NAME + "/user/";
+    UrlUtil.GET_OWNED_VACATION = UrlUtil.HOST_NAME + "/user/";
     /**
      * Comments url's
      */

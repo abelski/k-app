@@ -12,15 +12,21 @@ var core_1 = require('@angular/core');
 var registration_service_1 = require('../registration/registration.service');
 var router_1 = require('@angular/router');
 var Globals = require('../globals');
+var profile_service_1 = require('./profile.service');
 var ProfileComponent = (function () {
-    function ProfileComponent(registrationService, router) {
+    function ProfileComponent(registrationService, router, profileService) {
         var _this = this;
         this.registrationService = registrationService;
         this.router = router;
+        this.profileService = profileService;
         this.authenticated = false;
         this.isMyProfile = false;
+        this.monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         router.events.subscribe(function (val) { return _this.initProfileView(); });
         this.user = Globals.userInfo;
+        this.profileService.getActiveVacations(this.user.id).subscribe(function (vacs) { return _this.activeVacation = vacs; });
+        this.profileService.getPastVacations(this.user.id).subscribe(function (vacs) { return _this.pastVacation = vacs; });
+        this.profileService.getOwnedVacations(this.user.id).subscribe(function (vacs) { return _this.ownedVacation = vacs; });
     }
     ProfileComponent.prototype.ngAfterViewInit = function () {
         this.initProfileView();
@@ -79,13 +85,16 @@ var ProfileComponent = (function () {
         // TODO update user on server
         $('i.' + value.id).hide();
     };
+    ProfileComponent.prototype.getMonthName = function (monthNum) {
+        return this.monthNames[monthNum];
+    };
     ProfileComponent = __decorate([
         core_1.Component({
             //selector: 'header-login',
             templateUrl: 'app/profile/profile.template.html',
-            providers: [registration_service_1.RegistrationService]
+            providers: [registration_service_1.RegistrationService, profile_service_1.ProfileService]
         }), 
-        __metadata('design:paramtypes', [registration_service_1.RegistrationService, router_1.Router])
+        __metadata('design:paramtypes', [registration_service_1.RegistrationService, router_1.Router, profile_service_1.ProfileService])
     ], ProfileComponent);
     return ProfileComponent;
 }());

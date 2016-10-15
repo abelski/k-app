@@ -9,7 +9,8 @@ export class User {
         public region: String,
         public skype: String,
         public phone: String,
-        public avatar: Image 
+        public avatar: Image,
+        public id?: number 
         ) {
 
     }
