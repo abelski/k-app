@@ -22,7 +22,7 @@ var UserService = (function () {
             .catch(this.handleError);
     };
     UserService.prototype.getUserById = function (id) {
-        return this.http.get(url_util_1.UrlUtil.GET_USER_BY_ID)
+        return this.http.get(url_util_1.UrlUtil.GET_USER_BY_ID + id)
             .map(this.extractData)
             .catch(this.handleError);
     };
@@ -31,6 +31,7 @@ var UserService = (function () {
         var i = 0;
         var users = [];
         if (body.content) {
+            console.log(body.content);
             // if response has more than one vac
             for (var _i = 0, _a = body.content; _i < _a.length; _i++) {
                 var user = _a[_i];
@@ -38,6 +39,7 @@ var UserService = (function () {
             }
         }
         else {
+            console.log(body);
             // if response has only one vac
             return body;
         }

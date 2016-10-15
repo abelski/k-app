@@ -12,6 +12,7 @@ import { Image } from '../domain/image';
 import { UserService } from '../user-picker/user.service';
 import { VacationStatus } from '../domain/enums/vacation-status';
 import { UrlUtil } from '../utils/url.util';
+import { Observable } from 'rxjs/Observable';
 
 declare var $: any;
 
@@ -325,13 +326,15 @@ export class AddVacationComponent {
         //that.participants = [];
         $("#user-picker-modal-body .selected").each(function (index, el) {
             var name = $(el).text();
-            var id = +$(el).attr('id');
-            var member: User;
-            that.userService.getUserById(id).subscribe(m => member = m);
-            if (that.members.indexOf(member) == -1) {
-                that.members.push(name);
-            }
-            $(el).removeClass("selected");
+            var id = $(el).attr('id');
+            var member = that.userService.getUserById(id);
+            member.subscribe(m => {
+                debugger;
+                if (that.participants.indexOf(m) == -1) {
+                    that.participants.push(m);
+                }
+                $(el).removeClass("selected");
+            });
         });
     }
 
@@ -353,13 +356,15 @@ export class AddVacationComponent {
                 processData: false,
                 success: function (data) {
                     that.titleImg = new Image(data.id, data.altText, data.extension, data.uri, data.description)
+                    
+                    console.log("CURRENT USER " + that.currentUser);
+                    that.currentUser.id = "123456";
+                    that.vacation = new Vacation(that.currentUser, that.members, that.title, that.description,
+                        that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
+                        that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry,
+                        that.targetCountry, that.targetCity);
 
-                    this.vacation = new Vacation(this.owner, this.members, this.title, this.description,
-                        this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, VacationStatus.OPEN,
-                        this.plannedActivities, null, null, this.titleImg, this.days, this.transoprt, this.departureCountry,
-                        this.targetCountry, this.targetCity);
-
-                    this.vacationService.createVacation(this.vacation);
+                    that.vacationService.createVacation(that.vacation);
                 },
                 error: function (data) {
                     console.log("error");
