@@ -19,6 +19,11 @@ export class VacationDetailPageComponent implements OnInit {
    private vacation: Vacation;
    private currentUser: User;
    private isInVac: boolean = false;
+   monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+//    private place = {
+//        country: {name: "Germany"},
+//        city: {name: "Dortmund"},
+//    }
 
     constructor(
         private vacationService: VacationService,
@@ -33,12 +38,12 @@ export class VacationDetailPageComponent implements OnInit {
             this.vacationService.getVacation(id)
                 .subscribe(vac => { 
                     this.vacation = vac;
-                    // setTimeout(function(){
-                    //     $("#vac-carousel .carousel-indicators li").each(function(index) {
-                    //         $(this).attr("data-slide-to", index);
-                    //         console.log(index);
-                    //     });
-                    // }, 50);
+                    setTimeout(function(){
+                        $("#vac-carousel .carousel-indicators li").each(function(index) {
+                            $(this).attr("data-slide-to", index);
+                            console.log(index);
+                        });
+                    }, 50);
                 });
         });
     }
@@ -48,10 +53,11 @@ export class VacationDetailPageComponent implements OnInit {
         if(!this.isInVac) {
             this.vacationService.addMember(this.vacation.id, this.currentUser);
             this.vacation.members.push(this.currentUser);
+            this.isInVac = true;   
         }
     }
 
-    goBack(): void {
-        this.router.navigate(['/vacations']);
+    getMonthName(monthNum) {
+        return this.monthNames[monthNum];
     }
 }

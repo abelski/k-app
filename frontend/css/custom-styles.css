@@ -479,9 +479,16 @@ vdp .card-navigation-section {
     width: 100%;
     height: 40px;
 }
-
-vdp .card-navigation-section button:first-child {
-    float: right;
+.card-body .details {
+    padding: 24px 18px;
+    font-family: 'Oswald Regular', Arial, sans-serif;
+    font-size: 18pt;
+}
+.card-body .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 #vac-carousel .carousel-indicators li {
     border-color: #ffffff;
@@ -545,6 +552,7 @@ vdp .card-body {
 #vac-activities>h2 {
     margin-bottom: 18px;
 }
+#activity-form,
 .activity-short {
     background: #ffffff;
     box-shadow: 0 1px 3px 0 rgba(51,51,51,.2);
@@ -579,6 +587,25 @@ vdp .card-body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+#activity-form {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#added-msg {
+    font-family: 'Oswald Regular', Arial, sans-serif;
+    font-size: 16pt;
+    text-transform: capitalize;
+}
+.act-thumb {
+    
+}
+.act-col {
+    display: flex;
+    flex-direction: column;
 }
 .info-panel-section .fa {
     margin-right: 8px;
@@ -674,6 +701,12 @@ vdp .card-body {
 .vac-form-table #tags-block {
     min-height: 44px;
     padding-top: 4px; 
+}
+.card-body .details .days, 
+.card-body .details .dep-country, 
+.card-body .details .budget, 
+.card-body .details .max-people {
+    margin-bottom: 8px;
 }
 
 #places-ph, #tags-ph {

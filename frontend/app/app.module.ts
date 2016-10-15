@@ -18,6 +18,7 @@ import { CommentComponent } from './comment/comment.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { FilterComponent } from './filter/filter.component';
 import { HashTagComponent } from './hash-tag/hash-tag.component';
+import { PlaceTagComponent } from './place-tag/place-tag.component';
 import { WhatsupComponent } from './whatsup/whatsup.component';
 import { MyTravelComponent } from './my-travel/my-travel.component';
 import { VacationService } from './feed/vacation/vacation.service';
@@ -33,7 +34,7 @@ import { UserService } from './user-picker/user.service';
     routing
 ],
   declarations: [ AppComponent, VacationCartComponent, SidebarComponent, HeaderComponent, ProfileComponent, FooterComponent, VacationDetailPageComponent,
-      UserPickerComponent, CommentComponent, AddCommentComponent, FilterComponent, HashTagComponent, WhatsupComponent, MyTravelComponent ],
+      UserPickerComponent, CommentComponent, AddCommentComponent, FilterComponent, HashTagComponent, PlaceTagComponent, WhatsupComponent, MyTravelComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ OAuthService, WindowService, appRoutingProviders, VacationService, FilterService, FilterComponent, UserService ]
 })
