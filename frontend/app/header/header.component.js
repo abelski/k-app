@@ -23,6 +23,10 @@ var HeaderComponent = (function () {
         this.authInProgress = true;
         this.registrationService.startGoogleAuth();
     };
+    HeaderComponent.prototype.startYammerAuth = function () {
+        this.authInProgress = true;
+        this.registrationService.startYammerAuth();
+    };
     HeaderComponent.prototype.logoutGoogle = function () {
         this.registrationService.doLogout();
         this.authenticated = false;
