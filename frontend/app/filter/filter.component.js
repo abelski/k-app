@@ -30,7 +30,9 @@ var FilterComponent = (function () {
         $('#filterDatepicker input').uui_datepicker()
             .on('change', function (dateText, inst) {
             that.beginDate = $(this).uui_datepicker('getDate'); //the getDate method
-            that.filterService.getFilteredVacations();
+            filter_service_1.FilterService.filterDate = that.beginDate;
+            vacation_service_1.VacationService.vacations = that.filterService.getFilteredVacations();
+            filter_service_1.FilterService.isChanged = true;
         });
     };
     FilterComponent.prototype.ngDoCheck = function () {
