@@ -100,4 +100,9 @@ public class VacationController {
         vacation.getPlannedActivities().add(activity);
         return new HttpEntity<>(vacationService.save(vacation));
     }
+
+    @RequestMapping(value ="/vacations/members/{id}", method = GET)
+    public HttpEntity<Iterable<Vacation>> getVacationsByMember(@PathVariable("id") final String id) {
+        return new HttpEntity<>(vacationService.findAllByMember(userService.findOne(id)));
+    }
 }

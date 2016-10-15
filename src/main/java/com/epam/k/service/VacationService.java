@@ -9,6 +9,7 @@ import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Service
 public class VacationService extends BaseService<Vacation, String> {
@@ -25,7 +26,17 @@ public class VacationService extends BaseService<Vacation, String> {
         return vacationDAO;
     }
 
-    public Iterable<Vacation> findAllByOwner(final User user) {
-        return getRepository().findAllByOwnerAndStatusIn(user, Arrays.asList (VacationStatus.OPEN, VacationStatus.CLOSED));
-    }
+   public Iterable<Vacation> findAllByOwner(final User user)
+   {
+      final List<Vacation> vacationsOwnedByUser = getRepository().findAllByOwnerAndStatusIn(user, Arrays.asList
+            (VacationStatus.OPEN, VacationStatus.CLOSED));
+      return vacationsOwnedByUser;
+   }
+
+   public Iterable<Vacation> findAllByMember(final User user)
+   {
+      final List<Vacation> vacationsOwnedByMember = getRepository().findAllByMemberAndStatusIn(user, Arrays.asList
+              (VacationStatus.OPEN, VacationStatus.CLOSED));
+      return vacationsOwnedByMember;
+   }
 }
