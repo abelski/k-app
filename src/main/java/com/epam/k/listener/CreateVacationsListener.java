@@ -33,15 +33,15 @@ public class CreateVacationsListener implements ApplicationListener<ContextRefre
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        mongoDatabase.drop();
-        try (InputStream vacationsStream = getClass().getClassLoader().getResourceAsStream(vacationsPath)) {
-            String vacationsJson = IOUtils.toString(vacationsStream);
-            ObjectMapper objectMapper = new ObjectMapper();
-            List<Vacation> vacations = objectMapper.readValue(vacationsJson, new TypeReference<List<Vacation>>(){});
-            vacationDAO.save(vacations);
-        } catch (IOException e) {
-            LOGGER.warn("Error in the vacations creation", e);
-        }
+        mongoDatabase.drop();;
+//        try (InputStream vacationsStream = getClass().getClassLoader().getResourceAsStream(vacationsPath)) {
+//            String vacationsJson = IOUtils.toString(vacationsStream);
+//            ObjectMapper objectMapper = new ObjectMapper();
+//            List<Vacation> vacations = objectMapper.readValue(vacationsJson, new TypeReference<List<Vacation>>(){});
+//            vacationDAO.save(vacations);
+//        } catch (IOException e) {
+//            LOGGER.warn("Error in the vacations creation", e);
+//        }
     }
 }
 
