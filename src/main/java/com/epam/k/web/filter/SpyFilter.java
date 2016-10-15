@@ -1,14 +1,15 @@
 package com.epam.k.web.filter;
 
-import org.springframework.web.filter.OncePerRequestFilter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.Objects;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.util.Objects;
+
+import org.springframework.web.filter.OncePerRequestFilter;
 
 /**
  * Created by Maksim Ruts on 10/15/2016.
