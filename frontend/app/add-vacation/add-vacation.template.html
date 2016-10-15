@@ -45,12 +45,16 @@
                 <td><span class="uui-label blue">Images</span></td>
                 <td colspan="3">
                     <div class="uui-file-uploader fileinput fileinput-new" data-provides="fileinput">
-                        <span class="btn btn-file uui-button">
-                            <span class="fileinput-new">Choose...</span>
-                        <span class="fileinput-exists">Change...</span>
-                        <input type="file" name="..." />
-                        </span>
-                        <span class="fileinput-filename"></span>
+                        <form id="imageUploadForm" method="post">
+                            <span class="btn btn-file uui-button">
+                                <span class="fileinput-new">Choose...</span>
+                            <span class="fileinput-exists">Change...</span>
+                            
+                            <input type="file" id="file" name="..." />
+                            </span>
+                            <span class="fileinput-filename"></span>
+                        </form>
+                        
                         <a href="#" class="close fileinput-exists" data-dismiss="fileinput">×</a>
                     </div>
                 </td>
@@ -75,7 +79,7 @@
                 <td colspan="3">
                     <div id="participants-block">
                         <span *ngIf="participants.length == 0" id="participants-ph">Add some guys!</span>
-                        <span class="uui-label participant large" *ngFor="let prt of participants">{{prt}} <i class="fa fa-times-circle-o"></i></span>
+                        <span class="uui-label participant large" *ngFor="let prt of participants">{{prt.firstName}} {{prt.lastName}}<i class="fa fa-times-circle-o"></i></span>
                     </div>
                     <button class="uui-button left-icon text-button" id="add-people-btn" (click)="onOpenUserPicker()" data-toggle="modal" data-target="#add-user-popup">
                         <i class="fa fa-plus"></i>Add People
@@ -108,7 +112,7 @@
             <tr>
                 <td><span class="uui-label blue">Instagram</span></td>
                 <td colspan="3">
-                    <input (change)="minMembers = $event.target.value" class="uui-form-element" style="width: 68px" placeholder="Hash-tag"/>
+                    <input (change)="minMembers = $event.target.value" class="uui-form-element" style="width: 68px" placeholder="Hash-tag Unique for Your Travel"/>
                     <i class="fa fa-magic" id="insta-magic-btn"></i>
                 </td>
             </tr>

@@ -19,6 +19,7 @@ var tag_1 = require('../domain/tag');
 var image_1 = require('../domain/image');
 var user_service_1 = require('../user-picker/user.service');
 var vacation_status_1 = require('../domain/enums/vacation-status');
+var url_util_1 = require('../utils/url.util');
 var AddVacationComponent = (function () {
     function AddVacationComponent(registrationService, router, userPickerComponent, vacationService, userService) {
         this.registrationService = registrationService;
@@ -274,13 +275,14 @@ var AddVacationComponent = (function () {
         //that.participants = [];
         $("#user-picker-modal-body .selected").each(function (index, el) {
             var name = $(el).text();
-            var id = +$(el).attr('id');
-            var member;
-            that.userService.getUserById(id).subscribe(function (m) { return member = m; });
-            if (that.members.indexOf(member) == -1) {
-                that.members.push(name);
-            }
-            $(el).removeClass("selected");
+            var id = $(el).attr('id');
+            var member = that.userService.getUserById(id);
+            member.subscribe(function (m) {
+                if (that.participants.indexOf(m) == -1) {
+                    that.participants.push(m);
+                }
+                $(el).removeClass("selected");
+            });
         });
     };
     AddVacationComponent.prototype.addOwner = function () {
@@ -288,8 +290,29 @@ var AddVacationComponent = (function () {
         this.ownerAdded = true;
     };
     AddVacationComponent.prototype.saveTrip = function () {
-        this.vacation = new vacation_1.Vacation(this.owner, this.members, this.title, this.description, this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, vacation_status_1.VacationStatus.OPEN, this.plannedActivities, null, null, new image_1.Image("", "", ".jpg", "vac_1", "ds"), this.days, this.transoprt, this.departureCountry, this.targetCountry, this.targetCity);
-        this.vacationService.createVacation(this.vacation);
+        var that = this;
+        $(document).ready(function (e) {
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: url_util_1.UrlUtil.UPLOAD_IMAGE,
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    that.titleImg = new image_1.Image(data.id, data.altText, data.extension, data.uri, data.description);
+                    console.log("CURRENT USER " + that.currentUser);
+                    that.currentUser.id = "123456";
+                    that.vacation = new vacation_1.Vacation(that.currentUser, that.members, that.title, that.description, that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, vacation_status_1.VacationStatus.OPEN, that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry, that.targetCountry, that.targetCity);
+                    that.vacationService.createVacation(that.vacation);
+                },
+                error: function (data) {
+                    console.log("error");
+                    console.log(data);
+                }
+            });
+        });
     };
     AddVacationComponent.prototype.cancelVacCreation = function () {
         var answer = confirm("Are you sure you want to leave this page?");
@@ -301,7 +324,7 @@ var AddVacationComponent = (function () {
     AddVacationComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/add-vacation/add-vacation.template.html',
-            providers: [registration_service_1.RegistrationService, user_picker_component_1.UserPickerComponent, user_service_1.UserService]
+            providers: [registration_service_1.RegistrationService, user_picker_component_1.UserPickerComponent, user_service_1.UserService],
         }), 
         __metadata('design:paramtypes', [registration_service_1.RegistrationService, router_1.Router, user_picker_component_1.UserPickerComponent, vacation_service_1.VacationService, user_service_1.UserService])
     ], AddVacationComponent);

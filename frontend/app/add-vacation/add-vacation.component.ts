@@ -11,12 +11,14 @@ import { Activity } from '../domain/activity';
 import { Image } from '../domain/image';
 import { UserService } from '../user-picker/user.service';
 import { VacationStatus } from '../domain/enums/vacation-status';
+import { UrlUtil } from '../utils/url.util';
+import { Observable } from 'rxjs/Observable';
 
 declare var $: any;
 
 @Component({
     templateUrl: 'app/add-vacation/add-vacation.template.html',
-    providers: [RegistrationService, UserPickerComponent, UserService]
+    providers: [RegistrationService, UserPickerComponent, UserService],
 })
 
 export class AddVacationComponent {
@@ -60,7 +62,7 @@ export class AddVacationComponent {
     private plannedActivities: Activity[];
     private comments: Comment[];
     private gallery: Image[];
-    private titleImg: string; //change to Image 
+    private titleImg: Image; //change to Image 
     private days: number;
     private transoprt: string;
     private departureCountry: string;
@@ -95,7 +97,7 @@ export class AddVacationComponent {
                 var curr_date = d.getDate();
                 var curr_month = d.getMonth() + 1;
                 var curr_year = d.getFullYear();
-                that.beginDate = curr_year + "-" + ((curr_month < 10) ? "0":"") + curr_month + "-" + ((curr_date < 10) ? "0":"") + curr_date;
+                that.beginDate = curr_year + "-" + ((curr_month < 10) ? "0" : "") + curr_month + "-" + ((curr_date < 10) ? "0" : "") + curr_date;
             });
 
         $('#pickerDateRange .endDate')
@@ -105,15 +107,15 @@ export class AddVacationComponent {
                 var curr_date = d.getDate();
                 var curr_month = d.getMonth() + 1;
                 var curr_year = d.getFullYear();
-                that.endDate = curr_year + "-" + ((curr_month < 10) ? "0":"") + curr_month + "-" + ((curr_date < 10) ? "0":"") + curr_date;
+                that.endDate = curr_year + "-" + ((curr_month < 10) ? "0" : "") + curr_month + "-" + ((curr_date < 10) ? "0" : "") + curr_date;
             });
 
         $('.selectpicker').selectpicker();
 
-        
+
         this.loadCountriesList();
 
-       // load cities
+        // load cities
         $(".vac-form-table").on("change", "#countries-input", function (event) {
             var cntCode = that.countries[this.value];
             that.loadCitiesForCountry(cntCode);
@@ -224,10 +226,10 @@ export class AddVacationComponent {
 
         $.get({
             url: "http://api.geonames.org/countryInfo?username=ksuhiyp",
-            success: function(data) {
+            success: function (data) {
                 var cntNames = [];
-                $(data).find("country").each(function(index, element) {
-                    var cnt = {/*code: null, name: null*/};
+                $(data).find("country").each(function (index, element) {
+                    var cnt = {/*code: null, name: null*/ };
                     var code = $(element).find("countryCode").text();
                     var name = $(element).find("countryName").text();
 
@@ -243,7 +245,7 @@ export class AddVacationComponent {
                 $("#countries-input").prop("disabled", false);
                 $("#depart-country-input").prop("disabled", false);
             },
-            error: function() {
+            error: function () {
                 alert("Error obtaining list of countries");
                 $("#cntr-spinner").hide();
                 $("#dep-cntr-spinner").hide();
@@ -260,9 +262,9 @@ export class AddVacationComponent {
 
         $.get({
             url: "http://api.geonames.org/searchJSON?username=ksuhiyp&country=" + cntCode + "&style=SHORT",
-            success: function(data) {
+            success: function (data) {
                 var citiesNames = [];
-                data.geonames.forEach(function(city, index) {
+                data.geonames.forEach(function (city, index) {
                     that.cities[city.name] = city.geonameId;
                     citiesNames.push(city.name);
                 });
@@ -273,7 +275,7 @@ export class AddVacationComponent {
                 $("#cities-input").prop("disabled", false);
                 $("#cities-input").focus();
             },
-            error: function() {
+            error: function () {
                 alert("Error loading cities for country code " + cntCode);
                 $("#city-spinner").hide();
                 $("#cities-input").prop("disabled", false);
@@ -289,31 +291,31 @@ export class AddVacationComponent {
             items: 10
         });
     }
-/*
-    private initCitiesComponent(cities) {
-        var citiesComponent = $("#cities-input").prop('outerHTML');
-        $("#cities-input").remove();
-        $("#countries-input").after(citiesComponent);
-        $("#cities-input").uui_autocomplete({
-            source: cities,
-            items: 8
-        });
-
-        var that = this;
-        $("#cities-input").change(function (event) {
-            if (!event.bubbles) {
-                var placeName = $("#countries-input").val() + ", " + $("#cities-input").val();
-                if (!that.places.includes(placeName)) {
-                    $("#cities-input").removeClass("error");
-
-                    that.places.push(placeName);
-                    $("#cities-input").val("");
-                } else {
-                    $("#cities-input").addClass("error");
+    /*
+        private initCitiesComponent(cities) {
+            var citiesComponent = $("#cities-input").prop('outerHTML');
+            $("#cities-input").remove();
+            $("#countries-input").after(citiesComponent);
+            $("#cities-input").uui_autocomplete({
+                source: cities,
+                items: 8
+            });
+    
+            var that = this;
+            $("#cities-input").change(function (event) {
+                if (!event.bubbles) {
+                    var placeName = $("#countries-input").val() + ", " + $("#cities-input").val();
+                    if (!that.places.includes(placeName)) {
+                        $("#cities-input").removeClass("error");
+    
+                        that.places.push(placeName);
+                        $("#cities-input").val("");
+                    } else {
+                        $("#cities-input").addClass("error");
+                    }
                 }
-            }
-        });
-    }*/
+            });
+        }*/
 
     onOpenUserPicker() {
         this.userPickerComponent.init();
@@ -324,13 +326,14 @@ export class AddVacationComponent {
         //that.participants = [];
         $("#user-picker-modal-body .selected").each(function (index, el) {
             var name = $(el).text();
-            var id = +$(el).attr('id');
-            var member: User;
-            that.userService.getUserById(id).subscribe(m => member = m);
-            if (that.members.indexOf(member) == -1) {
-                that.members.push(name);
-            }
-            $(el).removeClass("selected");
+            var id = $(el).attr('id');
+            var member = that.userService.getUserById(id);
+            member.subscribe(m => {
+                if (that.participants.indexOf(m) == -1) {
+                    that.participants.push(m);
+                }
+                $(el).removeClass("selected");
+            });
         });
     }
 
@@ -340,12 +343,34 @@ export class AddVacationComponent {
     }
 
     saveTrip() {
-        this.vacation = new Vacation(this.owner, this.members, this.title, this.description,
-        this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, VacationStatus.OPEN, 
-        this.plannedActivities, null, null, new Image("", "",".jpg", "vac_1", "ds"), this.days, this.transoprt, this.departureCountry,
-        this.targetCountry, this.targetCity);
+        var that = this;
+        $(document).ready(function (e) {
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: UrlUtil.UPLOAD_IMAGE,
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    that.titleImg = new Image(data.id, data.altText, data.extension, data.uri, data.description)
+                    
+                    console.log("CURRENT USER " + that.currentUser);
+                    that.currentUser.id = "123456";
+                    that.vacation = new Vacation(that.currentUser, that.members, that.title, that.description,
+                        that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
+                        that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry,
+                        that.targetCountry, that.targetCity);
 
-        this.vacationService.createVacation(this.vacation);
+                    that.vacationService.createVacation(that.vacation);
+                },
+                error: function (data) {
+                    console.log("error");
+                    console.log(data);
+                }
+            });
+        });
     }
 
     cancelVacCreation() {

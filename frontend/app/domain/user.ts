@@ -10,7 +10,7 @@ export class User {
         public skype: String,
         public phone: String,
         public avatar: Image,
-        public id?: number 
+        public id?: any 
         ) {
 
     }

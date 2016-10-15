@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -32,9 +33,10 @@ public class ImageController {
     private String uploadDir;
 
     @RequestMapping(value = "/upload", method = POST)
-    public HttpEntity<Image> uploadImage(MultipartFile file) {
+    public HttpEntity<Image> uploadImage(@RequestParam("file") MultipartFile file) {
         final String filename = file.getOriginalFilename();
         LOG.debug("Uploading image with filename {}", filename);
+
         Image image = new Image();
         image.setAltText(filename);
         image.setExtension(filename.split("\\.")[1]);
@@ -46,6 +48,8 @@ public class ImageController {
 
     @RequestMapping(path = "/img/{path}")
     public void image(@PathVariable("path") String path, HttpServletResponse response) throws IOException {
+        String imgPath = "img/" + path + ".jpg";
+        try (InputStream imgResource = getClass().getClassLoader().getResourceAsStream(imgPath);){
         String imgPath = "/" + path + ".jpg";
 //        try (InputStream imgResource = getClass().getClassLoader().getResourceAsStream(uploadDir+imgPath)) {
         try (InputStream imgResource = new FileInputStream(new File(uploadDir+imgPath))) {

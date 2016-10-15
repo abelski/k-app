@@ -9,10 +9,11 @@ public class User extends Principal {
     private String id;
     private String firstName;
     private String lastName;
+    private String birth;
+    private String region;
     private String skype;
     private String phone;
     private Image avatar;
-    private String token;
 
     public String getId() {
         return id;
@@ -67,11 +68,21 @@ public class User extends Principal {
         return this;
     }
 
-    public String getToken() {
-        return token;
+    public String getBirth() {
+        return birth;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public User setBirth(String birth) {
+        this.birth = birth;
+        return this;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public User setRegion(String region) {
+        this.region = region;
+        return this;
     }
 }

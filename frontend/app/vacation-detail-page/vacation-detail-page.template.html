@@ -46,7 +46,7 @@
                         <div class="max-people">Up to 6 persons</div>
                     </div>
                     <div class="places">
-                        <span class="uui-label place large _red" >Germany, Dortmund</span>
+                        <place-tag [place]="place" *ngFor="let place of vacation.places"></place-tag>
                     </div>
                     <div id="members-list">
                         <!-- link should lead to the correspondent profile, e.g. /profile/:id -->

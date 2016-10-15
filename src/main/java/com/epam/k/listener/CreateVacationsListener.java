@@ -5,11 +5,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import com.mongodb.client.MongoDatabase;
-import org.apache.commons.io.FileUtils;
+import com.epam.k.domain.Comment;
+import com.epam.k.domain.Image;
+import com.epam.k.domain.User;
+import com.epam.k.service.ImageService;
+import com.epam.k.service.UserService;
+import com.epam.k.service.VacationService;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
-import org.bson.BsonDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
@@ -17,7 +20,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.epam.k.dao.VacationDAO;
 import com.epam.k.domain.Vacation;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,7 +32,13 @@ public class CreateVacationsListener implements ApplicationListener<ContextRefre
     private ApplicationContext context;
 
     @Autowired
-    private VacationDAO vacationDAO;
+    private VacationService vacationService;
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private ImageService imageService;
 
     @Value("${vacations.list}")
     private String vacationsPath;
@@ -38,21 +46,29 @@ public class CreateVacationsListener implements ApplicationListener<ContextRefre
     @Value("${uploadDir}")
     private String uploadDir;
 
-    @Value("${resourceImgDir}")
-    private String resourceImgDir;
-
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        try {
-            createUploadDir();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         try (InputStream vacationsStream = getClass().getClassLoader().getResourceAsStream(vacationsPath)) {
             String vacationsJson = IOUtils.toString(vacationsStream);
             ObjectMapper objectMapper = new ObjectMapper();
             List<Vacation> vacations = objectMapper.readValue(vacationsJson, new TypeReference<List<Vacation>>(){});
-            vacationDAO.save(vacations);
+
+            vacations.stream().forEach(vacation -> {
+                userService.registerAndGet(vacation.getOwner());
+                for (User member :vacation.getMembers()) {
+                    userService.registerAndGet(member);
+                }
+                imageService.save(vacation.getTitleImg());
+                for (Image image : vacation.getGallery()) {
+                    imageService.save(image);
+                }
+
+                for (Comment comment : vacation.getComments()) {
+                    userService.save(comment.getAuthor());
+                }
+            });
+
+            vacationService.save(vacations);
         } catch (IOException e) {
             LOGGER.warn("Error in the vacations creation", e);
         }
