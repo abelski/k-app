@@ -109,7 +109,7 @@ var WhatsupComponent = (function () {
         });
         this.loadInstPictures("mototripepam");
         this.loadInstPictures("khackathon");
-        this.loadInstPictures("india");
+        this.loadInstPictures("yogatrip");
         this.loadInstPictures("yoga");
         this.loadInstPictures("skiing");
     };

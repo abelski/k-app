@@ -14,7 +14,7 @@ var MyTravelComponent = (function () {
         this.instImages = [];
     }
     MyTravelComponent.prototype.ngAfterViewInit = function () {
-        this.loadInstPictures("cheerleader");
+        this.loadInstPictures("khackathon");
     };
     MyTravelComponent.prototype.loadInstPictures = function (hashtag) {
         $("#insta-images .fa-spin").show();
