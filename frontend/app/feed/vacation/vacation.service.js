@@ -40,9 +40,14 @@ var VacationService = (function () {
         var body = JSON.stringify(vacation);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
+        console.log("VAC CREATED" + body);
         return this.http.post(url_util_1.UrlUtil.ADD_VACATION, body, options)
             .map(this.extractData)
-            .catch(this.handleError);
+            .catch(this.handleError)
+            .subscribe(function (vac) {
+            console.log(vac);
+            return vac;
+        });
     };
     VacationService.prototype.extractData = function (res) {
         var body = res.json();

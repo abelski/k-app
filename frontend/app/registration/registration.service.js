@@ -124,23 +124,9 @@ var RegistrationService = (function () {
     };
     RegistrationService.prototype.startYammerAuth = function () {
         yam.platform.getLoginStatus(function (response) {
+            console.log(response);
             if (response.authResponse) {
                 console.log(response);
-                yam.platform.request({
-                    url: "users.json",
-                    method: "GET",
-                    data: {
-                        "letter": "a",
-                        "page": "2",
-                    },
-                    success: function (user) {
-                        alert("The request was successful.");
-                        console.dir(user);
-                    },
-                    error: function (user) {
-                        alert("There was an error with the request.");
-                    }
-                });
             }
             else {
                 alert("not logged in");
