@@ -26,7 +26,8 @@ public class PersistenceConfiguration {
     @Bean
     public VacationFilterPredicateBuilder vacationFilterPredicateBuilder() {
         VacationFilterPredicateBuilderImpl builder = new VacationFilterPredicateBuilderImpl();
-        builder.setFilters(Arrays.asList(new DatesFilter(), new OwnerIdFilter(), new TagsFilter(), new TransportFilter()));
+        builder.setFilters(Arrays.asList(new DatesFilter(), new OwnerIdFilter(), new TagsFilter(), new TransportFilter(),
+                new DepartureCountryFilter()));
         return builder;
     }
 }
