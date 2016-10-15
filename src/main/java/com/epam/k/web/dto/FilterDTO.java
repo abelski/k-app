@@ -26,6 +26,7 @@ public class FilterDTO {
     private String countryToGo;
     private String cityToGo;
     private BigDecimal estimatedCost;
+    private String departureCountry;
 
     public String getOwnerId() {
         return ownerId;
@@ -105,6 +106,15 @@ public class FilterDTO {
 
     public FilterDTO setTransport(Transport transport) {
         this.transport = transport;
+        return this;
+    }
+
+    public String getDepartureCountry() {
+        return departureCountry;
+    }
+
+    public FilterDTO setDepartureCountry(String departureCountry) {
+        this.departureCountry = departureCountry;
         return this;
     }
 }

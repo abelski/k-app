@@ -10,14 +10,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var filter_service_1 = require('../filter/filter.service');
-//declare var $:any;
+var router_1 = require('@angular/router');
+var Globals = require('../globals');
 var SidebarComponent = (function () {
-    function SidebarComponent() {
+    function SidebarComponent(router) {
+        this.router = router;
     }
     SidebarComponent.prototype.doSomthing = function (value) {
     };
     SidebarComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
         UUI.Sidebar.init({ open: true, animate: true });
+        window.onbeforeunload = function () {
+            console.log(window.location.href);
+        };
+        this.router.events.subscribe(function (val) {
+            _this.showHide();
+        });
+    };
+    SidebarComponent.prototype.showHide = function () {
+        if (window.location.pathname == "/" + Globals.PATH_VACS) {
+            $("#side-filter").show();
+        }
+        else {
+            $("#side-filter").hide();
+        }
     };
     SidebarComponent = __decorate([
         core_1.Component({
@@ -25,7 +42,7 @@ var SidebarComponent = (function () {
             templateUrl: 'app/sidebar/sidebar.template.html',
             providers: [filter_service_1.FilterService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], SidebarComponent);
     return SidebarComponent;
 }());

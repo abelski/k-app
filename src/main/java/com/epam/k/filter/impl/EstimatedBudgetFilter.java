@@ -5,13 +5,16 @@ import com.epam.k.filter.Filter;
 import com.epam.k.web.dto.FilterDTO;
 import com.querydsl.core.types.dsl.BooleanExpression;
 
-public class OwnerFilter implements Filter {
+import java.math.BigDecimal;
+
+public class EstimatedBudgetFilter implements Filter {
     @Override
     public BooleanExpression addConstraint(BooleanExpression filterExpression, FilterDTO filter) {
-        String ownerId = filter.getOwnerId();
-        if (ownerId != null) {
+        BigDecimal estimatedCost = filter.getEstimatedCost();
+        if (estimatedCost != null) {
             QVacation vacation = QVacation.vacation;
-            return filterExpression.and(vacation.owner.id.eq(ownerId));
+            return filterExpression.and(vacation.estimatedCost.eq(estimatedCost)
+                    .or(vacation.estimatedCost.lt(estimatedCost)));
         }
         return filterExpression;
     }

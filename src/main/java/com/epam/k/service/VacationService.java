@@ -32,6 +32,6 @@ public class VacationService extends BaseService<Vacation, String> {
     }
 
     public Iterable<Vacation> findAllByMember(final User user) {
-        return getRepository().findAllByMemberAndStatusIn(user, Arrays.asList(VacationStatus.OPEN, VacationStatus.CLOSED));
+        return getRepository().findAllByMembersContainingAndStatusIn(user, Arrays.asList(VacationStatus.OPEN, VacationStatus.CLOSED));
     }
 }

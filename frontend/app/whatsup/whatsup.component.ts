@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 declare var $: any;
+declare var c3: any;
 
 @Component({
     templateUrl: 'app/whatsup/whatsup.template.html',
@@ -8,8 +9,6 @@ declare var $: any;
 })
 
 export class WhatsupComponent {
-    private imgMinHeight = 50;
-    private imgMaxHeight = 350;
 
     private instImages = [];
 
@@ -18,6 +17,29 @@ export class WhatsupComponent {
     }
 
     ngAfterViewInit() {
+        c3.generate({
+            bindto: '#c3-donut-travel-type',
+            size: {
+                height: 280,
+                width: 280
+            },
+            data: {
+                columns: [
+                    ['Plane', 60],
+                    ['Car', 70],
+                    ['Bus', 80],
+                    ['Motocycle', 120],
+                    ['On feet', 30]
+                ],
+                type: 'donut'
+            },
+            donut: {
+                title: 'Title'
+            },
+            color: {
+                pattern: ['#39c2d7', '#a3c644', '#b22746', '#8b5a9f', '#ffdc19']
+            }
+        });
         this.loadInstPictures("cheerleader");
     }
 
