@@ -54,25 +54,51 @@
         <h2><a href="#vacs-owned">Owned Vacations</a></h2>
 
         <div class="vacs-wrapper" id="vacs-active">
-            <div class="uui-person-horizontal-profile vacation-short" *ngFor="let vac of activeVacation" routerLink="/vacations/{{vac.id}}">
+            <div class="uui-person-horizontal-profile vacation-short" routerLink="/vacations/1">
                 <div class="person-profile-body">
                     <div class="person-profile-section">
                         <div class="person-profile-photo">
-                            <img [src]="vac.avatar.uri" alt="" />
+                            <img src="img/trip-square.jpg" alt="" />
                         </div>
                         <div class="person-profile-info">
-                            <h2>{{vac.title}}</h2>
-                            <p>{{vac.beginDate[2]}} {{getMonthName(vac.beginDate[1])}} {{vac.beginDate[0]}} - {{vac.endDate[2]}} {{getMonthName(vac.endDate[1])}} {{vac.endDate[0]}}</p>
+                            <h2>Euro trip through Germany, France, Spain to Porto</h2>
+                            <p>8 Sept 2015 - 21 Sept 2015</p>
                         </div>
                     </div>
                     <section class="uui-info-panel-horizontal additional-info blue">
                         <div class="info-panel-body">
                             <div class="info-panel-section">
-                                <div>{{vac.members.length}} prticipants</div>
+                                <div>4 prticipants</div>
                                 <div>
                                     <!--<i class="fa fa-heart"></i>-->16 people liked</div>
-                                <div>{{vac.estimatedCost}}$ estimated cost</div>
-                                <div>{{vac.activities.length}} activities</div>
+                                <div>550$ estimated cost</div>
+                                <div>15 activities</div>
+                                <div>4 locations</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="uui-person-horizontal-profile vacation-short">
+                <div class="person-profile-body">
+                    <div class="person-profile-section">
+                        <div class="person-profile-photo">
+                            <img src="img/trip-square.jpg" alt="" />
+                        </div>
+                        <div class="person-profile-info">
+                            <h2>Trip to Curshavel</h2>
+                            <p>22 Mar 2015 - 6 Apr 2015</p>
+                        </div>
+                    </div>
+                    <section class="uui-info-panel-horizontal additional-info blue">
+                        <div class="info-panel-body">
+                            <div class="info-panel-section">
+                                <div>4 prticipants</div>
+                                <div>
+                                    <!--<i class="fa fa-heart"></i>-->16 people liked</div>
+                                <div>550$ estimated cost</div>
+                                <div>15 activities</div>
                                 <div>4 locations</div>
                             </div>
                         </div>
@@ -82,25 +108,25 @@
         </div>
 
         <div class="vacs-wrapper" id="vacs-past">
-            <div class="uui-person-horizontal-profile vacation-short" *ngFor="let vac of pastVacation" routerLink="/vacations/{{vac.id}}">
+            <div class="uui-person-horizontal-profile vacation-short past">
                 <div class="person-profile-body">
                     <div class="person-profile-section">
                         <div class="person-profile-photo">
-                            <img [src]="vac.avatar.uri" alt="" />
+                            <img src="img/trip-square.jpg" alt="" />
                         </div>
                         <div class="person-profile-info">
-                            <h2>{{vac.title}}</h2>
-                            <p>{{vac.beginDate[2]}} {{getMonthName(vac.beginDate[1])}} {{vac.beginDate[0]}} - {{vac.endDate[2]}} {{getMonthName(vac.endDate[1])}} {{vac.endDate[0]}}</p>
+                            <h2>Trip to Prague and Plzen</h2>
+                            <p>30 Oct 2013 - 11 Nov 2013</p>
                         </div>
                     </div>
                     <section class="uui-info-panel-horizontal additional-info blue">
                         <div class="info-panel-body">
                             <div class="info-panel-section">
-                                <div>{{vac.members.length}} prticipants</div>
+                                <div>4 prticipants</div>
                                 <div>
                                     <!--<i class="fa fa-heart"></i>-->16 people liked</div>
-                                <div>{{vac.estimatedCost}}$ estimated cost</div>
-                                <div>{{vac.activities.length}} activities</div>
+                                <div>550$ estimated cost</div>
+                                <div>15 activities</div>
                                 <div>4 locations</div>
                             </div>
                         </div>
@@ -110,25 +136,25 @@
         </div>
 
         <div class="vacs-wrapper" id="vacs-owned">
-            <div class="uui-person-horizontal-profile vacation-short" *ngFor="let vac of ownedVacation" routerLink="/vacations/{{vac.id}}">
+            <div class="uui-person-horizontal-profile vacation-short">
                 <div class="person-profile-body">
                     <div class="person-profile-section">
                         <div class="person-profile-photo">
-                            <img [src]="vac.avatar.uri" alt="" />
+                            <img src="img/trip-square.jpg" alt="" />
                         </div>
                         <div class="person-profile-info">
-                            <h2>{{vac.title}}</h2>
-                            <p>{{vac.beginDate[2]}} {{getMonthName(vac.beginDate[1])}} {{vac.beginDate[0]}} - {{vac.endDate[2]}} {{getMonthName(vac.endDate[1])}} {{vac.endDate[0]}}</p>
+                            <h2>Trip to Curshavel</h2>
+                            <p>22 Mar 2015 - 6 Apr 2015</p>
                         </div>
                     </div>
                     <section class="uui-info-panel-horizontal additional-info blue">
                         <div class="info-panel-body">
                             <div class="info-panel-section">
-                                <div>{{vac.members.length}} prticipants</div>
+                                <div>4 prticipants</div>
                                 <div>
                                     <!--<i class="fa fa-heart"></i>-->16 people liked</div>
-                                <div>{{vac.estimatedCost}}$ estimated cost</div>
-                                <div>{{vac.activities.length}} activities</div>
+                                <div>550$ estimated cost</div>
+                                <div>15 activities</div>
                                 <div>4 locations</div>
                             </div>
                         </div>
