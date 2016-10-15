@@ -46,6 +46,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
     compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.springframework.boot:spring-boot-starter-mail'
     compile 'javax.servlet:javax.servlet-api:3.1.0'
     compile 'com.querydsl:querydsl-core'
     compile 'com.querydsl:querydsl-apt'
