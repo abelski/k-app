@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-8">
+        <form action="#">
+            <div class="avatar-img"><i class="material-icons mdl-list__item-avatar"><img [src]="currentUser.avatar.uri"/></i></div>
+            <div class="comment-body">
+                <div class="comment-owner">{{currentUser.firstName}} {{currentUser.lastName}}</div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample3" #textComment placeholder="Text...">
+                    <!--<label class="mdl-textfield__label" for="sample3">Text...</label>-->
+                </div>
+                <button (click)="addComment(textComment.value)" class="uui-button transparent blue">LEAVE COMMENT</button>
+            </div>
+        </form>
+    </div>
+</div>
