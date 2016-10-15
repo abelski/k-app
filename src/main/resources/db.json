@@ -10,7 +10,7 @@
 
 				"altText":"alt_text",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
+				"uri":"/img/avatar1.",
 				"description":"Very good description"
 			}
 		},
@@ -23,7 +23,7 @@
 
 				"altText":"alt_text123",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
+				"uri":"/img/member_avatar1.",
 				"description":"Very good description"
 			}
 		}
@@ -60,7 +60,7 @@
 
 						"altText":"alt_text",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
+						"uri":"/img/avatar1.",
 						"description":"Very good description"
 					}
 				},
@@ -74,13 +74,13 @@
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
 			}
 		],
@@ -89,7 +89,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_1.",
+			"uri":"/img/vac_1.",
 			"description":"Very good description"
 		}
 	},
@@ -104,7 +104,7 @@
 
 				"altText":"alt_text",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
+				"uri":"/img/avatar1.",
 				"description":"Very good description"
 			}
 		},
@@ -117,7 +117,7 @@
 
 				"altText":"alt_text123",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
+				"uri":"/img/member_avatar1.",
 				"description":"Very good description"
 			}
 		}
@@ -155,7 +155,7 @@
 
 						"altText":"alt_text",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
+						"uri":"/img/avatar1.",
 						"description":"Very good description"
 					}
 				},
@@ -169,13 +169,13 @@
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
 			}
 		],
@@ -184,7 +184,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_2.",
+			"uri":"/img/vac_2.",
 			"description":"Very good description"
 		}
 	},
@@ -199,7 +199,7 @@
 
 				"altText":"alt_text",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
+				"uri":"/img/avatar1.",
 				"description":"Very good description"
 			}
 		},
@@ -212,7 +212,7 @@
 
 				"altText":"alt_text123",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
+				"uri":"/img/member_avatar1.",
 				"description":"Very good description"
 			}
 		}
@@ -249,7 +249,7 @@
 
 						"altText":"alt_text",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
+						"uri":"/img/avatar1.",
 						"description":"Very good description"
 					}
 				},
@@ -263,13 +263,13 @@
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
 			}
 		],
@@ -278,7 +278,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_3.",
+			"uri":"/img/vac_3.",
 			"description":"Very good description"
 		}
 	},
@@ -293,7 +293,7 @@
 
 				"altText":"alt_text",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
+				"uri":"/img/avatar1.",
 				"description":"Very good description"
 			}
 		},
@@ -306,7 +306,7 @@
 
 				"altText":"alt_text123",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
+				"uri":"/img/member_avatar1.",
 				"description":"Very good description"
 			}
 		}
@@ -346,7 +346,7 @@
 
 						"altText":"alt_text",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
+						"uri":"/img/avatar1.",
 						"description":"Very good description"
 					}
 				},
@@ -360,13 +360,13 @@
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
 			}
 		],
@@ -375,7 +375,7 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_4.",
+			"uri":"/img/vac_4.",
 			"description":"Very good description"
 		}
 	},
@@ -390,7 +390,7 @@
 
 				"altText":"alt_text",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
+				"uri":"/img/avatar1.",
 				"description":"Very good description"
 			}
 		},
@@ -403,7 +403,7 @@
 
 				"altText":"alt_text123",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
+				"uri":"/img/member_avatar1.",
 				"description":"Very good description"
 			}
 		}
@@ -443,7 +443,7 @@
 
 						"altText":"alt_text",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
+						"uri":"/img/avatar1.",
 						"description":"Very good description"
 					}
 				},
@@ -457,13 +457,13 @@
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
 			}, {
 
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
 			}
 		],
@@ -472,1852 +472,8 @@
 
 			"altText":"Smth",
 			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_1.",
-			"description":"Very good description"
-		}
-	},
-	{
-		"id": 13123,
-		"owner": {
-			"firstName": "Valera",
-			"lastName": "Valerov",
-			"skype": "qwert",
-			"phone": "+123 44 234 3434",
-			"avatar": {
-
-				"altText":"alt_text",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
-				"description":"Very good description"
-			}
-		},
-		"members": [{
-			"firstName": "Leha",
-			"lastName": "Evlanov",
-			"skype": "leha.here",
-			"phone": "+375 33 345 0132",
-			"avatar": {
-
-				"altText":"alt_text123",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
-				"description":"Very good description"
-			}
-		}
-
-		],
-		"title": "Trip To Egypt",
-		"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-		"tags": [
-			{ "name":"winter"},
-			{ "name":"Egypt"},
-			{ "name":"Mordor"},
-			{ "name":"Shire"},
-			{ "name":"Ausralia"},
-			{ "name":"Some Islands"},
-			{ "name":"The End of The World"}
-		],
-
-		"estimatedCost": "111.11",
-		"minMembers": "5",
-		"status": "OPEN",
-		"plannedActivities": [
-			{ "title":"Ski"},
-			{ "title":"Surfing"},
-			{ "title":"PyromydWatching"}
-		],
-		"comments": [
-			{
-
-				"author":
-				{
-					"firstName": "Leha",
-					"lastName": "Evlanov",
-					"skype": "leha.here",
-					"phone": "+375 33 345 0182",
-					"avatar": {
-
-						"altText":"alt_text",
-						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
-						"description":"Very good description"
-					}
-				},
-				"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-			}
-		],
-		"beginDate": [2016,3,2],
-		"endDate": [2016,6,2],
-		"gallery": [
-			{
-
-				"altText":"Smth else",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
-				"description":"Very good description"
-			}, {
-
-				"altText":"Smth else",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
-				"description":"Very good description"
-			}
-		],
-		"titleImg":
-		{
-
-			"altText":"Smth",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_1.",
-			"description":"Very good description"
-		}
-	},
-	{
-		"id": 1543534,
-		"owner": {
-			"firstName": "Valera",
-			"lastName": "Valerov",
-			"skype": "qwert",
-			"phone": "+123 44 234 3434",
-			"avatar": {
-
-				"altText":"alt_text",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
-				"description":"Very good description"
-			}
-		},
-		"members": [{
-			"firstName": "Leha",
-			"lastName": "Evlanov",
-			"skype": "leha.here",
-			"phone": "+375 33 345 0132",
-			"avatar": {
-
-				"altText":"alt_text123",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
-				"description":"Very good description"
-			}
-		}
-
-		],
-		"title": "Trip To Egypt",
-		"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-		"tags": [
-			{ "name":"winter"},
-			{ "name":"Egypt"},
-			{ "name":"Mordor"},
-			{ "name":"Shire"},
-			{ "name":"Ausralia"},
-			{ "name":"Some Islands"},
-			{ "name":"The End of The World"}
-		],
-
-		"estimatedCost": "111.11",
-		"minMembers": "5",
-		"status": "OPEN",
-		"plannedActivities": [
-			{ "title":"Ski"},
-			{ "title":"Surfing"},
-			{ "title":"PyromydWatching"}
-		],
-		"comments": [
-			{
-
-				"author":
-				{
-					"firstName": "Leha",
-					"lastName": "Evlanov",
-					"skype": "leha.here",
-					"phone": "+375 33 345 0182",
-					"avatar": {
-
-						"altText":"alt_text",
-						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
-						"description":"Very good description"
-					}
-				},
-				"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-			}
-		],
-		"beginDate": [2016,3,2],
-		"endDate": [2016,6,2],
-		"gallery": [
-			{
-
-				"altText":"Smth else",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
-				"description":"Very good description"
-			}, {
-
-				"altText":"Smth else",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
-				"description":"Very good description"
-			}
-		],
-		"titleImg":
-		{
-
-			"altText":"Smth",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_1.",
-			"description":"Very good description"
-		}
-	},
-	{
-		"id": 1532,
-		"owner": {
-			"firstName": "Valera",
-			"lastName": "Valerov",
-			"skype": "qwert",
-			"phone": "+123 44 234 3434",
-			"avatar": {
-
-				"altText":"alt_text",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
-				"description":"Very good description"
-			}
-		},
-		"members": [{
-			"firstName": "Leha",
-			"lastName": "Evlanov",
-			"skype": "leha.here",
-			"phone": "+375 33 345 0132",
-			"avatar": {
-
-				"altText":"alt_text123",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
-				"description":"Very good description"
-			}
-		}
-
-		],
-		"title": "Trip To Egypt",
-		"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-		"tags": [
-			{ "name":"winter"},
-			{ "name":"Egypt"},
-			{ "name":"Mordor"},
-			{ "name":"Shire"},
-			{ "name":"Ausralia"},
-			{ "name":"Some Islands"},
-			{ "name":"The End of The World"}
-		],
-
-		"estimatedCost": "111.11",
-		"minMembers": "5",
-		"status": "OPEN",
-		"plannedActivities": [
-			{ "title":"Ski"},
-			{ "title":"Surfing"},
-			{ "title":"PyromydWatching"}
-		],
-		"comments": [
-			{
-
-				"author":
-				{
-					"firstName": "Leha",
-					"lastName": "Evlanov",
-					"skype": "leha.here",
-					"phone": "+375 33 345 0182",
-					"avatar": {
-
-						"altText":"alt_text",
-						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
-						"description":"Very good description"
-					}
-				},
-				"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-			}
-		],
-		"beginDate": [2016,3,2],
-		"endDate": [2016,6,2],
-		"gallery": [
-			{
-
-				"altText":"Smth else",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
-				"description":"Very good description"
-			}, {
-
-				"altText":"Smth else",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
-				"description":"Very good description"
-			}
-		],
-		"titleImg":
-		{
-
-			"altText":"Smth",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_1.",
-			"description":"Very good description"
-		}
-	},
-	{
-		"id": 16,
-		"owner": {
-			"firstName": "Valera",
-			"lastName": "Valerov",
-			"skype": "qwert",
-			"phone": "+123 44 234 3434",
-			"avatar": {
-
-				"altText":"alt_text",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/avatar1.",
-				"description":"Very good description"
-			}
-		},
-		"members": [{
-			"firstName": "Leha",
-			"lastName": "Evlanov",
-			"skype": "leha.here",
-			"phone": "+375 33 345 0132",
-			"avatar": {
-
-				"altText":"alt_text123",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/member_avatar1.",
-				"description":"Very good description"
-			}
-		}
-
-		],
-		"title": "Trip To Egypt",
-		"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-		"tags": [
-			{ "name":"winter"},
-			{ "name":"Egypt"},
-			{ "name":"Mordor"},
-			{ "name":"Shire"},
-			{ "name":"Ausralia"},
-			{ "name":"Some Islands"},
-			{ "name":"The End of The World"}
-		],
-
-		"estimatedCost": "111.11",
-		"minMembers": "5",
-		"status": "OPEN",
-		"plannedActivities": [
-			{ "title":"Ski"},
-			{ "title":"Surfing"},
-			{ "title":"PyromydWatching"}
-		],
-		"comments": [
-			{
-
-				"author":
-				{
-					"firstName": "Leha",
-					"lastName": "Evlanov",
-					"skype": "leha.here",
-					"phone": "+375 33 345 0182",
-					"avatar": {
-
-						"altText":"alt_text",
-						"extension":"jpg",
-						"uri":"http://localhost:8080/img/avatar1.",
-						"description":"Very good description"
-					}
-				},
-				"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-			}
-		],
-		"beginDate": [2016,3,2],
-		"endDate": [2016,6,2],
-		"gallery": [
-			{
-
-				"altText":"Smth else",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
-				"description":"Very good description"
-			}, {
-
-				"altText":"Smth else",
-				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
-				"description":"Very good description"
-			}
-		],
-		"titleImg":
-		{
-
-			"altText":"Smth",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/vac_1.",
-			"description":"Very good description"
-		}
-
-	},{
-	"id": 15,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
+			"uri":"/img/vac_1.",
 			"description":"Very good description"
 		}
 	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 14,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 13,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 12,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 11,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 10,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 9,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 8,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 7,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 6,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 5,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 4,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 3,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 2,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-},{
-	"id": 112311,
-	"owner": {
-		"firstName": "Valera",
-		"lastName": "Valerov",
-		"skype": "qwert",
-		"phone": "+123 44 234 3434",
-		"avatar": {
-
-			"altText":"alt_text",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/avatar1.",
-			"description":"Very good description"
-		}
-	},
-	"members": [{
-		"firstName": "Leha",
-		"lastName": "Evlanov",
-		"skype": "leha.here",
-		"phone": "+375 33 345 0132",
-		"avatar": {
-
-			"altText":"alt_text123",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/member_avatar1.",
-			"description":"Very good description"
-		}
-	}
-
-	],
-	"title": "Trip To Egypt",
-	"description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-	"tags": [
-		{ "name":"winter"},
-		{ "name":"Egypt"},
-		{ "name":"Mordor"},
-		{ "name":"Shire"},
-		{ "name":"Ausralia"},
-		{ "name":"Some Islands"},
-		{ "name":"The End of The World"}
-	],
-
-	"estimatedCost": "111.11",
-	"minMembers": "5",
-	"status": "OPEN",
-	"plannedActivities": [
-		{ "title":"Ski"},
-		{ "title":"Surfing"},
-		{ "title":"PyromydWatching"}
-	],
-	"comments": [
-		{
-
-			"author":
-			{
-				"firstName": "Leha",
-				"lastName": "Evlanov",
-				"skype": "leha.here",
-				"phone": "+375 33 345 0182",
-				"avatar": {
-
-					"altText":"alt_text",
-					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
-					"description":"Very good description"
-				}
-			},
-			"text":"You're gonna regret this trip!! AHAAHHAAHAHA"
-		}
-	],
-	"beginDate": [2016,3,2],
-	"endDate": [2016,6,2],
-	"gallery": [
-		{
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_123.",
-			"description":"Very good description"
-		}, {
-
-			"altText":"Smth else",
-			"extension":"jpg",
-			"uri":"http://localhost:8080/img/gal_124.",
-			"description":"Very good description"
-		}
-	],
-	"titleImg":
-	{
-
-		"altText":"Smth",
-		"extension":"jpg",
-		"uri":"http://localhost:8080/img/vac_1.",
-		"description":"Very good description"
-	}
-
-}
 ]
