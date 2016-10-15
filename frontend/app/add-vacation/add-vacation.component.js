@@ -293,26 +293,38 @@ var AddVacationComponent = (function () {
         var that = this;
         $(document).ready(function (e) {
             var formData = new FormData(this);
+            console.log("FORM DATA" + formData);
+            delete $.ajaxSettings.headers["Content-Type"];
+            alert("COOL" + $.ajaxSettings.headers);
             $.ajax({
                 type: 'POST',
                 url: url_util_1.UrlUtil.UPLOAD_IMAGE,
-                data: formData,
+                file: formData,
                 cache: false,
-                contentType: false,
                 processData: false,
                 success: function (data) {
+                    console.log(data);
                     that.titleImg = new image_1.Image(data.id, data.altText, data.extension, data.uri, data.description);
+                    $.ajaxSettings.headers["Content-Type"] = "application/json";
                     console.log("CURRENT USER " + that.currentUser);
+                    alert("COOL" + that.currentUser);
                     that.currentUser.id = "123456";
                     that.vacation = new vacation_1.Vacation(that.currentUser, that.members, that.title, that.description, that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, vacation_status_1.VacationStatus.OPEN, that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry, that.targetCountry, that.targetCity);
                     that.vacationService.createVacation(that.vacation);
                 },
                 error: function (data) {
                     console.log("error");
+                    alert("MISTAKE!!1");
                     console.log(data);
                 }
             });
         });
+        that.vacation = new vacation_1.Vacation(that.currentUser, that.members, that.title, that.description, that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, vacation_status_1.VacationStatus.OPEN, that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry, that.targetCountry, that.targetCity);
+        that.vacationService.createVacation(that.vacation);
+        // return false;
+    };
+    AddVacationComponent.prototype.createHashTag = function () {
+        $("#inst-tag").val("Vac-" + this.beginDate);
     };
     AddVacationComponent.prototype.cancelVacCreation = function () {
         var answer = confirm("Are you sure you want to leave this page?");
