@@ -64,7 +64,7 @@ public class CreateVacationsListener implements ApplicationListener<ContextRefre
                 }
 
                 for (Comment comment : vacation.getComments()) {
-                    userService.save(comment.getAuthor());
+                    userService.registerAndGet(comment.getAuthor());
                 }
             });
 
