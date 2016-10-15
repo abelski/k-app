@@ -6,7 +6,7 @@
         <div>
             <div class="card card-big">
                 <div routerLink="/vacations/{{vacation.id}}" class="mini-card-body">
-                    <div [ngStyle]="{'background-image': 'url(' + vacation.titleImg.uri + vacation.titleImg.extension + ')'}" class="card-image">
+                    <div [ngStyle]="{'background-image': 'url(' + 'http://10.9.202.128:9090' + vacation.titleImg.uri + vacation.titleImg.extension + ')'}" class="card-image">
                         <h2 class="card-title">{{vacation.title}}</h2>
                     </div>
                     <div class="mini-card-details">

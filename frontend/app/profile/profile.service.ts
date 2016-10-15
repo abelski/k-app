@@ -9,19 +9,19 @@ export class ProfileService {
 
     constructor(private http: Http) { }
 
-    public getActiveVacations(userId: number): Observable<Vacation[]> {
+    public getActiveVacations(userId: any): Observable<Vacation[]> {
         return this.http.get(UrlUtil.GET_ACTIVE_VACATION + userId)
             .map(this.extractData)
             .catch(this.handleError);
     }
 
-    public getPastVacations(userId: number): Observable<Vacation[]> {
+    public getPastVacations(userId: any): Observable<Vacation[]> {
         return this.http.get(UrlUtil.GET_ACTIVE_VACATION + userId)
             .map(this.extractData)
             .catch(this.handleError);
     }
 
-    public getOwnedVacations(userId: number): Observable<Vacation[]> {
+    public getOwnedVacations(userId: any): Observable<Vacation[]> {
         return this.http.get(UrlUtil.GET_OWNED_VACATION + userId + "/vacations")
             .map(this.extractData)
             .catch(this.handleError);

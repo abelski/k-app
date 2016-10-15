@@ -11,13 +11,20 @@ import { Tag } from '../domain/tag';
 @Injectable()
 export class FilterService {
 
+    public static filterDate = null;
     public static filterTags: Tag[] = [];
     public static isChanged = false;
 
     constructor(private http: Http, private vacationService: VacationService) { }
 
-    public getVacationsByTag(): Observable<Vacation[]> {
-        let body = JSON.stringify(FilterService.filterTags);
+    public getFilteredVacations(): Observable<Vacation[]> {
+        let body = null;
+        if (FilterService.filterTags.length != 0) {
+            body = JSON.stringify(FilterService.filterTags);
+        }
+        if (FilterService.filterDate != null) {
+            
+        }
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         // console.log(body);

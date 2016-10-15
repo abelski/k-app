@@ -15,9 +15,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**")
-                .addResourceLocations("/resources/");
-        registry.addResourceHandler("/pics/**")
-                .addResourceLocations("/pics/");
+        registry.addResourceHandler("/img/**")
+                .addResourceLocations("file:/hackaton/img/");
     }
 }
