@@ -1,0 +1,8 @@
+<div class="user-picker">
+    <div class="">
+        <input type="text" placeholder="Start Typing a Name" class="uui-form-element user-search-input" id="user-filter-input"/>
+    </div>
+    <div class="users-pick-list">
+        <div class="user-pick-item" *ngFor="let user of userList" id="{{user.id}}"><i class="fa fa-check"></i><i class="fa fa-user"></i>{{user}}</div>
+    </div>
+</div>
