@@ -53,9 +53,9 @@ public class CreateVacationsListener implements ApplicationListener<ContextRefre
             List<Vacation> vacations = objectMapper.readValue(vacationsJson, new TypeReference<List<Vacation>>(){});
 
             vacations.stream().forEach(vacation -> {
-                userService.save(vacation.getOwner());
+                userService.registerAndGet(vacation.getOwner());
                 for (User member :vacation.getMembers()) {
-                    userService.save(member);
+                    userService.registerAndGet(member);
                 }
                 imageService.save(vacation.getTitleImg());
                 for (Image image : vacation.getGallery()) {
