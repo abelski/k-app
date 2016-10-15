@@ -243,7 +243,7 @@ button.card-button:hover {
 
 #addVacFAB {
     position: fixed;
-    right: calc(18% - 66px);
+    right: calc(18% - 104px);
     bottom: 112px;
     background: #E4445F;
     z-index: 100;
