@@ -51,6 +51,7 @@ public class ImageController {
         File img = new File("C://hackaton/img/"+path+".jpg");
         if (img.exists() && !img.isDirectory()) {
             FileInputStream imgStream = new FileInputStream(img);
+            response.setContentType("image/jpg");
             response.getOutputStream().write(IOUtils.toByteArray(imgStream));
         } else {
             response.getWriter().print(img.getAbsolutePath());
