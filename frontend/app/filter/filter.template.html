@@ -1,0 +1,32 @@
+<div class="filter">
+    <div class="date-filter">
+        <p class="filter-header">Vacation start date</p>
+        <div class="uui-datepicker input-daterange input-group" id="filterDatepicker">
+            <div>
+                <input #beginDate [ngModel]="date" type="text" class="uui-form-element" name="start" placeholder="mm/dd/yyyy"/>
+            </div>
+        </div>
+    </div>
+    <div class="source-country">
+        <p class="filter-header">Source country</p>
+        <input (change)="onChange($event.target.value)" type="text" class="uui-form-element" placeholder="Source Country" id="countries-input-filter"
+                 style="width: 177px; min-width: 177px; margin-right: 20px;"/>
+    </div>
+    <div class="target-country">
+        <p class="filter-header">Target country</p>
+        <input (change)="onChange($event.target.value)" type="text" class="uui-form-element" placeholder="Target Country" id="countries-input-filter"
+                style="width: 177px; min-width: 177px; margin-right: 20px;"/>
+    </div>
+    <div class="activity-type">
+        <p class="filter-header">Activity type</p>
+        <select (change)="onChange($event.target.value)" class="selectpicker uui-form-element" data-live-search="true">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+    <div class="details-tags">
+        <p class="filter-header">Tags</p>
+        <div (click)="deleteFilterTag(tag)" class="tag" *ngFor="let tag of filterTags">{{tag.name}}</div>
+    </div>
+</div>
