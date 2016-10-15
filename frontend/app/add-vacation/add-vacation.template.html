@@ -1,0 +1,136 @@
+<div id="vacation-semi-back">
+    <div id="add-vacation-form">
+        <table class="vac-form-table">
+            <tr>
+                <td><span class="uui-label blue">Title</span></td>
+                <td colspan="3"><input (change)="title = $event.target.value" type="text" class="uui-form-element" style="width: 100%" value="{{vacEdited.title}}" /></td>
+            </tr>
+            <tr>
+                <td><span class="uui-label blue">Date period</span></td>
+                <td>
+                    <div class="uui-datepicker input-daterange input-group" id="pickerDateRange">
+                        <span class="input-group-addon">From</span>
+                        <input (change)="beginDate = $event.target.value" type="text" class="uui-form-element beginDate" name="start" placeholder="mm/dd/yyyy" />
+                        <span class="input-group-addon">to</span>
+                        <input type="text" class="uui-form-element endDate" name="end" placeholder="mm/dd/yyyy" />
+                    </div>
+                </td>
+                <td><span class="uui-label blue">Days</span></td>
+                <td><input (change)="days = $event.target.value" type="number" class="uui-form-element" min="1" style="width: 68px" /></td>
+            </tr>
+            <tr>
+                <td><span class="uui-label blue">Description</span></td>
+                <td colspan="3"><textarea (change)="description = $event.target.value" class="uui-form-element" style="width: 100%;"></textarea></td>
+            </tr>
+            <tr>
+                <td><span class="uui-label blue">Go by</span></td>
+                <td>
+                    <select (change)="transoprt = $event.target.value" class="selectpicker uui-form-element" id="transport_type_select">
+                        <option value="0"><i class="fa fa-plane"></i>Plane</option>
+                        <option value="1"><i class="fa fa-bus"></i>Bus</option>
+                        <option value="2"><i class="fa fa-car"></i>Car</option>
+                        <option value="3"><i class="fa fa-train"></i>Train</option>
+                        <option value="4"><i class="fa fa-motorcycle"></i>Motocycle</option>
+                        <option value="5"><i class="fa fa-bicycle"></i>Bicycle</option>
+                        <option value="6"><i class="fa fa-leaf"></i>On fit</option>
+                    </select>
+                </td>
+                <td><span class="uui-label blue">Estimated Cost</span></td>
+                <td colspan="3">
+                    <input (change)="estimatedCost = $event.target.value" type="text" class="uui-form-element" min="0" style="width: 68px" placeholder="Estimated per Person"/>
+                    <i class="fa fa-usd" style="margin-left: 8px; color: #1A9CB0;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="uui-label blue">Images</span></td>
+                <td colspan="3">
+                    <div class="uui-file-uploader fileinput fileinput-new" data-provides="fileinput">
+                        <span class="btn btn-file uui-button">
+                            <span class="fileinput-new">Choose...</span>
+                        <span class="fileinput-exists">Change...</span>
+                        <input type="file" name="..." />
+                        </span>
+                        <span class="fileinput-filename"></span>
+                        <a href="#" class="close fileinput-exists" data-dismiss="fileinput">×</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="uui-label blue">Places</span></td>
+                <td colspan="3">
+                    <div id="places-block">
+                        <span *ngIf="places.length == 0" id="places-ph">Add the places you wanna go&hellip;</span>
+                        <span class="uui-label place large" *ngFor="let place of places">{{place}} <i class="fa fa-times-circle-o"></i></span>
+                    </div>
+                    <input (change)="targetCountry = $event.target.value" type="text" class="uui-form-element" placeholder="Country" id="countries-input" style="width: 180px; min-width: 180px; margin-right: 20px;"
+                    />
+                    <i id="cntr-spinner" class="fa fa-circle-o-notch fa-spin fa-fw"></i>
+                    <input (change)="targetCity = $event.target.value" type="text" class="uui-form-element" placeholder="City" id="cities-input" style="width: 180px; min-width: 180px;"
+                    />
+                    <i id="city-spinner" class="fa fa-circle-o-notch fa-spin fa-fw"></i>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="uui-label blue">Participants</span></td>
+                <td colspan="3">
+                    <div id="participants-block">
+                        <span *ngIf="participants.length == 0" id="participants-ph">Add some guys!</span>
+                        <span class="uui-label participant large" *ngFor="let prt of participants">{{prt}} <i class="fa fa-times-circle-o"></i></span>
+                    </div>
+                    <button class="uui-button left-icon text-button" id="add-people-btn" (click)="onOpenUserPicker()" data-toggle="modal" data-target="#add-user-popup">
+                        <i class="fa fa-plus"></i>Add People
+                    </button>
+                    <button class="uui-button left-icon text-button" (click)="addOwner()" id="add-me-btn" *ngIf="!ownerAdded">
+                        <i class="fa fa-plus"></i>Add Youself
+                    </button>
+                    <span *ngIf="ownerAdded" id="owner-added-msg">You're in!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="uui-label blue">Minimum People</span></td>
+                <td><input (change)="minMembers = $event.target.value" type="number" min="1" class="uui-form-element" style="width: 68px" placeholder="Number of People"/></td>
+                <td><span class="uui-label blue">Departure Country</span></td>
+                <td>
+                    <input (change)="departureCountry = $event.target.value" type="text" min="1" class="uui-form-element" id="depart-country-input" style="width: 180px" placeholder="Select Countrty"/>
+                    <i id="dep-cntr-spinner" class="fa fa-circle-o-notch fa-spin fa-fw"></i>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="uui-label blue">Tags</span></td>
+                <td colspan="3">
+                    <div id="tags-block">
+                        <span *ngIf="tags.length == 0" id="tags-ph">Add some tags to help people find you!</span>
+                        <span class="tag" *ngFor="let tag of tags">{{tag.name}} <i class="fa fa-remove"></i></span>
+                    </div>
+                    <input type="text" class="uui-form-element" placeholder="Type tags" id="tags-input" style="width: 180px; min-width: 180px; margin-top: 4px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">
+                    <a href="" class="uui-button text-button form-action large" (click)="saveTrip()" id="save-vac-btn" *ngIf="!editMode">Create</a>
+                    <a href="" class="uui-button text-button form-action large" (click)="saveTrip()" id="save-vac-btn" *ngIf="editMode">Apply</a>
+                    <a routerLink="/vacations" class="uui-button text-button large grayed" (click)="cancelVacCreation()" id="cancel-vac-btn">Cancel</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="modal uui-modal fade" id="add-user-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Tittle</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span></span><span></span></button>
+            </div>
+            <div class="modal-body" id="user-picker-modal-body">
+                <user-picker></user-picker>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="uui-button text-button grayed">Cancel</button>
+                <button type="button" data-dismiss="modal" class="uui-button text-button form-action" style="margin-left: 2px;" (click)="onUserPickerReturn()">Add Selected</button>
+            </div>
+        </div>
+    </div>
+</div>

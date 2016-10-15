@@ -1,0 +1,61 @@
+<div class="container vacs-list">
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="addVacFAB" routerLink="/vacations/add">
+        <i class="material-icons">add</i>
+    </button>
+    <div class="row vac-row" *ngFor="let vacation of vacations | async">
+        <div>
+            <div class="card card-big">
+                <div routerLink="/vacations/{{vacation.id}}" class="mini-card-body">
+                    <div [ngStyle]="{'background-image': 'url(' + vacation.titleImg.uri + vacation.titleImg.extension + ')'}" class="card-image">
+                        <h2 class="card-title">{{vacation.title}}</h2>
+                    </div>
+                    <div class="mini-card-details">
+                        <div class="details-row">
+                            <div>
+                                <div class="date-tiles">
+                                    <span class="tile-day">{{vacation.beginDate[2]}}</span>
+                                    <div class="date-tile-col">
+                                        <span class="tile-month">{{getMonthName(vacation.beginDate[1])}}</span>
+                                        <span class="tile-year">{{vacation.beginDate[0]}}</span>
+                                    </div>
+                                </div>
+                                <span class="date-till">till</span>
+                                <div class="date-tiles">
+                                    <span class="tile-day">{{vacation.endDate[2]}}</span>
+                                    <div class="date-tile-col">
+                                        <span class="tile-month">{{getMonthName(vacation.endDate[1])}}</span>
+                                        <span class="tile-year">{{vacation.endDate[0]}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="details-transport" *ngIf="vacation.transport == 0"><i class="fa fa-plane" title="Go by plane"></i> <span>Go by plain</span></span>
+                            <span class="details-transport" *ngIf="vacation.transport == 1"><i class="fa fa-bus" title="Go by bus"></i> <span>Go by bus</span></span>
+                            <span class="details-transport" *ngIf="vacation.transport == 2"><i class="fa fa-car" title="Go by train"></i> <span>Go by car</span></span>
+                            <span class="details-transport" *ngIf="vacation.transport == 3"><i class="fa fa-train" title="Go by car"></i> <span>Go by train</span></span>
+                            <span class="details-transport" *ngIf="vacation.transport == 4"><i class="fa fa-motocycle" title="Go by motocycle"></i> <span>Go by motocycle</span></span>
+                            <span class="details-transport" *ngIf="vacation.transport == 5"><i class="fa fa-bicycle" title="Go by bicycle"></i> <span>Go by bicycle</span></span>
+                            <span class="details-transport" *ngIf="vacation.transport == 6"><i class="fa fa-leaf" title="Go on fit"></i> <span>Go on fit</span></span>
+                            <!--<span class="details-budget">Budget about 350$</span>-->
+                        </div>
+
+                        <!--<span title="Kairo, Egypt">Kairo, Hurghada, Alexandria</span>-->
+
+                        <div class="details-tags">
+                            <div class="no-tags" *ngIf="vacation.tags.length === 0">No tags</div>
+                            <hash-tag (click)="onClickVacTag(tag)" *ngFor="let tag of vacation.tags" [tag]="tag"></hash-tag>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action-bar">
+                    <i class="fa fa-heart vac-like not-liked"><span>{{vacation.comments.length}}</span></i>
+                    <i class="fa fa-user" title="{{vacation.members.length}} Participants"><span>{{vacation.members.length}}</span></i>
+                    <i class="fa fa-calendar-o" title="{{vacation.days}} Days"><span>{{vacation.days}}</span></i>
+                    <a routerLink="/profile/{{vacation.owner.id}}" class="owner" title="Vacation Creator">{{vacation.owner.firstName}} {{vacation.owner.lastName}}</a>
+                    <i class="fa fa-map-marker departure" title="Departure Country"><span>{{vacation.departureCountry}}</span></i>
+                    <button class="uui-button text-button form-action" (click)="gotoDetail(vacation)" style="float: right; margin-top: 12px;">DETAIL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
