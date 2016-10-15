@@ -79,7 +79,7 @@
                 <td colspan="3">
                     <div id="participants-block">
                         <span *ngIf="participants.length == 0" id="participants-ph">Add some guys!</span>
-                        <span class="uui-label participant large" *ngFor="let prt of participants">{{prt}} <i class="fa fa-times-circle-o"></i></span>
+                        <span class="uui-label participant large" *ngFor="let prt of participants">{{prt.firstName}} {{prt.lastName}}<i class="fa fa-times-circle-o"></i></span>
                     </div>
                     <button class="uui-button left-icon text-button" id="add-people-btn" (click)="onOpenUserPicker()" data-toggle="modal" data-target="#add-user-popup">
                         <i class="fa fa-plus"></i>Add People
