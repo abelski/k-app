@@ -12,7 +12,7 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div *ngFor="let gImg of vacation.gallery; let fst = first;" [class]="fst ? 'item active' : 'item'"
-                                [ngStyle]="{'background-image': 'url(' + 'http://10.9.202.128:9090' + vacation.titleImg.uri + vacation.titleImg.extension + ')'}">
+                                [ngStyle]="{'background-image': 'url(' + 'http://10.9.202.128:9090' + gImg.uri + gImg.extension + ')'}">
                             <!--<img src="../../img/{{gImg}}">-->
                         </div>
                     </div>
@@ -22,6 +22,32 @@
                     <div class="description">
                         <!--<h1 class="section-header">Description</h1> -->{{vacation.description}}
                     </div>
+                    <div class="details">
+                        <div>
+                            <div class="date-tiles">
+                                <span class="tile-day">{{vacation.beginDate[2]}}</span>
+                                <div class="date-tile-col">
+                                    <span class="tile-month">{{getMonthName(vacation.beginDate[1])}}</span>
+                                    <span class="tile-year">{{vacation.beginDate[0]}}</span>
+                                </div>
+                            </div>
+                            <span class="date-till">till</span>
+                            <div class="date-tiles">
+                                <span class="tile-day">{{vacation.endDate[2]}}</span>
+                                <div class="date-tile-col">
+                                    <span class="tile-month">{{getMonthName(vacation.endDate[1])}}</span>
+                                    <span class="tile-year">{{vacation.endDate[0]}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="days">~4 days</div>
+                        <div class="dep-country">Go from Belarus</div>
+                        <div class="budget">~400$</div>
+                        <div class="max-people">Up to 6 persons</div>
+                    </div>
+                    <div class="places">
+                        <span class="uui-label place large _red" >Germany, Dortmund</span>
+                    </div>
                     <div id="members-list">
                         <!-- link should lead to the correspondent profile, e.g. /profile/:id -->
                         <span class="member-item" *ngFor="let member of vacation.members" routerLink="/profile/1">
@@ -29,8 +55,8 @@
                         </span>
                     </div>
                     <div class="card-navigation-section">
-                        <button (click)="goBack()" class="uui-button text-button large blue">Back</button>
-                        <button [disabled] = "isInVac" (click)="askToInvite()" class="uui-button text-button large fuchsia">Ask to invite</button>
+                        <button *ngIf="!isInVac" (click)="askToInvite()" class="uui-button text-button large fuchsia">Ask for invite</button>
+                        <span *ngIf="isInVac" class="added-msg">You're in!</span>                        
                     </div>
                     <div class="details-tags">
                         <div class="no-tags" *ngIf="vacation.tags.length == 0">No tags</div>
@@ -67,13 +93,23 @@
                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" id="addActivityFAB">
                     <i class="material-icons">add</i>
                 </button>
+
+                <!--<div id="activity-form">
+                    <div class="act-thumb">
+                        <input >
+                    </div>
+                    <div class="act-col">
+                        <input>
+                        <input>
+                    </div>
+                </div>-->
             </div>
 
-            <div class="card-comment">
+            <!--<div class="card-comment">
                 <h1> Comments </h1>
                 <add-comment [vacation]="vacation"></add-comment>
                 <vacation-comment *ngFor="let comment of vacation.comments" [comment]="comment"></vacation-comment>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
