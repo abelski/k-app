@@ -18,17 +18,21 @@ export class FilterService {
     constructor(private http: Http, private vacationService: VacationService) { }
 
     public getFilteredVacations(): Observable<Vacation[]> {
-        let body = null;
+        let body = '{';
         if (FilterService.filterTags.length != 0) {
-            body = JSON.stringify(FilterService.filterTags);
+            body += '"tags":'+ JSON.stringify(FilterService.filterTags);
         }
         if (FilterService.filterDate != null) {
-            
+            body += '"startDate":' + JSON.stringify(FilterService.filterDate);
         }
+        body += '}'
+
+        console.log("FILTERS: " + body);
+
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         // console.log(body);
-        return this.http.post(UrlUtil.FILTER, '{ "tags":' + body + '}', options)
+        return this.http.post(UrlUtil.FILTER, body, options)
                 .map(this.extractData)
                 .catch(this.handleError);
     }
