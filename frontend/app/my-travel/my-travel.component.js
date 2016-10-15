@@ -11,7 +11,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var MyTravelComponent = (function () {
     function MyTravelComponent() {
+        this.instImages = [];
     }
+    MyTravelComponent.prototype.ngAfterViewInit = function () {
+        this.loadInstPictures("cheerleader");
+    };
+    MyTravelComponent.prototype.loadInstPictures = function (hashtag) {
+        $("#insta-images .fa-spin").show();
+        var that = this;
+        $.get({
+            url: "https://api.instagram.com/v1/tags/" + hashtag + "/media/recent?access_token=4027454714.8e6503f.c0dd220c575e4ad6bf6331e4cc22c914&callback=?",
+            dataType: 'jsonp',
+            success: function (data) {
+                $("#insta-images .fa-spin").hide();
+                data.data.forEach(function (obj, i) {
+                    var url = obj.images.low_resolution.url;
+                    if (that.instImages.indexOf(url) == -1) {
+                        that.instImages.push(url);
+                    }
+                });
+            }
+        });
+    };
     MyTravelComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/my-travel/my-travel.template.html',

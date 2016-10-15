@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { FilterService } from '../filter/filter.service';
+import { Router }   from '@angular/router';
+import Globals = require('../globals');
 
 declare var UUI: any;
-//declare var $:any;
+declare var $:any;
 
 @Component({
     selector: 'sidebar',
@@ -13,7 +15,7 @@ declare var UUI: any;
 
 export class SidebarComponent {
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     doSomthing(value: any) {
         
@@ -21,5 +23,20 @@ export class SidebarComponent {
 
     ngAfterViewInit() {
         UUI.Sidebar.init({open: true, animate: true});
+       window.onbeforeunload = function() {
+            console.log(window.location.href);
+        };
+        this.router.events.subscribe((val) => {
+            this.showHide();
+        });
+
+    }
+
+    private showHide() {
+        if (window.location.pathname == "/" + Globals.PATH_VACS) {
+            $("#side-filter").show();
+        } else {
+            $("#side-filter").hide();
+        }
     }
 }

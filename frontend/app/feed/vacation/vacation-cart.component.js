@@ -12,7 +12,6 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var vacation_service_1 = require('./vacation.service');
 var filter_service_1 = require('../../filter/filter.service');
-var filter_component_1 = require('../../filter/filter.component');
 var VacationCartComponent = (function () {
     function VacationCartComponent(vacationService, router, filterService) {
         this.vacationService = vacationService;
@@ -63,8 +62,7 @@ var VacationCartComponent = (function () {
     VacationCartComponent = __decorate([
         core_1.Component({
             selector: 'vacation-cart',
-            templateUrl: 'app/feed/vacation/vacation-cart.template.html',
-            providers: [vacation_service_1.VacationService, filter_service_1.FilterService, filter_component_1.FilterComponent]
+            templateUrl: 'app/feed/vacation/vacation-cart.template.html'
         }), 
         __metadata('design:paramtypes', [vacation_service_1.VacationService, router_1.Router, filter_service_1.FilterService])
     ], VacationCartComponent);

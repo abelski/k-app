@@ -5,10 +5,44 @@
             <div class="mate-portrait">
                 <img src="../../img/person/2.jpg"/>
             </div>
-            <div class="mate-name">Vikentiy Almanakh</div>
+            <div class="mate-name">Hunter Thompson</div>
             <div class="mate-trips"><span class="trips-num">4</span> travels</div>
         </div>
+        <div class="mate card">
+            <div class="mate-portrait">
+                <img src="../../img/person/1.jpg"/>
+            </div>
+            <div class="mate-name">Great Humanist</div>
+            <div class="mate-trips"><span class="trips-num">3</span> travels</div>
+        </div>
     </div>
-    <h3>Places</h3>
-    <h3>Magic Memories</h3>
+    <h3 id="places-header">Places to Go</h3>
+    <div id="places-wanna">
+        <div class="card place">
+            <div class="place-image"><img src="../../img/logos/Barc.jpg"></div>
+            <div class="place-name">Spain, Barcelona</div>
+        </div>
+        <div class="card place">
+            <div class="place-image"><img src="../../img/logos/casa.jpg"></div>
+            <div class="place-name">Colorado, Casa Bonita</div>
+        </div>
+        <div class="card place">
+            <div class="place-image"><img src="../../img/logos/rus.jpg"></div>
+            <div class="place-name">Siberia, Baykal</div>
+        </div>
+    </div>
+    <h3 id="magic-header">Magic Memories</h3>
+    <div id="inst">
+        <div id="k-hashtags">
+            <a class="inst-hashtag">Vac-12062016-1</a>
+            <a class="inst-hashtag">Vac-23082016</a>
+            <a class="inst-hashtag">Vac-03012016-2</a>
+            <a class="inst-hashtag">Vac-22052015-12</a>
+            <a class="inst-hashtag">Vac-15082014</a>
+        </div>
+        <div id="insta-images">
+            <i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>
+            <img src="{{imgUrl}}" *ngFor="let imgUrl of instImages"/>
+        </div>
+    </div>
 </div>

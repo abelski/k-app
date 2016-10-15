@@ -11,8 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var WhatsupComponent = (function () {
     function WhatsupComponent() {
-        this.imgMinHeight = 50;
-        this.imgMaxHeight = 350;
         this.instImages = [];
     }
     WhatsupComponent.prototype.ngAfterViewInit = function () {
