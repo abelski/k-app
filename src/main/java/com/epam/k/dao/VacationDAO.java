@@ -18,6 +18,5 @@ public interface VacationDAO extends PagingAndSortingRepository<Vacation, String
 {
    List<Vacation> findAllByOwnerAndStatusIn(User user, List<VacationStatus> vacationStatuses);
 
-   @Query("from vacation v where ?1 member of v.members and v.status in ?2")
-   List<Vacation> findAllByMemberAndStatusIn(User user, List<VacationStatus> vacationStatuses);
+   List<Vacation> findAllByMembersContainingAndStatusIn(User user, List<VacationStatus> vacationStatuses);
 }
