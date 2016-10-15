@@ -184,15 +184,15 @@ export class RegistrationService {
     }
 
     private onUserParsed() {
-        console.log("User Info:", JSON.stringify(Globals.userInfo));
+        // console.log("User Info:", JSON.stringify(Globals.userInfo));
         this.saveUserToCookies();
         if (this.listener) {
             this.listener.onUserLogin(Globals.userInfo);
-            let body = JSON.stringify(this.token);
+            let body = JSON.stringify(Globals.userInfo);
             let headers = new Headers({ 'Content-Type': 'application/json' });
             let options = new RequestOptions({ headers: headers });
-
-            this.http.post(UrlUtil.REGISTER_ACCOUNT, body, options);
+            // console.log(body);
+            this.http.post(UrlUtil.REGISTER_ACCOUNT, body, options).subscribe();
         }
     }
 

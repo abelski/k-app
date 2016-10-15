@@ -167,14 +167,15 @@ var RegistrationService = (function () {
         Cookies.remove(this.ckUserInfoName, {});
     };
     RegistrationService.prototype.onUserParsed = function () {
-        console.log("User Info:", JSON.stringify(Globals.userInfo));
+        // console.log("User Info:", JSON.stringify(Globals.userInfo));
         this.saveUserToCookies();
         if (this.listener) {
             this.listener.onUserLogin(Globals.userInfo);
-            var body = JSON.stringify(this.token);
+            var body = JSON.stringify(Globals.userInfo);
             var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
             var options = new http_1.RequestOptions({ headers: headers });
-            this.http.post(url_util_1.UrlUtil.REGISTER_ACCOUNT, body, options);
+            // console.log(body);
+            this.http.post(url_util_1.UrlUtil.REGISTER_ACCOUNT, body, options).subscribe();
         }
     };
     RegistrationService.prototype.doLogout = function () {

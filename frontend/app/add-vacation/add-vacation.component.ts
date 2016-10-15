@@ -353,13 +353,15 @@ export class AddVacationComponent {
                 processData: false,
                 success: function (data) {
                     that.titleImg = new Image(data.id, data.altText, data.extension, data.uri, data.description)
+                    
+                    console.log("CURRENT USER " + that.currentUser);
+                    that.currentUser.id = "123456";
+                    that.vacation = new Vacation(that.currentUser, that.members, that.title, that.description,
+                        that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, VacationStatus.OPEN,
+                        that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry,
+                        that.targetCountry, that.targetCity);
 
-                    this.vacation = new Vacation(this.owner, this.members, this.title, this.description,
-                        this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, VacationStatus.OPEN,
-                        this.plannedActivities, null, null, this.titleImg, this.days, this.transoprt, this.departureCountry,
-                        this.targetCountry, this.targetCity);
-
-                    this.vacationService.createVacation(this.vacation);
+                    that.vacationService.createVacation(that.vacation);
                 },
                 error: function (data) {
                     console.log("error");

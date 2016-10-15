@@ -20,7 +20,6 @@ export class UserPickerComponent {
 
     constructor(private userService: UserService) {
         this.userService.getAllUsers().subscribe(user => this.userList.push(user));
-        this.userList.sort();
         // makes Case Insensitive 'contains'
         $.extend($.expr[":"], {
             "containsIN": function (elem, i, match, array) {

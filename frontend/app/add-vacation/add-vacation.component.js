@@ -301,8 +301,10 @@ var AddVacationComponent = (function () {
                 processData: false,
                 success: function (data) {
                     that.titleImg = new image_1.Image(data.id, data.altText, data.extension, data.uri, data.description);
-                    this.vacation = new vacation_1.Vacation(this.owner, this.members, this.title, this.description, this.beginDate, this.endDate, this.tags, this.estimatedCost, this.minMembers, vacation_status_1.VacationStatus.OPEN, this.plannedActivities, null, null, this.titleImg, this.days, this.transoprt, this.departureCountry, this.targetCountry, this.targetCity);
-                    this.vacationService.createVacation(this.vacation);
+                    console.log("CURRENT USER " + that.currentUser);
+                    that.currentUser.id = "123456";
+                    that.vacation = new vacation_1.Vacation(that.currentUser, that.members, that.title, that.description, that.beginDate, that.endDate, that.tags, that.estimatedCost, that.minMembers, vacation_status_1.VacationStatus.OPEN, that.plannedActivities, null, null, that.titleImg, that.days, that.transoprt, that.departureCountry, that.targetCountry, that.targetCity);
+                    that.vacationService.createVacation(that.vacation);
                 },
                 error: function (data) {
                     console.log("error");

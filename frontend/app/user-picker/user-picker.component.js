@@ -20,7 +20,6 @@ var UserPickerComponent = (function () {
         //     "Herodotus Adamsen", "Susann Danielsen", "Luciana Hummel", "Rasmus Hermansen", "Abraham Falk", "Theodoulos Steensen", "Grete Landvik", "Pomponia Carlson"];
         this.userList = [];
         this.userService.getAllUsers().subscribe(function (user) { return _this.userList.push(user); });
-        this.userList.sort();
         // makes Case Insensitive 'contains'
         $.extend($.expr[":"], {
             "containsIN": function (elem, i, match, array) {
