@@ -64,10 +64,10 @@ public class CreateVacationsListener implements ApplicationListener<ContextRefre
             uploadFolder.mkdirs();
         }
 
-        File resourceImgsFolder = context.getResource("classpath:img").getFile();
-        if (resourceImgsFolder.exists()) {
-            FileUtils.copyDirectory(resourceImgsFolder, uploadFolder);
-        }
+//        File resourceImgsFolder = context.getResource("classpath:img").getFile();
+//        if (resourceImgsFolder.exists()) {
+//            FileUtils.copyDirectory(resourceImgsFolder, uploadFolder);
+//        }
     }
 }
 
