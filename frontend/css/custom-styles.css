@@ -20,6 +20,11 @@ app > div {
     padding: 26px 7% 20px 7%;
     width: auto;
 }
+.vacs-list .fa-spin {
+    color: #1A9CB0;
+    display: block;
+    margin: 0 auto;
+}
 
 .container .row.vac-row {
     display: inline-block;

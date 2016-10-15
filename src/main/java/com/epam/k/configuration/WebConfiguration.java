@@ -1,8 +1,9 @@
 package com.epam.k.configuration;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
@@ -13,9 +14,16 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         registry.addMapping("/**");
     }
 
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/img/**")
-                .addResourceLocations("file:/hackaton/img/");
+    @Bean
+    public JavaMailSenderImpl configureAndReturnSender() {
+        JavaMailSenderImpl sender = new JavaMailSenderImpl();
+        sender.setHost("smtp.gmail.com");
+        sender.setUsername("hackathonhere@gmail.com");
+        sender.setPassword("hackathon");
+        sender.setPort(587);
+        sender.getJavaMailProperties().setProperty("mail.mime.charset", "UTF-8");
+        sender.getJavaMailProperties().setProperty("mail.smtp.starttls.enable", "true");
+
+        return sender;
     }
 }

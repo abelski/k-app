@@ -19,6 +19,7 @@ var VacationCartComponent = (function () {
         this.filterService = filterService;
         this.vacations = null;
         this.errorMsg = null;
+        this.isUpdating = false;
         this.monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     }
     VacationCartComponent.prototype.ngAfterViewInit = function () {
@@ -34,6 +35,8 @@ var VacationCartComponent = (function () {
         }
     };
     VacationCartComponent.prototype.getVacations = function () {
+        var _this = this;
+        this.isUpdating = true;
         if (filter_service_1.FilterService.filterTags.length > 0) {
             console.log("have a filter");
             vacation_service_1.VacationService.vacations = this.filterService.getFilteredVacations();
@@ -44,6 +47,9 @@ var VacationCartComponent = (function () {
             vacation_service_1.VacationService.vacations = this.vacationService.getVacations();
             this.vacations = vacation_service_1.VacationService.vacations;
         }
+        this.vacations.subscribe(function () {
+            _this.isUpdating = false;
+        });
     };
     VacationCartComponent.prototype.gotoDetail = function (vacation) {
         this.router.navigate(['/vacations', vacation.id]);
