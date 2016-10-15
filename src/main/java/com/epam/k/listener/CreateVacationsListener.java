@@ -1,5 +1,6 @@
 package com.epam.k.listener;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -30,9 +31,6 @@ public class CreateVacationsListener implements ApplicationListener<ContextRefre
 
     @Autowired
     private VacationDAO vacationDAO;
-
-    @Autowired
-    private MongoDatabase mongoDatabase;
 
     @Value("${vacations.list}")
     private String vacationsPath;
