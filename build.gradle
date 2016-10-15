@@ -57,13 +57,18 @@ dependencies {
 }
 
 def generatedSrcDir = 'src/main/generated'
+def picsDir = 'src/main/pics'
 task createGeneratedSrcDir << {
     file(generatedSrcDir).mkdirs()
 }
-compileJava.dependsOn createGeneratedSrcDir
+task createPicsDir << {
+    file(picsDir).mkdirs()
+}
+compileJava.dependsOn createGeneratedSrcDir, createPicsDir
 compileJava {
     options.compilerArgs << '-processor' << 'org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor' << '-s' << file(generatedSrcDir).absolutePath
 }
 clean {
     delete generatedSrcDir
+    delete picsDir
 }

@@ -3,7 +3,7 @@ mongodb:
   
 vacations.list: db.json
 
-uploadDir: /images
+uploadDir: /pics
 
 server:
     port: 8080
