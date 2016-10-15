@@ -7,7 +7,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User extends Principal {
     @Id
     private String id;
-    private String username;
     private String firstName;
     private String lastName;
     private String skype;
@@ -21,14 +20,6 @@ public class User extends Principal {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getFirstName() {
