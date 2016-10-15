@@ -1,0 +1,79 @@
+<div *ngIf="vacation" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mdl-card vac-info">
+                <div class="mdl-card__title">
+                    <h1>{{vacation.title}}</h1>
+                </div>
+                <!--<div class="card-image" [ngStyle]="{'background-image': 'url(' + vacation.titleImg + ')'}"></div>-->
+                <div id="vac-carousel" class="carousel slide" data-ride="carousel" *ngIf="vacation.gallery.length > 0">
+                    <ol class="carousel-indicators">
+                        <li data-target="#vac-carousel" *ngFor="let g of vacation.gallery; let fst = first;" data-slide-to="0" [class]="fst ? 'active' : ''">{{i}}</li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div *ngFor="let gImg of vacation.gallery; let fst = first;" [class]="fst ? 'item active' : 'item'"
+                                [ngStyle]="{'background-image': 'url(../../img/' + gImg + ')'}">
+                            <!--<img src="../../img/{{gImg}}">-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="description">
+                        <!--<h1 class="section-header">Description</h1> -->{{vacation.description}}
+                    </div>
+                    <div id="members-list">
+                        <!-- link should lead to the correspondent profile, e.g. /profile/:id -->
+                        <span class="member-item" *ngFor="let member of vacation.members" routerLink="/profile/1">
+                            <i class="fa fa-user"></i>{{member.firstName}} {{member.lastName}}
+                        </span>
+                    </div>
+                    <div class="card-navigation-section">
+                        <button (click)="goBack()" class="uui-button text-button large blue">Back</button>
+                        <button [disabled] = "isInVac" (click)="askToInvite()" class="uui-button text-button large fuchsia">Ask to invite</button>
+                    </div>
+                    <div class="details-tags">
+                        <div class="no-tags" *ngIf="vacation.tags.length == 0">No tags</div>
+                        <hash-tag *ngFor="let tag of vacation.tags" [tag]="tag"></hash-tag>
+                    </div>
+                </div>
+            </div>
+
+            <div id="vac-activities">
+                <h2>Planned Activities</h2>
+                <div class="uui-person-horizontal-profile activity-short">
+                    <div class="person-profile-body">
+                        <div class="person-profile-section">
+                            <div class="person-profile-photo">
+                                <img src="img/montjuic-barcelona.jpg" alt="" />
+                            </div>
+                            <div class="person-profile-info">
+                                <h2>Go to Montjuïc, visit National Museum, see Magic Fountain</h2>
+                                <p>Day 1 or day 3</p>
+                            </div>
+                        </div>
+                        <section class="uui-info-panel-horizontal additional-info blue">
+                            <div class="info-panel-body">
+                                <div class="info-panel-section">
+                                    <div>~ 4 hours</div>
+                                    <div>20&euro; estimated cost</div>
+                                    <div><i class="fa fa-heart unchecked" title="Like This!"></i>5 members liked</div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- This button placed at the end of all activities; if no activity, change style to take some other place, to left side -->
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" id="addActivityFAB">
+                    <i class="material-icons">add</i>
+                </button>
+            </div>
+
+            <div class="card-comment">
+                <h1> Comments </h1>
+                <add-comment [vacation]="vacation"></add-comment>
+                <vacation-comment *ngFor="let comment of vacation.comments" [comment]="comment"></vacation-comment>
+            </div>
+        </div>
+    </div>
+</div>

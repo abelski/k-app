@@ -1,0 +1,11 @@
+<form #regForm="ngForm" (ngSubmit)="doRegistration(regForm.value)">
+    <div class="uui-input-group">
+        <label for="username">Username</label>
+        <input type="text" class="uui-form-element" placeholder="username" id="username" name="username" ngModel>
+    </div>
+    <div class="uui-input-group">
+        <label for="password">Password</label>
+        <input type="text" class="uui-form-element" placeholder="password" id="password" name="password" ngModel>
+    </div>
+    <button type="submit" class="uui-button blue">Registration</button>
+</form>
