@@ -46,7 +46,7 @@ public class ImageController {
 
     @RequestMapping(path = "/img/{path}")
     public void image(@PathVariable("path") String path, HttpServletResponse response) throws IOException {
-        String imgPath = "img/" + path + ".jpg";
+        String imgPath = "/" + path + ".jpg";
         try (InputStream imgResource = getClass().getClassLoader().getResourceAsStream(uploadDir+imgPath)) {
             response.setContentType("image/jpg");
             response.getOutputStream().write(IOUtils.toByteArray(imgResource));
