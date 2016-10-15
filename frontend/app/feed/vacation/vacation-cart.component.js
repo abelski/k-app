@@ -12,12 +12,13 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var vacation_service_1 = require('./vacation.service');
 var filter_service_1 = require('../../filter/filter.service');
+var filter_component_1 = require('../../filter/filter.component');
 var VacationCartComponent = (function () {
     function VacationCartComponent(vacationService, router, filterService) {
         this.vacationService = vacationService;
         this.router = router;
         this.filterService = filterService;
-        // vacations: Observable<Vacation[]> = null;
+        this.vacations = null;
         this.errorMsg = null;
         this.monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     }
@@ -62,12 +63,12 @@ var VacationCartComponent = (function () {
     VacationCartComponent = __decorate([
         core_1.Component({
             selector: 'vacation-cart',
-            templateUrl: 'app/feed/vacation/vacation-cart.template.html'
+            templateUrl: 'app/feed/vacation/vacation-cart.template.html',
+            providers: [vacation_service_1.VacationService, filter_service_1.FilterService, filter_component_1.FilterComponent]
         }), 
-        __metadata('design:paramtypes', [vacation_service_1.VacationService, router_1.Router, (typeof (_a = typeof filter_service_1.FilterService !== 'undefined' && filter_service_1.FilterService) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [vacation_service_1.VacationService, router_1.Router, filter_service_1.FilterService])
     ], VacationCartComponent);
     return VacationCartComponent;
-    var _a;
 }());
 exports.VacationCartComponent = VacationCartComponent;
 //# sourceMappingURL=vacation-cart.component.js.map

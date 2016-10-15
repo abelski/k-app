@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { VacationService } from './vacation.service';
-// import { Vacation } from '../../domain/vacation';
+import { Vacation } from '../../domain/vacation';
 import * as Collections from 'typescript-collections';
 import { Observable } from 'rxjs/Observable';
 import { ColorUtil } from '../../utils/color.util';
@@ -15,11 +15,11 @@ declare var $: any;
 
 @Component({
     selector: 'vacation-cart',
-    templateUrl: 'app/feed/vacation/vacation-cart.template.html'
-    // providers: [VacationService, FilterService, FilterComponent]
+    templateUrl: 'app/feed/vacation/vacation-cart.template.html',
+    providers: [VacationService, FilterService, FilterComponent]
 })
 export class VacationCartComponent {
-    // vacations: Observable<Vacation[]> = null;
+    vacations: Observable<Vacation[]> = null;
     errorMsg: string = null;
     monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
