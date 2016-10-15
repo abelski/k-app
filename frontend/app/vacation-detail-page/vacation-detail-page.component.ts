@@ -20,6 +20,10 @@ export class VacationDetailPageComponent implements OnInit {
    private currentUser: User;
    private isInVac: boolean = false;
    monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+//    private place = {
+//        country: {name: "Germany"},
+//        city: {name: "Dortmund"},
+//    }
 
     constructor(
         private vacationService: VacationService,

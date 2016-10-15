@@ -702,6 +702,12 @@ vdp .card-body {
     min-height: 44px;
     padding-top: 4px; 
 }
+.card-body .details .days, 
+.card-body .details .dep-country, 
+.card-body .details .budget, 
+.card-body .details .max-people {
+    margin-bottom: 8px;
+}
 
 #places-ph, #tags-ph {
     color: #999999;
