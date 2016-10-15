@@ -53,3 +53,5 @@ npm-debug.log
 .gradle/
 src/main/generated/
 src/main/webapp/
+
+out/

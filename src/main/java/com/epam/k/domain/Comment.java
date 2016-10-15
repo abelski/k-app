@@ -1,24 +1,29 @@
 package com.epam.k.domain;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
-
+@Document
 public class Comment {
+    @Id
+    private String id;
     private User author;
     private String text;
-    @JsonDeserialize(using = LocalDateDeserializer.class)
-    @JsonSerialize(using = LocalDateSerializer.class)
-    private LocalDate commentDate;
+
+    public String getId() {
+        return id;
+    }
+
+    public Comment setId(final String id) {
+        this.id = id;
+        return this;
+    }
 
     public User getAuthor() {
         return author;
     }
 
-    public Comment setAuthor(User author) {
+    public Comment setAuthor(final User author) {
         this.author = author;
         return this;
     }
@@ -27,17 +32,8 @@ public class Comment {
         return text;
     }
 
-    public Comment setText(String text) {
+    public Comment setText(final String text) {
         this.text = text;
-        return this;
-    }
-
-    public LocalDate getCommentDate() {
-        return commentDate;
-    }
-
-    public Comment setCommentDate(LocalDate commentDate) {
-        this.commentDate = commentDate;
         return this;
     }
 }

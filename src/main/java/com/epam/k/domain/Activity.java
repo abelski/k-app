@@ -1,5 +1,8 @@
 package com.epam.k.domain;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Activity {
     private String title;
 
@@ -7,7 +10,7 @@ public class Activity {
         return title;
     }
 
-    public Activity setTitle(String title) {
+    public Activity setTitle(final String title) {
         this.title = title;
         return this;
     }
