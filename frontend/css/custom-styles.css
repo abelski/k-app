@@ -113,6 +113,7 @@ app > div {
 .details-tags .tag:hover {
     opacity: 0.8;
     cursor: pointer;
+    box-shadow: 0 2px 3px rgba(157,157,157,.5)
 }
 .details-tags .tag::before {
     content: "#";
@@ -438,6 +439,13 @@ header .uui-header .user-profile.vac-message .location {
 }
 #dep-cntr-spinner {
     right: 32px; 
+}
+
+#insta-magic-btn {
+    margin-left: 16px;
+    font-size: 14pt;
+    cursor: pointer;
+    color: #1A9CB0;
 }
 
 vdp .card-image {
@@ -1022,6 +1030,18 @@ vdp .card-body {
     height: 24px;
     font-family: 'Oswald Regular', Arial, sans-serif;
     font-size: 12pt;
+}
+#whatsup-charts {
+    margin-top: 24px;
+}
+#charts-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.c3-chart-arcs-title {
+    font-size: 11pt;
 }
 
 #inst {

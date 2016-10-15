@@ -1,5 +1,6 @@
 package com.epam.k.web.dto;
 
+import com.epam.k.domain.Place;
 import com.epam.k.domain.Tag;
 import com.epam.k.domain.Transport;
 import com.epam.k.domain.User;
@@ -23,8 +24,7 @@ public class FilterDTO {
     private List<Tag> tags;
     private List<User> members;
     private Transport transport;
-    private String countryToGo;
-    private String cityToGo;
+    private List<Place> places;
     private BigDecimal estimatedCost;
     private String departureCountry;
 
@@ -73,24 +73,6 @@ public class FilterDTO {
         return this;
     }
 
-    public String getCountryToGo() {
-        return countryToGo;
-    }
-
-    public FilterDTO setCountryToGo(final String countryToGo) {
-        this.countryToGo = countryToGo;
-        return this;
-    }
-
-    public String getCityToGo() {
-        return cityToGo;
-    }
-
-    public FilterDTO setCityToGo(final String cityToGo) {
-        this.cityToGo = cityToGo;
-        return this;
-    }
-
     public BigDecimal getEstimatedCost() {
         return estimatedCost;
     }
@@ -115,6 +97,15 @@ public class FilterDTO {
 
     public FilterDTO setDepartureCountry(String departureCountry) {
         this.departureCountry = departureCountry;
+        return this;
+    }
+
+    public List<Place> getPlaces() {
+        return places;
+    }
+
+    public FilterDTO setPlaces(List<Place> places) {
+        this.places = places;
         return this;
     }
 }

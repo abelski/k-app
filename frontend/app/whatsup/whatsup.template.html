@@ -30,7 +30,12 @@
 	</div>
     <div id="whatsup-charts">
         <h3>How We Travel</h3>
-        <div id="c3-donut-travel-type"></div>
+        <div id="charts-wrapper">
+            <div id="c3-donut-travel-type"></div>
+            <div id="c3-donut-seasons-europe"></div>
+            <div id="c3-donut-seasons-america"></div>
+            <div id="c3-donut-seasons-asia"></div>
+        </div>
     </div>
     <div id="inst">
         <h3>Vacations in Pictures</h3>
@@ -46,8 +51,8 @@
             <a class="inst-hashtag">Country</a>
         </div>
         <div id="insta-images">
-            <i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>
             <img src="{{imgUrl}}" *ngFor="let imgUrl of instImages"/>
+            <i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>
             <!--<img src="../../img/inst/4.jpg"/>
             <img src="../../img/inst/1.jpg"/>
             <img src="../../img/inst/2.jpg"/>

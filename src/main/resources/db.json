@@ -1,6 +1,5 @@
  [
 	{
-            "id": 1,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -10,7 +9,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -23,7 +22,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -64,7 +63,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -78,13 +77,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -93,12 +92,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
     }, 
 	{
-            "id": 1234234,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -108,7 +106,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -121,7 +119,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -161,7 +159,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -175,13 +173,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -190,12 +188,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
     },
 	{
-            "id": 12344,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -205,7 +202,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -218,7 +215,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -259,7 +256,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -273,13 +270,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -288,12 +285,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
     },
 	{
-            "id": 153456,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -303,7 +299,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -316,7 +312,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -356,7 +352,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -370,13 +366,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -385,12 +381,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
     },
 	{
-            "id": 18676,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -400,7 +395,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -413,7 +408,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -453,7 +448,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -467,13 +462,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -482,12 +477,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
     },
 	{
-            "id": 13123,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -497,7 +491,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -510,7 +504,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -550,7 +544,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -564,13 +558,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -579,12 +573,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
     },
 	{
-            "id": 1543534,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -594,7 +587,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -607,7 +600,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -647,7 +640,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -661,13 +654,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -676,12 +669,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
     },
 	{
-            "id": 1532,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -691,7 +683,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -704,7 +696,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -744,7 +736,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -758,13 +750,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -773,12 +765,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
     },
 	{
-            "id": 16,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -788,7 +779,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -801,7 +792,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -841,7 +832,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -855,13 +846,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -870,12 +861,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 15,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -885,7 +875,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -898,7 +888,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -938,7 +928,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -952,13 +942,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -967,12 +957,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 14,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -982,7 +971,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -995,7 +984,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1035,7 +1024,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1049,13 +1038,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1064,12 +1053,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 13,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1079,7 +1067,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1092,7 +1080,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1132,7 +1120,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1146,13 +1134,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1161,12 +1149,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 12,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1176,7 +1163,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1189,7 +1176,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1229,7 +1216,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1243,13 +1230,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1258,12 +1245,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 11,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1273,7 +1259,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1286,7 +1272,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1326,7 +1312,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1340,13 +1326,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1355,12 +1341,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 10,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1370,7 +1355,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1383,7 +1368,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1423,7 +1408,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1437,13 +1422,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1452,12 +1437,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 9,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1467,7 +1451,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1480,7 +1464,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1520,7 +1504,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1534,13 +1518,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1549,12 +1533,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 8,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1564,7 +1547,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1577,7 +1560,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1617,7 +1600,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1631,13 +1614,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1646,12 +1629,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 7,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1661,7 +1643,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1674,7 +1656,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1714,7 +1696,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1728,13 +1710,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1743,12 +1725,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 6,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1758,7 +1739,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1771,7 +1752,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1811,7 +1792,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1825,13 +1806,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1840,12 +1821,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 5,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1855,7 +1835,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1868,7 +1848,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -1908,7 +1888,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -1922,13 +1902,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -1937,12 +1917,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 4,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -1952,7 +1931,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -1965,7 +1944,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -2005,7 +1984,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -2019,13 +1998,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -2034,12 +2013,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 3,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -2049,7 +2027,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -2062,7 +2040,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -2102,7 +2080,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -2116,13 +2094,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -2131,12 +2109,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 2,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -2146,7 +2123,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -2159,7 +2136,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -2199,7 +2176,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -2213,13 +2190,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -2228,12 +2205,11 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				
     },{
-            "id": 112311,
             "owner": {
                 "firstName": "Valera",
                 "lastName": "Valerov",
@@ -2243,7 +2219,7 @@
                 	
 					"altText":"alt_text",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/avatar1.",
+					"uri":"/img/avatar1.",
 					"description":"Very good description"
                 }
             },
@@ -2256,7 +2232,7 @@
 	                	
 						"altText":"alt_text123",
 						"extension":"jpg",
-						"uri":"http://localhost:8080/img/member_avatar1.",
+						"uri":"/img/member_avatar1.",
 						"description":"Very good description"
 	                }
 				}
@@ -2296,7 +2272,7 @@
 								
 								"altText":"alt_text",
 								"extension":"jpg",
-								"uri":"http://localhost:8080/img/avatar1.",
+								"uri":"/img/avatar1.",
 								"description":"Very good description"
 						}
 					},
@@ -2310,13 +2286,13 @@
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_123.",
+				"uri":"/img/gal_123.",
 				"description":"Very good description"
             }, {
             	
 				"altText":"Smth else",
 				"extension":"jpg",
-				"uri":"http://localhost:8080/img/gal_124.",
+				"uri":"/img/gal_124.",
 				"description":"Very good description"
             }
             ],
@@ -2325,7 +2301,7 @@
 					
 					"altText":"Smth",
 					"extension":"jpg",
-					"uri":"http://localhost:8080/img/vac_1.",
+					"uri":"/img/vac_1.",
 					"description":"Very good description"
 				}
 				

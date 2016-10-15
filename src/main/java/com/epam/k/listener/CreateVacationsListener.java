@@ -17,9 +17,6 @@ import com.epam.k.domain.Vacation;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-/**
- * Created by Maksim Ruts on 9/27/2016.
- */
 @Component
 public class CreateVacationsListener implements ApplicationListener<ContextRefreshedEvent> {
     private static final Logger LOGGER = Logger.getLogger(CreateVacationsListener.class);
