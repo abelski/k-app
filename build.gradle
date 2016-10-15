@@ -32,7 +32,7 @@ task wrapper(type: Wrapper) {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.boot:spring-boot-starter-data-mongodb:1.4.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
     compile 'com.querydsl:querydsl-apt:4.1.4'
     compile 'com.querydsl:querydsl-mongodb:4.1.4'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.5.3'
