@@ -33,7 +33,7 @@ var UrlUtil = (function () {
     /**
      * File upload
      */
-    UrlUtil.UPLOAD_IMAGE = "/upload";
+    UrlUtil.UPLOAD_IMAGE = UrlUtil.HOST_NAME + "/upload";
     return UrlUtil;
 }());
 exports.UrlUtil = UrlUtil;

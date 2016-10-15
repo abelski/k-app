@@ -37,5 +37,5 @@ export class UrlUtil {
     /**
      * File upload
      */
-    public static UPLOAD_IMAGE: string = "/upload";
+    public static UPLOAD_IMAGE: string = UrlUtil.HOST_NAME + "/upload";
 }

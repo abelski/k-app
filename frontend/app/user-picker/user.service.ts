@@ -26,11 +26,13 @@ export class UserService {
         let i: number = 0;
         let users: User[] = [];
         if (body.content) {
+            console.log(body.content);
             // if response has more than one vac
             for (let user of body.content) {
                 users.push(JSON.parse(JSON.stringify(user)));
             }
         } else {
+            console.log(body);
             // if response has only one vac
             return body;
         }
